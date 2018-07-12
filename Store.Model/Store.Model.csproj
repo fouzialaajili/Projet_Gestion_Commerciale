@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\Doclie.cs" />
     <Compile Include="Models\Doclieart.cs" />
     <Compile Include="Models\Impression.cs" />

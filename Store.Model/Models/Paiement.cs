@@ -12,11 +12,11 @@ namespace Store.Model
     public string  PaiementCode
         { get; set; }
         public string PaiementIntitule { get; set; }
-        public Enum PaiementType { get; set; }
+        public long  PaiementType { get; set; }
         public DateTime PaiementEcheance { get; set; }
-        public int PaiementSys_user { get; set; }
-        public DateTime PaiementSys_DateCreation { get; set; }
-        public DateTime PaiementSys_DateUpdate { get; set; }
+        public int PaiementSysuser { get; set; }
+        public DateTime PaiementSysDateCreation { get; set; }
+        public DateTime PaiementSysDateUpdate { get; set; }
         public int SocieteId { get; set; }
         public Societe Societe { get; set; }
     }

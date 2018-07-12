@@ -12,9 +12,9 @@ namespace Store.Model
         public string MarqueCode { get; set; }
         public string  MarqueLibelle { get; set; }
          public bool MarqueActif{ get; set; }
-        public int MarqueSys_user { get; set; }
-        public DateTime MarqueSys_DateCreation { get; set; }
-        public DateTime MarqueSys_DateUpdate { get; set; }
+        public int MarqueSysuser { get; set; }
+        public DateTime MarqueSysDateCreation { get; set; }
+        public DateTime MarqueSysDateUpdate { get; set; }
         public int SocieteId { get; set; }
         public Societe Societe { get; set; }
     }

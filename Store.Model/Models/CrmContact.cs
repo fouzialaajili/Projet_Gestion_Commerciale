@@ -9,7 +9,7 @@ namespace Store.Model
     public class CrmContact
     {
         public int  CrmContactId { get; set; }
-        public Enum CrmContactType { get; set; }
+        public long  CrmContactType { get; set; }
         public DateTime CrmContactDate { get; set; }
         public string  CrmContactBesoin { get; set; }
         public string CrmContactDescbesoin { get; set; }

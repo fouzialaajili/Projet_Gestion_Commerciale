@@ -10,7 +10,7 @@ namespace Store.Model
     {
         public int ToleranceId { get; set; }
         public int ToleranceEntier { get; set; }
-        public int ZenSocieteId { get; set; }
+        public int SocieteId { get; set; }
         public Societe Societe { get; set; }
     }
 }

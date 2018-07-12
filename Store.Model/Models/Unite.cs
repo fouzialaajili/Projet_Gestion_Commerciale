@@ -14,9 +14,9 @@ namespace Store.Model
         public string UniteLibelle
         { get; set; }
         public bool UniteActif { get; set; }
-        public int UniteSys_user { get; set; }
-        public DateTime UniteSys_DateCreation { get; set; }
-        public DateTime UniteSys_DateUpdate { get; set; }
+        public int UniteSysuser { get; set; }
+        public DateTime UniteSysDateCreation { get; set; }
+        public DateTime UniteSysDateUpdate { get; set; }
         public int SocieteId { get; set; }
         public Societe Societe { get; set; }
     }

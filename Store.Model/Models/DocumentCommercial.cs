@@ -26,9 +26,9 @@ namespace Store.Model
         public string DocumentCommercialCodeLiaison { get; set; }
         public string DocumentCommercialStatutDocument { get; set; }
         public string DocumentCommercialConditionGe { get; set; }
-        public int DocumentCommercialSys_user { get; set; }
-        public DateTime DocumentCommercialSys_DateCreation { get; set; }
-        public DateTime DocumentCommercialSys_DateUpdate { get; set; }
+        public int DocumentCommercialSysuser { get; set; }
+        public DateTime DocumentCommercialSysDateCreation { get; set; }
+        public DateTime DocumentCommercialSysDateUpdate { get; set; }
       public int SocieteId { get; set; }
         public Societe Societe { get; set; }
 

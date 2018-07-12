@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Store.Model.Models
+namespace Store.Model
 {
     public class Devises
     {

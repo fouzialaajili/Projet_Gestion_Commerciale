@@ -11,7 +11,7 @@ namespace Store.Model
         public int ArticlesId { get; set; }
 
 
-        public Enum ArticlesTypeArticle { get; set; }
+        public long ArticlesTypeArticle { get; set; }
         public string ArticlesCodeArticle
         { get; set; }
         public string ArticlesDescription { get; set; }
@@ -42,9 +42,9 @@ namespace Store.Model
         { get; set; }
 public string ArticlesImage
         { get; set; }
-        public int ArticlesSys_user { get; set; }
-        public DateTime ArticlesSys_DateCreation { get; set; }
-        public DateTime ArticlesSys_DateUpdate { get; set; }
+        public int ArticlesSysuser { get; set; }
+        public DateTime ArticlesSysDateCreation { get; set; }
+        public DateTime ArticlesSysDateUpdate { get; set; }
         public bool DepotActif { get; set; }
         public int SocieteId { get; set; }
         public Societe Societe { get; set; }

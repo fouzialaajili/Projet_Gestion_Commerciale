@@ -1,4 +1,4 @@
-﻿using Store.Model.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +14,9 @@ namespace Store.Model
    public string DocumentCommercialDetailSerieNumeroLot { get; set; }
         public bool DocumentCommercialDetailSerieGarantie { get; set; }
      public DateTime   DocumentCommercialDetailSerieDateFinMaintenance { get; set; }
-        public int DocumentCommercialDetailSerieSys_user { get; set; }
-        public DateTime DocumentCommercialDetailSerieSys_DateCreation { get; set; }
-        public DateTime DocumentCommercialDetailSerieSys_DateUpdate { get; set; }
+        public int DocumentCommercialDetailSerieSysuser { get; set; }
+        public DateTime DocumentCommercialDetailSerieSysDateCreation { get; set; }
+        public DateTime DocumentCommercialDetailSerieSysDateUpdate { get; set; }
     
         public int SocieteId { get; set; }
         public Societe Societe { get; set; }

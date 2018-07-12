@@ -14,9 +14,9 @@ namespace Store.Model
         public string TvaLibelle
         { get; set; }
         public bool TvaPercu { get; set; }
-    public int TvaSys_user { get; set; }
-        public DateTime TvaSys_DateCreation { get; set; }
-        public DateTime TvaSys_DateUpdate { get; set; }
+    public int TvaSysuser { get; set; }
+        public DateTime TvaSysDateCreation { get; set; }
+        public DateTime TvaSysDateUpdate { get; set; }
         public int  SocieteId { get; set; }
         public Societe Societe { get; set; }
     }

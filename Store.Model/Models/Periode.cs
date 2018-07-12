@@ -12,11 +12,11 @@ namespace Store.Model
     public string PeriodeIntitule { get; set; }
     public string  Periodecode{ get; set; }
 
-    public DateTime PeriodeDate_debut { get; set; }
-        public DateTime PeriodeDate_fin { get; set; }
-        public int PeriodeSys_user { get; set; }
-        public DateTime PeriodeSys_DateCreation { get; set; }
-        public DateTime PeriodeSys_DateUpdate { get; set; }
+    public DateTime PeriodeDatedebut { get; set; }
+        public DateTime PeriodeDatefin { get; set; }
+        public int PeriodeSysuser { get; set; }
+        public DateTime PeriodeSysDateCreation { get; set; }
+        public DateTime PeriodeSysDateUpdate { get; set; }
         public int SocieteId { get; set; }
         public Societe Societe { get; set; }
     }
