@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27705.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.web", "Store.web\Store.web.csproj", "{8BA53539-F679-4277-843F-DA32F6FB7F23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionCommerciale.web", "Store.web\GestionCommerciale.web.csproj", "{8BA53539-F679-4277-843F-DA32F6FB7F23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Model", "Store.Model\Store.Model.csproj", "{ED1007B2-1F19-4A8B-8B98-1E24B4B4CF2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionCommerciale.Model", "Store.Model\GestionCommerciale.Model.csproj", "{ED1007B2-1F19-4A8B-8B98-1E24B4B4CF2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Data", "Store.Data\Store.Data.csproj", "{EA59312B-B184-4ED6-A452-86B9F6B0F499}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionCommerciale.Data", "Store.Data\GestionCommerciale.Data.csproj", "{EA59312B-B184-4ED6-A452-86B9F6B0F499}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Service", "Store.Service\Store.Service.csproj", "{0D43E4C1-152D-422B-9177-4E7FD1040411}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionCommerciale.Service", "Store.Service\GestionCommerciale.Service.csproj", "{0D43E4C1-152D-422B-9177-4E7FD1040411}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

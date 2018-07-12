@@ -160,17 +160,17 @@
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Store.Data\Store.Data.csproj">
+    <ProjectReference Include="..\Store.Data\GestionCommerciale.Data.csproj">
       <Project>{ea59312b-b184-4ed6-a452-86b9f6b0f499}</Project>
-      <Name>Store.Data</Name>
+      <Name>GestionCommerciale.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Store.Model\Store.Model.csproj">
+    <ProjectReference Include="..\Store.Model\GestionCommerciale.Model.csproj">
       <Project>{ed1007b2-1f19-4a8b-8b98-1e24b4b4cf2b}</Project>
-      <Name>Store.Model</Name>
+      <Name>GestionCommerciale.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Store.Service\Store.Service.csproj">
+    <ProjectReference Include="..\Store.Service\GestionCommerciale.Service.csproj">
       <Project>{0d43e4c1-152d-422b-9177-4e7fd1040411}</Project>
-      <Name>Store.Service</Name>
+      <Name>GestionCommerciale.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -57,9 +57,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Store.Model\Store.Model.csproj">
+    <ProjectReference Include="..\Store.Model\GestionCommerciale.Model.csproj">
       <Project>{ed1007b2-1f19-4a8b-8b98-1e24b4b4cf2b}</Project>
-      <Name>Store.Model</Name>
+      <Name>GestionCommerciale.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

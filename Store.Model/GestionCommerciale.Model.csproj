@@ -41,10 +41,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Doclie.cs" />
+    <Compile Include="Models\Doclieart.cs" />
+    <Compile Include="Models\Impression.cs" />
+    <Compile Include="Models\Licence.cs" />
+    <Compile Include="Models\Marque.cs" />
+    <Compile Include="Models\Opportunite.cs" />
+    <Compile Include="Models\Paiement.cs" />
+    <Compile Include="Models\Periode.cs" />
+    <Compile Include="Models\FicheTiers.cs" />
+    <Compile Include="Models\Tolerance.cs" />
+    <Compile Include="Models\Tva.cs" />
+    <Compile Include="Models\Unite.cs" />
+    <Compile Include="Models\Affaire.cs" />
+    <Compile Include="Models\Articles.cs" />
+    <Compile Include="Models\ArticlesKits.cs" />
+    <Compile Include="Models\ArticlesPrix.cs" />
+    <Compile Include="Models\Categorie.cs" />
+    <Compile Include="Models\CrmContact.cs" />
+    <Compile Include="Models\Depot.cs" />
+    <Compile Include="Models\DepotContact.cs" />
+    <Compile Include="Models\Devises.cs" />
+    <Compile Include="Models\DocumentCommercial.cs" />
+    <Compile Include="Models\DocumentCommercialDetail.cs" />
+    <Compile Include="Models\DocumentCommercialDetailSerie.cs" />
+    <Compile Include="Models\Famille.cs" />
+    <Compile Include="Models\Societe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
