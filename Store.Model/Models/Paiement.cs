@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Store.Model.Models
+namespace Store.Model
 {
-    class Paiement
+    public class Paiement
     {
         public int PaiementId { get; set; }
     }

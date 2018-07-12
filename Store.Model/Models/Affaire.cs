@@ -12,6 +12,7 @@ namespace Store.Model
          public string AffaireCode { get; set; }
       public string AffaireLibelle
         { get; set; }
+
    
         public int AffaireSysuser { get; set; }
         public DateTime AffaireSysDateCreation { get; set; }

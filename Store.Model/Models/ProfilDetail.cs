@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    class ProfilDetail
+    public class ProfilDetail
     {
         public int ProfilDetailId { get; set; }
         public int ProfilId { get; set; }

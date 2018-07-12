@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    class FournisseurArticle
+    public class FournisseurArticle
     {
         public int FournisseurArticleId { get; set; }
         public int ArticleId { get; set; }
@@ -29,7 +29,7 @@ namespace Store.Model
         }
 
         public Fichetiers Fichetiers { get; set; }
-        public Article Article { get; set; }
+        public Articles Articles { get; set; }
 
 
 

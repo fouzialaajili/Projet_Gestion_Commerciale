@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Affaire.cs" />
     <Compile Include="Models\Articles.cs" />
@@ -64,6 +63,9 @@
     <Compile Include="Models\Ged.cs" />
     <Compile Include="Models\GEN_Items.cs" />
     <Compile Include="Models\GEN_Model.cs" />
+    <Compile Include="Models\Impression.cs" />
+    <Compile Include="Models\Licence.cs" />
+    <Compile Include="Models\Marque.cs" />
     <Compile Include="Models\Motif.cs" />
     <Compile Include="Models\MotifTicket.cs" />
     <Compile Include="Models\MouvementStock.cs" />
@@ -83,6 +85,9 @@
     <Compile Include="Models\Societe.cs" />
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\TicketDetail.cs" />
+    <Compile Include="Models\Tolerance.cs" />
+    <Compile Include="Models\Tva.cs" />
+    <Compile Include="Models\Unite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

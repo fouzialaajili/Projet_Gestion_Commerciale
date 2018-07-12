@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    class Fichetiers
+    public class Fichetiers
     {
         public int FichetiersId { get; set; }
         public string FichetiersNatureTiers { get; set; }
@@ -43,7 +43,7 @@ namespace Store.Model
         }
 
         public int SocieteId { get; set; }
-        public Representant Representant { get; set; }
+        public FichetiersRepresentants FichetiersRepresentants { get; set; }
 
         public Societe Societe { get; set; }
         public Paiement Paiement { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    class Representant
+    public class Representant
     {
         public int RepresentantId { get; set; }
         public string RepresentantCode { get; set; }

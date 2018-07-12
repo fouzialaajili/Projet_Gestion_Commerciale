@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    class Periode
+    public class Periode
     {
         public int PeriodeId { get; set; }
         public DateTime? PeriodeAnnee { get; set; }

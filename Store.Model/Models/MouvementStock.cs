@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    class MouvementStock
+    public class MouvementStock
     {
         public int MouvementStockId { get; set; }
         public string MouvementStockCode { get; set; }

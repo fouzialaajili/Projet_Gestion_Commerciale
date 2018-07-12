@@ -11,7 +11,7 @@ namespace Store.Model
         public int DocumentCommercialId { get; set; }
         public String DocumentCommercialNumeroPiece { get; set; }
         public int DocumentCommercialEtatPiece { get; set; }
-        public Enum DocumentCommercialTypePiece { get; set; }
+        public long DocumentCommercialTypePiece { get; set; }
        public DateTime DocumentCommercialDateDocument { get; set; }
        public int  DocumentCommercialReference { get; set; }
        public Double DocumentCommercialTotalHTTC { get; set; }

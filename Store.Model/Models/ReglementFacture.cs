@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    class ReglementFacture
+    public class ReglementFacture
     {
        public int ReglementFactureId { get; set; }
         public int ReglementId { set; get; }

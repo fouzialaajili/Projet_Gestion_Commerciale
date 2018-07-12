@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    class Ged
+    public class Ged
     {
         public int GedId { get; set; }
         public long? GedTypeFichier { get; set; }

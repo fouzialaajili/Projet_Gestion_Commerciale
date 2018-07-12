@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    class Nomenclature
+    public class Nomenclature
     {
         public int NomenclatureId { get; set; }
         public int ArticlenomencId { get; set; }

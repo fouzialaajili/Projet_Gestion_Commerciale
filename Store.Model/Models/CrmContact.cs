@@ -24,7 +24,7 @@ namespace Store.Model
         public int OpportuniteId { get; set; }
         public Opportunite Opportunite { get; set; }
 
-        public int FicheTiersId { get; set; }
-        public FicheTiers FicheTiers { get; set; }
+        public int FichetiersId { get; set; }
+        public Fichetiers Fichetiers { get; set; }
     }
 }

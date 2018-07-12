@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    class Numerotation
+    public class Numerotation
     {
         public int NumerotationId { get; set; }
         public long? NumerotationType { get; set; }
