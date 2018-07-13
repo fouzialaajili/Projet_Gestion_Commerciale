@@ -17,17 +17,14 @@ namespace Store.Model
   public int TvaSys_user { get; set; }
        public DateTime TvaSys_DateCreation { get; set; }
        public DateTime TvaSys_DateUpdate { get; set; }
-<<<<<<< HEAD
-       public int SocieteId { get; set; }
-       public Societe Societe { get; set; }
-
-
+       
+        public long TvaSocieteId { get; set; }
+        public virtual Societe TvaSociete { get; set; }
         public virtual ICollection<Fichetiers> TvaFichetiers { get; set; }
-        public virtual ICollection<Societe> TvaSociete { get; set; }
+        public virtual ICollection<Societe> TvaSocietes { get; set; }
     }
-=======
-       public long  SocieteId { get; set; }
-       public virtual Societe Societe { get; set; }
+
+     
    }
->>>>>>> 2267e92627d70391d6d45f5590325e078926f7fb
-}
+
+

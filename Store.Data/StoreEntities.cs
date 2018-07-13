@@ -97,6 +97,7 @@ namespace Store.Data
             modelBuilder.Configurations.Add(new DocumentCommercialDetailSerieConfiguration());
             modelBuilder.Configurations.Add(new FamilleConfiguration());
 
+
         
     }
     }
