@@ -8,13 +8,13 @@ namespace Store.Model
 {
     public class Famille
     {
-        public int FamilleId { get; set; }
+        public long FamilleId { get; set; }
         public int FamilleCode { get; set; }
         public int FamilleLibelle { get; set; }
 public int FamilleSyuser { get; set; }
         public DateTime FamilleSysDateCreation { get; set; }
         public DateTime FamilleSysDateUpdate { get; set; }
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
+        public long  FamilleSocieteId { get; set; }
+        public virtual Societe FamilleSociete { get; set; }
     }
 }

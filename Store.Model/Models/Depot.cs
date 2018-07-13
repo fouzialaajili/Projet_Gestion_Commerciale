@@ -21,8 +21,13 @@ namespace Store.Model
         public DateTime DepotSysDateCreation { get; set; }
         public DateTime DepotSysDateUpdate { get; set; }
         public bool DepotActif { get; set; }
+<<<<<<< HEAD
         public int SocieteId { get; set; }
         public Societe Societe { get; set; }
         public virtual ICollection<MouvementStock> DepotMouvementStock { get; set; }
+=======
+        public long DepotSocieteId { get; set; }
+        public virtual Societe DepotSociete { get; set; }
+>>>>>>> 2267e92627d70391d6d45f5590325e078926f7fb
     }
 }

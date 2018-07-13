@@ -8,7 +8,7 @@ namespace Store.Model
 {
    public  class Categorie
     {
-        public int CategorieId { get; set; }
+        public long  CategorieId { get; set; }
         public string CategorieLibelle { get; set; }
     public string CategorieDescription
     { get; set; }
@@ -16,7 +16,7 @@ namespace Store.Model
         public DateTime CategorieSysDateCreation { get; set; }
         public DateTime CategorieSysDateUpdate { get; set; }
         public bool CategorieActif{ get; set; }
-    public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
+    public long  CategorieSocieteId { get; set; }
+        public virtual Societe CategorieSociete { get; set; }
     }
 }

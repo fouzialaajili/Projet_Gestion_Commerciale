@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class Unite
     {
-        public int UniteId { get; set; }
+        public long UniteId { get; set; }
        public string UniteCode { get; set; }
 
        public string UniteLibelle
@@ -17,7 +17,7 @@ namespace Store.Model
        public int UniteSys_user { get; set; }
         public DateTime UniteSys_DateCreation { get; set; }
        public DateTime UniteSys_DateUpdate { get; set; }
-        public int SocieteId { get; set; }
-       public Societe Societe { get; set; }
+        public long UniteSocieteId { get; set; }
+       public virtual  Societe UniteSociete { get; set; }
 }
 }

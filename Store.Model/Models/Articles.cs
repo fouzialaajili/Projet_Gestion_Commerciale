@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class Articles
     {
-        public int ArticlesId { get; set; }
+        public long ArticlesId { get; set; }
 
 
         public long ArticlesTypeArticle { get; set; }
@@ -45,17 +45,17 @@ public string ArticlesImage
         public int ArticlesSysuser { get; set; }
         public DateTime ArticlesSysDateCreation { get; set; }
         public DateTime ArticlesSysDateUpdate { get; set; }
-        public bool DepotActif { get; set; }
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
-        public int   DepotId { get; set; }
-        public  Depot Depot  { get; set; }
-        public int CategorieId { get; set; }
-        public Categorie Categorie{ get; set; }
-        public int UniteId { get; set; }
-        public Unite Unite { get; set; }
-        public int MarqueId { get; set; }
-        public  Marque  Marque{ get; set; }
+      
+        public long ArticlesSocieteId { get; set; }
+        public virtual Societe ArticlesSociete { get; set; }
+        public long ArticlesDepotId { get; set; }
+        public  virtual Depot ArticlesDepot { get; set; }
+        public long ArticlesCategorieId { get; set; }
+        public virtual Categorie ArticlesCategorie { get; set; }
+        public long  ArticlesUniteId { get; set; }
+        public virtual Unite ArticlesUnite { get; set; }
+        public long ArticlesMarqueId { get; set; }
+        public  virtual Marque ArticlesMarque { get; set; }
 
         public virtual ICollection<FournisseurArticle> ArticlesFournisseurArticle { get; set; }
         public virtual ICollection<MouvementStock> ArticlesMouvementStock { get; set; }
