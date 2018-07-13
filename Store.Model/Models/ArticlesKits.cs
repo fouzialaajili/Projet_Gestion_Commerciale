@@ -8,17 +8,17 @@ namespace Store.Model
 {
     public class ArticlesKits
     {
-        public int ArticlesKitsId { get; set;
+        public long  ArticlesKitsId { get; set;
         }
         public int ArticlesKitsQantite { get; set; }
         public string ArticlesKitsDescription { get; set; }
         public int ArticlesKitsSysuser { get; set; }
         public DateTime ArticleeKitsSysDateCreation { get; set; }
         public DateTime ArticlesKitsSysDateUpdate { get; set; }
-        public int ArticlesId { get; set; }
-        public Articles Articles { get; set; }
-        public int ArticlesId1 { get; set; }
-        public Articles Articles1 { get; set; }
+        public long ArticlesKitsArticlesId { get; set; }
+        public virtual Articles ArticlesKitsArticles { get; set; }
+        public long ArticlesKitsArticlesId1 { get; set; }
+        public virtual Articles ArticlesKitsArticles1 { get; set; }
 
     }
 }

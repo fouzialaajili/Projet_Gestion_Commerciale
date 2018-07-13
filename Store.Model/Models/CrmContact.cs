@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class CrmContact
     {
-        public int  CrmContactId { get; set; }
+        public long  CrmContactId { get; set; }
         public long  CrmContactType { get; set; }
         public DateTime CrmContactDate { get; set; }
         public string  CrmContactBesoin { get; set; }
@@ -18,13 +18,13 @@ namespace Store.Model
         public DateTime CrmContactSysDateCreation { get; set; }
         public DateTime CrmContactSysDateUpdate { get; set; }
 
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
+        public long  CrmContactSocieteId { get; set; }
+        public virtual Societe CrmContactSociete { get; set; }
 
-        public int OpportuniteId { get; set; }
-        public Opportunite Opportunite { get; set; }
+        public long  CrmContactOpportuniteId { get; set; }
+        public virtual Opportunite CrmContactOpportunite { get; set; }
 
-        public int FichetiersId { get; set; }
-        public Fichetiers Fichetiers { get; set; }
+        public long  CrmContactFichetiersId { get; set; }
+        public virtual Fichetiers CrmContactFichetiers { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class DocumentCommercial
     {
-        public int DocumentCommercialId { get; set; }
+        public long  DocumentCommercialId { get; set; }
         public String DocumentCommercialNumeroPiece { get; set; }
         public int DocumentCommercialEtatPiece { get; set; }
         public long DocumentCommercialTypePiece { get; set; }
@@ -29,8 +29,8 @@ namespace Store.Model
         public int DocumentCommercialSysuser { get; set; }
         public DateTime DocumentCommercialSysDateCreation { get; set; }
         public DateTime DocumentCommercialSysDateUpdate { get; set; }
-      public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
+      public long  DocumentCommercialSocieteId { get; set; }
+        public virtual Societe DocumentCommercialSociete { get; set; }
 
 
 

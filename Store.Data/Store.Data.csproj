@@ -48,6 +48,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Configuration\AdminConfiguration.cs" />
+    <Compile Include="Configuration\AffaireConfiguration.cs" />
+    <Compile Include="Configuration\ArticlesConfiguration.cs" />
+    <Compile Include="Configuration\ArticlesKitsConfiguration.cs" />
+    <Compile Include="Configuration\ArticlesPrixConfiguration.cs" />
+    <Compile Include="Configuration\CategorieConfiguration.cs" />
+    <Compile Include="Configuration\CrmContactConfiguration.cs" />
+    <Compile Include="Configuration\DepotConfiguration.cs" />
+    <Compile Include="Configuration\DepotContactConfiguration.cs" />
+    <Compile Include="Configuration\DevisesConfiguration.cs" />
+    <Compile Include="Configuration\DoclieartConfiguration.cs" />
+    <Compile Include="Configuration\DoclieConfiguration.cs" />
+    <Compile Include="Configuration\DocumentCommercialConfiguration.cs" />
+    <Compile Include="Configuration\DocumentCommercialDetailConfiguration.cs" />
+    <Compile Include="Configuration\DocumentCommercialDetailSerieConfiguration.cs" />
+    <Compile Include="Configuration\FamilleConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoreEntities.cs" />
     <Compile Include="StoreSeedData.cs" />
@@ -57,14 +73,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Store.Model\Store.Model.csproj">
       <Project>{ed1007b2-1f19-4a8b-8b98-1e24b4b4cf2b}</Project>
       <Name>Store.Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configuration\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

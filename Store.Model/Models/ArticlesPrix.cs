@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class ArticlesPrix
     {
-       public int  ArticlesPrixId  { get; set; }
+       public long  ArticlesPrixId  { get; set; }
         public double ArticlesPrixprixAchatTC { get; set; }
         public double ArticlesPrixprixVenteTC
         { get; set; }
@@ -20,8 +20,8 @@ namespace Store.Model
         public int ArticlesPrixSysuser { get; set; }
         public DateTime ArticlesPrixSysDateCreation { get; set; }
         public DateTime ArticlesPrixSysDateUpdate { get; set; }
-        public int ArticlesId { get; set; }
-        public Articles Articles { get; set; }
+        public long ArticlesPrixArticlesId { get; set; }
+        public virtual Articles ArticlesPrixArticles { get; set; }
 
     }
 }

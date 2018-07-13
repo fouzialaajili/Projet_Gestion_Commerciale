@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Store.Model.Models
+namespace Store.Model
 {
     public class Licence
  {
-     public int LicenceId { get; set; }
+     public long  LicenceId { get; set; }
       public int LicenceNumeroSerieid
       { get; set; }
      public string LicenceRaisonSociale
@@ -19,8 +19,8 @@ namespace Store.Model.Models
         public string LicenceCHash { get; set; }
        public DateTime LicenceDateFinContrat { get; set; }
        public string LicenceRenouvellable { get; set; }
-       public DateTime LicenceSys_DateCreation { get; set; }
-      public DateTime LicenceSys_DateUpdate { get; set; }
+       public DateTime LicenceSysDateCreation { get; set; }
+      public DateTime LicenceSysDateUpdate { get; set; }
 
 }
 }

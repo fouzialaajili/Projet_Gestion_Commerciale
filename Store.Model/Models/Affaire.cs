@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class Affaire
     {
-         int AffaireId { get; set; }
+         public long AffaireId { get; set; }
          public string AffaireCode { get; set; }
       public string AffaireLibelle
         { get; set; }
@@ -17,7 +17,7 @@ namespace Store.Model
         public int AffaireSysuser { get; set; }
         public DateTime AffaireSysDateCreation { get; set; }
         public DateTime AffaireSysDateUpdate { get; set; }
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
+        public long AffaireSocieteId { get; set; }
+        public virtual  Societe AffaireSociete { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace Store.Model
 {
    public  class DocumentCommercialDetailSerie
     {
-       public int DocumentCommercialDetailSerieId { get; set; }
+       public long  DocumentCommercialDetailSerieId { get; set; }
         public double DocumentCommercialDetailSerieNumeroSerie { get; set; }
    public string DocumentCommercialDetailSerieNumeroLot { get; set; }
         public bool DocumentCommercialDetailSerieGarantie { get; set; }
@@ -18,10 +18,10 @@ namespace Store.Model
         public DateTime DocumentCommercialDetailSerieSysDateCreation { get; set; }
         public DateTime DocumentCommercialDetailSerieSysDateUpdate { get; set; }
     
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
-        public int DocumentCommercialDetailIdDocumentDetail { get; set; }
-        public DocumentCommercialDetail DocumentCommercialDetail { get; set; }
+        public long  DocumentCommercialDetailSerieSocieteId { get; set; }
+        public Societe DocumentCommercialDetailSerieSociete { get; set; }
+        public long  DocumentCommercialDetailSerieDocumentCommercialDetailIdDocumentDetail { get; set; }
+        public virtual DocumentCommercialDetail DocumentCommercialDetailSerieDocumentCommercialDetail { get; set; }
 
     }
 }

@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class Tva
     {
-      public int TvaId { get; set; }
+      public long  TvaId { get; set; }
      public string TvaCode { get; set; }
   public int TvaTaux { get; set; }
      public string TvaLibelle
@@ -17,7 +17,7 @@ namespace Store.Model
   public int TvaSys_user { get; set; }
        public DateTime TvaSys_DateCreation { get; set; }
        public DateTime TvaSys_DateUpdate { get; set; }
-       public int SocieteId { get; set; }
-       public Societe Societe { get; set; }
+       public long  SocieteId { get; set; }
+       public virtual Societe Societe { get; set; }
    }
 }

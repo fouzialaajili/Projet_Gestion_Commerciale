@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class Devises
     {
-        public int DevisesId { get; set; }
+        public long  DevisesId { get; set; }
         public string DevisesCode { get; set; }
         public string DevisesCodeIso { get; set; }
         public string  DevisesDescription { get; set; }
@@ -18,7 +18,7 @@ namespace Store.Model
         public int DevisesSysuser { get; set; }
         public DateTime DevisesSysDateCreation { get; set; }
         public DateTime DevisesSysDateUpdate { get; set; }
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
+        public long  DevisesSocieteId { get; set; }
+        public Societe DevisesSociete { get; set; }
     }
 }
