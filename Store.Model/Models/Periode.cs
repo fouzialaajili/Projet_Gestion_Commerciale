@@ -6,17 +6,26 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    public class Periode
+    class Periode
     {
         public int PeriodeId { get; set; }
-    public string PeriodeIntitule { get; set; }
-    public string  Periodecode{ get; set; }
-
-    public DateTime PeriodeDatedebut { get; set; }
-        public DateTime PeriodeDatefin { get; set; }
+        public DateTime? PeriodeAnnee { get; set; }
+        public long? PeriodeTypePeriode { get; set; }
+        public string PeriodeLibelle { get; set; }
+        public DateTime? PeriodeDateDebut { get; set; }
+        public DateTime? PeriodeDateFin { get; set; }
+        public string PeriodeEtatPeriode { get; set; }
         public int PeriodeSysuser { get; set; }
-        public DateTime PeriodeSysDateCreation { get; set; }
-        public DateTime PeriodeSysDateUpdate { get; set; }
+        public DateTime? PeriodeSysDateCreation { get; set; }
+        public DateTime? PeriodeSysDateUpdate { get; set; }
+
+        public Periode()
+        {
+            PeriodeSysDateCreation = DateTime.Now;
+        }
+        public bool PeriodeAutoriserVente { get; set; }
+        public bool PeriodeAutoriserAchat{ get; set; }
+        public bool PeriodeAutoriserMvtStock { get; set; }
         public int SocieteId { get; set; }
         public Societe Societe { get; set; }
     }
