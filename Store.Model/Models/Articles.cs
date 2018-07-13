@@ -60,5 +60,9 @@ public string ArticlesImage
         public virtual ICollection<FournisseurArticle> ArticlesFournisseurArticle { get; set; }
         public virtual ICollection<MouvementStock> ArticlesMouvementStock { get; set; }
         public virtual ICollection<Nomenclature> ArticlesNomenclature { get; set; }
+        public virtual ICollection<ArticlesPrix> ArticlesArticlesPrix { get; set; }
+        public virtual ICollection<DocumentCommercialDetail> ArticlesDocumentCommercialDetail { get; set; }
+
+
     }
 }

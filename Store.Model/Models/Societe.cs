@@ -45,5 +45,39 @@ namespace Store.Model
         public virtual ICollection<Numerotation> SocieteNumerotation { get; set; }
         public virtual ICollection<Object> SocieteObject { get; set; }
         public virtual ICollection<Ticket> SocieteTicket { get; set; }
+        public virtual ICollection<Articles> SocieteArticles { get; set; }
+       
+        public virtual ICollection<Affaire> SocieteAffaire{ get; set; }
+        public virtual ICollection<Categorie> SocieteCategorie { get; set; }
+        public virtual ICollection<CrmContact> SocieteCrmContact { get; set; }
+        public virtual ICollection<Depot> SocieteDepot { get; set; }
+        public virtual ICollection<Devises> SocieteDevises { get; set; }
+        public virtual ICollection<Doclie> SocieteDoclie { get; set; }
+        public virtual ICollection<Doclie> SocieteDoclieart { get; set; }
+        public virtual ICollection<DocumentCommercial> SocieteDocumentCommercial { get; set; }
+        public virtual ICollection<DocumentCommercialDetailSerie> SocieteDocumentCommercialDetailSerie { get; set; }
+        public virtual ICollection<Famille> SocieteFamille { get; set; }
+        public virtual ICollection<Impression> SocieteImpression { get; set; }
+        public virtual ICollection<Marque> SocieteMarque { get; set; }
+        public virtual ICollection<Tolerance> SocieteTolerance { get; set; }
+        public virtual ICollection<Tva> SocieteTva{ get; set; }
+        public virtual ICollection<Unite> SocieteUnite { get; set; }
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

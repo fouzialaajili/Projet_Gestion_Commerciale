@@ -19,6 +19,6 @@ namespace Store.Model
         public DateTime DevisesSysDateCreation { get; set; }
         public DateTime DevisesSysDateUpdate { get; set; }
         public long  DevisesSocieteId { get; set; }
-        public Societe DevisesSociete { get; set; }
+        public virtual Societe DevisesSociete { get; set; }
     }
 }

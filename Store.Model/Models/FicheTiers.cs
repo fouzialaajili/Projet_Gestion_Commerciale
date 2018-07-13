@@ -54,6 +54,8 @@ namespace Store.Model
         public virtual ICollection<FournisseurArticle> FichetiersFournisseurArticle { get; set; }
         public virtual ICollection<Ticket> FichetiersTicket { get; set; }
         public virtual ICollection<TicketDetail> FichetiersTicketDetail { get; set; }
+        public virtual ICollection<CrmContact> FichetiersCrmContact { get; set; }
+       
 
     }
 }

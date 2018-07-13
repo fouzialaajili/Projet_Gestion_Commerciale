@@ -14,7 +14,7 @@ namespace Store.Model
       public string ImpressionChemin { get; set; }
       public string ImpressionLogo { get; set; }
      /***/ public long ImpressionSocieteId { get; set; }
-        virtual public Societe Societe { get; set; }
+        public  virtual Societe Societe { get; set; }
 
 
     }
