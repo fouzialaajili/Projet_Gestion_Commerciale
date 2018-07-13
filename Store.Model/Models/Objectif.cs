@@ -8,15 +8,15 @@ namespace Store.Model
 {
     public class Objectif
     {
-        public int ObjectifId { get; set; }
-        public int RepresentantId { get; set; }
+        public long ObjectifId { get; set; }
+     /***/   public long ObjectifRepresentantId { get; set; }
         public DateTime? ObjectifAnnee { get; set;}
         public int ObjectifPeriode { get; set; }
         public DateTime? ObjectifDatedebut { get; set; }
         public DateTime? ObjectifDatefin { get; set; }
         public int ObjectifObjectif { get; set; }
         public decimal ObjectifCommission { get; set; }
-        public int ObjectifSysuser { get; set; }
+        public long ObjectifSysuser { get; set; }
         public DateTime? ObjectifSysDateCreation { get; set; }
         public DateTime? ObjectifSysDateUpdate { get; set; }
 
@@ -24,9 +24,9 @@ namespace Store.Model
         {
             ObjectifSysDateCreation = DateTime.Now;
         }
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
-        public Representant Representant { get; set; }
+     /***/   public long ObjectifSocieteId { get; set; }
+        virtual public Societe Societe { get; set; }
+        virtual public Representant Representant { get; set; }
 
     }
 }

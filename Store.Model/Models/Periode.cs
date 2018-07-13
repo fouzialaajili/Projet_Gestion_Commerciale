@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class Periode
     {
-        public int PeriodeId { get; set; }
+        public long PeriodeId { get; set; }
         public DateTime? PeriodeAnnee { get; set; }
         public long? PeriodeTypePeriode { get; set; }
         public string PeriodeLibelle { get; set; }
@@ -26,7 +26,7 @@ namespace Store.Model
         public bool PeriodeAutoriserVente { get; set; }
         public bool PeriodeAutoriserAchat{ get; set; }
         public bool PeriodeAutoriserMvtStock { get; set; }
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
+        public long SocieteId { get; set; }
+        virtual public Societe Societe { get; set; }
     }
 }

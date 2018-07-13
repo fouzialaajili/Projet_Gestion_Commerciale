@@ -57,5 +57,8 @@ public string ArticlesImage
         public int MarqueId { get; set; }
         public  Marque  Marque{ get; set; }
 
+        public virtual ICollection<FournisseurArticle> ArticlesFournisseurArticle { get; set; }
+        public virtual ICollection<MouvementStock> ArticlesMouvementStock { get; set; }
+        public virtual ICollection<Nomenclature> ArticlesNomenclature { get; set; }
     }
 }

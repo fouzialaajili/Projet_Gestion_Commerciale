@@ -8,9 +8,9 @@ namespace Store.Model
 {
     public class FournisseurArticle
     {
-        public int FournisseurArticleId { get; set; }
-        public int ArticleId { get; set; }
-        public int FichetiersIdfournisseur { get; set; }
+        public long FournisseurArticleId { get; set; }
+     /**/   public long FournisseurArticleIdArticle { get; set; }
+    /**/    public long FournisseurArticleIdfournisseur { get; set; }
         public string FournisseurArticleReference { get; set; }
         public decimal FournisseurArticlePrixAchatTC { get; set; }
         public string FournisseurArticleDeviseAchat { get; set; }
@@ -19,17 +19,17 @@ namespace Store.Model
         public string FournisseurArticleDeviseVente { get; set; }
         public string FournisseurArticlePrixVenteDevise { get; set; }
 
-        public int FournisseurArticleSys_user { get; set; }
-        public DateTime? FournisseurArticleSys_DateCreation { get; set; }
-        public DateTime? FournisseurArticleSys_DateUpdate { get; set; }
+        public long FournisseurArticleSysuser { get; set; }
+        public DateTime? FournisseurArticleSysDateCreation { get; set; }
+        public DateTime? FournisseurArticleSysDateUpdate { get; set; }
 
         public FournisseurArticle()
         {
-            FournisseurArticleSys_DateCreation = DateTime.Now;
+            FournisseurArticleSysDateCreation = DateTime.Now;
         }
 
-        public Fichetiers Fichetiers { get; set; }
-        public Articles Articles { get; set; }
+        virtual public Fichetiers Fichetiers { get; set; }
+        virtual public Articles Articles { get; set; }
 
 
 

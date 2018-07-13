@@ -8,14 +8,14 @@ namespace Store.Model
 {
     public class ProfilDetail
     {
-        public int ProfilDetailId { get; set; }
-        public int ProfilId { get; set; }
+        public long ProfilDetailId { get; set; }
+        public long ProfilId { get; set; }
         public bool ProfilDetailToadd { get; set; }
         public bool ProfilDetailTodelete{ get; set; }
         public bool ProfilDetailToupdate { get; set; }
         public bool ProfilDetailToconsult{ get; set; }
         public string ProfilDetailNomentite { get; set; }
-        public int ProfilDetailSysuser { get; set; }
+        public long ProfilDetailSysuser { get; set; }
         public DateTime? ProfilDetailSysDateCreation { get; set; }
         public DateTime? ProfilDetailSysDateUpdate { get; set; }
 
@@ -23,9 +23,9 @@ namespace Store.Model
         {
             ProfilDetailSysDateCreation = DateTime.Now;
         }
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
-        public Profil Profil { get; set; }
+     /****/   public long SocieteId { get; set; }
+        virtual public Societe Societe { get; set; }
+        virtual public Profil Profil { get; set; }
 
 
     }

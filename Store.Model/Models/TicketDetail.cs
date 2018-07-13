@@ -8,15 +8,15 @@ namespace Store.Model
 {
     public class TicketDetail
     {
-        public int TicketDetailId { get; set; }
-        public int TicketId { get; set; }
+        public long TicketDetailId { get; set; }
+    /***/    public long TicketDetailIdTicket { get; set; }
         public long? TicketDetailTypeaction { get; set; }
-        public int FichetiersIdcommercial { get; set; }
+    /***/    public long TicketDetailIdcommercial { get; set; }
 
         public DateTime? TicketDetailDateaction { get; set; }
         public DateTime? TicketDetailheureaction { get; set; }
         public string TicketDetailDescription { get; set; }
-        public int TicketDetailSysuser { get; set; }
+        public long TicketDetailSysuser { get; set; }
         public DateTime? TicketDetailSysDateCreation { get; set; }
         public DateTime? TicketDetailSysDateUpdate { get; set; }
 
@@ -25,7 +25,9 @@ namespace Store.Model
             TicketDetailSysDateCreation = DateTime.Now;
         }
 
-        public Fichetiers Fichetiers { get; set; }
-        public Ticket Ticket { get; set; }
+        virtual public Fichetiers Fichetiers { get; set; }
+        virtual public Ticket Ticket { get; set; }
+       
+
     }
 }

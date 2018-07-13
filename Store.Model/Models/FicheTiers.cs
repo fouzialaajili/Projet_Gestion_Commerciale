@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class Fichetiers
     {
-        public int FichetiersId { get; set; }
+        public long FichetiersId { get; set; }
         public string FichetiersNatureTiers { get; set; }
         public string FichetiersCode { get; set; }
         public string FichetiersRaisonSociale { get; set; }
@@ -24,16 +24,16 @@ namespace Store.Model
         public string FichetiersPays { get; set; }
 
         public int FichetiersIdentifiantFiscale { get; set; }
-        public int TvaId { get; set; }
+     /***/   public long FichetiersIdentifiantTVA { get; set; }
         public int FichetiersIce { get; set; }
         public int FichetiersPatente { get; set; }
-        public int RepresentantId { get; set; }
+    /***/    public long FichetiersIdrepresentant { get; set; }
         public int FichetiersDeviseFacturation { get; set; }
         public int FichetiersEncours { get; set; }
-        public int PaiementId { get; set; }
+  /****/      public long FichetiersIdmodepaie { get; set; }
         public string FichetiersRisque { get; set; }
         public bool FichetiersActif { get; set; }
-        public int FichetiersSys_user { get; set; }
+        public long FichetiersSys_user { get; set; }
         public DateTime? FichetiersSysDateCreation { get; set; }
         public DateTime? FichetiersSysDateUpdate { get; set; }
 
@@ -42,15 +42,18 @@ namespace Store.Model
             FichetiersSysDateCreation = DateTime.Now;
         }
 
-        public int SocieteId { get; set; }
-        public FichetiersRepresentants FichetiersRepresentants { get; set; }
+     /**/   public int FichetiersSocieteId { get; set; }
+        virtual public FichetiersRepresentants FichetiersRepresentants { get; set; }
 
-        public Societe Societe { get; set; }
-        public Paiement Paiement { get; set; }
-        public Tva Tva { get; set; }
+        virtual  public Societe Societe { get; set; }
+        virtual public Paiement Paiement { get; set; }
+        virtual public Tva Tva { get; set; }
 
 
+        public virtual ICollection<FichetiersContact> FichetiersFichetiersContact { get; set; }
+        public virtual ICollection<FournisseurArticle> FichetiersFournisseurArticle { get; set; }
+        public virtual ICollection<Ticket> FichetiersTicket { get; set; }
+        public virtual ICollection<TicketDetail> FichetiersTicketDetail { get; set; }
 
-    
-}
+    }
 }

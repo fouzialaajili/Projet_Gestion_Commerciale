@@ -9,5 +9,11 @@ namespace Store.Model
     public class Paiement
     {
         public int PaiementId { get; set; }
+
+
+
+
+
+        public virtual ICollection<Fichetiers> FichetiersPaiement { get; set; }
     }
 }

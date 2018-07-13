@@ -10,8 +10,8 @@ namespace Store.Model
     {
         public int ToleranceId { get; set; }
        public int ToleranceEntier { get; set; }
-      public int ZenSocieteId { get; set; }
-        public Societe Societe { get; set; }
+       public int ZenSocieteId { get; set; }
+        virtual public Societe Societe { get; set; }
   }
 }
 

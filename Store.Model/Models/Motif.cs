@@ -8,8 +8,8 @@ namespace Store.Model
 {
     public  class Motif
     {
-        public int MotifId { get; set; }
-        public int OpportuniteId { get; set; }
+        public long MotifId { get; set; }
+   /****/     public long OpportuniteId { get; set; }
         public string MotifEtat { get; set; }
         public string MotifMotif { get; set; }
         public string MotifDescription { get; set; }
@@ -20,8 +20,8 @@ namespace Store.Model
         {
             MotifSysDateCreation = DateTime.Now;
         }
-        public Opportunite Opportunite { get; set; }
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
+        virtual public Opportunite Opportunite { get; set; }
+   /***/     public long MotifSocieteId { get; set; }
+        virtual public Societe Societe { get; set; }
     }
 }

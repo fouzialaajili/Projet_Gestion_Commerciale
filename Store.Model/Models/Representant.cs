@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class Representant
     {
-        public int RepresentantId { get; set; }
+        public long RepresentantId { get; set; }
         public string RepresentantCode { get; set; }
         public string RepresentantCivilite { get; set; }
         public string RepresentantNom { get; set; }
@@ -25,11 +25,11 @@ namespace Store.Model
         public string RepresentantLogin { get; set; }
         public string RepresentantPasswoord{ get; set; }
 
-        public int RepresentantProfil { get; set; }
+        public long RepresentantProfil { get; set; }
 
         public bool RepresentantBc { get; set; }
 
-        public int RepresentantSysuser { get; set; }
+        public long RepresentantSysuser { get; set; }
         public DateTime? RepresentantSysDateCreation { get; set; }
         public DateTime? ZenRepresentantSysDateUpdate { get; set; }
 
@@ -37,8 +37,10 @@ namespace Store.Model
         {
             RepresentantSysDateCreation = DateTime.Now;
         }
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
+       /***/ public long RepresentantSocieteId { get; set; }
+        virtual public Societe Societe { get; set; }
+        public virtual ICollection<Object> RepresentantObject { get; set; }
+        public virtual ICollection<Ticket> RepresentantTicket { get; set; }
 
 
     }

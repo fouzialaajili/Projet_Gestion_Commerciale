@@ -8,9 +8,9 @@ namespace Store.Model
 {
     public class ReglementFacture
     {
-       public int ReglementFactureId { get; set; }
-        public int ReglementId { set; get; }
-       /****/ public int ReglementFactureIdfacture { set; get; }
-        public int ReglementFacturePaye{ set; get; }
+       public long ReglementFactureId { get; set; }
+        public long ReglementId { set; get; }
+       /****/ public long ReglementFactureIdfacture { set; get; }
+        public long ReglementFacturePaye{ set; get; }
 }
 }

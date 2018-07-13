@@ -8,8 +8,8 @@ namespace Store.Model
 {
     public class MotifTicket
     {
-        public int MotifTicketId { get; set; }
-        public int TicketId { get; set; }
+        public long MotifTicketId { get; set; }
+   /**/     public long MotifIdticket { get; set; }
         public string MotifTicketEtat { get; set; }
         public string MotifTicketMotif { get; set; }
         public string MotifTicketDescription{ get; set; }
@@ -21,9 +21,9 @@ namespace Store.Model
         {
             MotifTicketSysDateCreation = DateTime.Now;
         }
-        public int SocieteId { get; set; }
-        public Ticket Ticket { get; set; }
-        public Societe Societe { get; set; }
+    /***/    public long SocieteId { get; set; }
+           public Ticket Ticket { get; set; }
+          virtual public Societe Societe { get; set; }
 
     }
 

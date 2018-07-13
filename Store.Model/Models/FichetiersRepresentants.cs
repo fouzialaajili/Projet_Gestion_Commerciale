@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class FichetiersRepresentants
     {
-        public int FichetiersRepresentantsId { get; set; }
+        public long FichetiersRepresentantsId { get; set; }
         public string FichetiersRepresentantsNom { get; set; }
         public string FichetiersRepresentantsPrenom { get; set; }
 
@@ -20,7 +20,7 @@ namespace Store.Model
         public string FichetiersRepresentantsVille { get; set; }
         public string FichetiersRepresentantsPays { get; set; }
         public bool FichetiersRepresentantsActif { get; set; }
-        public int FichetiersRepresentantsSysuser { get; set; }
+        public long FichetiersRepresentantsSysuser { get; set; }
 
         public DateTime? FichetiersRepresentantsSysDateCreation { get; set; }
         public DateTime? FichetiersRepresentantsSysDateUpdate { get; set; }
@@ -28,8 +28,8 @@ namespace Store.Model
         {
             FichetiersRepresentantsSysDateCreation = DateTime.Now;
         }
-        public int SocieteId { get; set; }
+   /***/     public long SocieteId { get; set; }
 
-        public Societe Societe { get; set; }
+        virtual public Societe Societe { get; set; }
     }
 }

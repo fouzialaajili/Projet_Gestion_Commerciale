@@ -8,18 +8,18 @@ namespace Store.Model
 {
     public class OpportuniteDetail
     {
-        public int OpportuniteDetailId { get; set; }
-        public int OpportuniteId { get; set; }
+        public long OpportuniteDetailId { get; set; }
+      /***/  public long OpportuniteDetailIdopportunite { get; set; }
         public long? OpportuniteDetailType_action { get; set; }
-        public int FichetiersIdcommercial { get; set; }
+     /***/   public long OpportuniteDetailIdcommercial { get; set; }
         public DateTime?  OpportuniteDetailDateaction { get; set; }
         public DateTime? OpportuniteDetailHeureaction { get; set; }
         public string OpportuniteDetailDescription { get; set; }
-        public int OpportuniteDetailSysuser { get; set; }
+        public long OpportuniteDetailSysuser { get; set; }
         public DateTime? OpportuniteDetailSysDateCreation { get; set; }
         public DateTime? OpportuniteDetailSysDateUpdate { get; set; }
-        public Fichetiers Fichetiers { get; set; }
-        public Opportunite Opportunite { get; set; }
+        virtual public Fichetiers Fichetiers { get; set; }
+        virtual public Opportunite Opportunite { get; set; }
         public OpportuniteDetail()
         {
             OpportuniteDetailSysDateCreation = DateTime.Now;

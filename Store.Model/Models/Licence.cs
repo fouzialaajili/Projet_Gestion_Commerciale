@@ -19,8 +19,8 @@ namespace Store.Model.Models
         public string LicenceCHash { get; set; }
        public DateTime LicenceDateFinContrat { get; set; }
        public string LicenceRenouvellable { get; set; }
-       public DateTime LicenceSys_DateCreation { get; set; }
-      public DateTime LicenceSys_DateUpdate { get; set; }
+       public DateTime LicenceSysDateCreation { get; set; }
+      public DateTime LicenceSysDateUpdate { get; set; }
 
 }
 }

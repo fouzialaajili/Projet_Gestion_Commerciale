@@ -9,12 +9,12 @@ namespace Store.Model
    
  public class Impression
   {
-      public int ImpressionId { get; set; }
+      public long ImpressionId { get; set; }
       public long ImpressionType { get; set; }
-     public string ImpressionChemin { get; set; }
+      public string ImpressionChemin { get; set; }
       public string ImpressionLogo { get; set; }
-      public int SocieteId { get; set; }
-       public Societe Societe { get; set; }
+     /***/ public long ImpressionSocieteId { get; set; }
+        virtual public Societe Societe { get; set; }
 
 
     }

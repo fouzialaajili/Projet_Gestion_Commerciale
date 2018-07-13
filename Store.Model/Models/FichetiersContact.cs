@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class FichetiersContact
     {
-        public int FichetiersContactId { get; set; }
+        public long FichetiersContactId { get; set; }
         public string FichetiersContactNom { get; set; }
         public string FichetiersContactPrenom { get; set; }
         public string FichetiersContactAdresse { get; set; }
@@ -19,20 +19,20 @@ namespace Store.Model
         public string FichetiersContactVille { get; set; }
         public string FichetiersContactPays { get; set; }
         public bool FichetiersContactActif { get; set; }
-        public int FichetiersContactSysuser { get; set; }
+        public long FichetiersContactSysuser { get; set; }
 
         public DateTime? FichetiersContactSysDateCreation { get; set; }
         public DateTime? FichetiersContactSysDateUpdate { get; set; }
-        public int FichetiersId { get; set; }
+      /***/  public long FichetiersContactIdFicheTiers { get; set; }
         public FichetiersContact()
         {
             FichetiersContactSysDateCreation = DateTime.Now;
         }
 
-        public Fichetiers Fichetiers { get; set; }
+        virtual public Fichetiers Fichetiers { get; set; }
 
 
-
+        public virtual ICollection<Ticket> FichetiersContactTicket { get; set; }
 
     }
 }

@@ -18,6 +18,6 @@ namespace Store.Model
         public DateTime AffaireSysDateCreation { get; set; }
         public DateTime AffaireSysDateUpdate { get; set; }
         public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
+        virtual public Societe Societe { get; set; }
     }
 }

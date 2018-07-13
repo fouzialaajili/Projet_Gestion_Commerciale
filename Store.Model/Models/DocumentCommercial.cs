@@ -32,6 +32,7 @@ namespace Store.Model
       public int SocieteId { get; set; }
         public Societe Societe { get; set; }
 
+        public virtual ICollection<MouvementStock> DocumentCommercialMouvementStock { get; set; }
 
 
 

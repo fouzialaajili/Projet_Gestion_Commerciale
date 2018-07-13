@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class Societe
     {
-        public int SocieteId { get; set; }
+        public long SocieteId { get; set; }
         public string SocieteRaisonSociale { get; set; }
         public string SocieteAdresse { get; set; }
         public string SocieteAdrlivraison { get; set; }
@@ -20,24 +20,30 @@ namespace Store.Model
         public int SocieteCapital { get; set; }
         public string SocieteForme { get; set; }
         public string SocieteActivite { get; set; }
-       public int SocieteIdentifiantFiscale { get; set; }
-       public int TvaId{ get; set; }
+         public long SocieteIdentifiantFiscale { get; set; }
+    /***/   public long SocieteIdentifiantTVA { get; set; }
        public decimal SocieteIce{ get; set; }
         public int SocietePatente { get; set; }
         public int SocieteRc{ get; set; }
         public string SocieteConditions { get; set; }
 
       public bool SocieteActif { get; set; }
-        public int SocieteSysuser { get; set; }
+        public long SocieteSysuser { get; set; }
         public DateTime? SocieteSysDateCreation { get; set; }
-      //  public Tva Tva { get; set; }
+        virtual public Tva Tva { get; set; }
         public DateTime? SocieteSysDateUpdate { get; set; }
 
         public Societe()
         {
             SocieteSysDateCreation = DateTime.Now;
         }
-
-
+        public virtual ICollection<Fichetiers> SocieteFichetiers { get; set; }
+        public virtual ICollection<FichetiersRepresentants> SocieteFichetiersRepresentants { get; set; }
+        public virtual ICollection<Motif> SocieteMotif { get; set; }
+        public virtual ICollection<MotifTicket> SocieteMotifTicket { get; set; }
+        public virtual ICollection<MouvementStock> SocieteMouvementStock { get; set; }
+        public virtual ICollection<Numerotation> SocieteNumerotation { get; set; }
+        public virtual ICollection<Object> SocieteObject { get; set; }
+        public virtual ICollection<Ticket> SocieteTicket { get; set; }
     }
 }

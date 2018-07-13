@@ -8,14 +8,14 @@ namespace Store.Model
 {
     public class Ged
     {
-        public int GedId { get; set; }
+        public long GedId { get; set; }
         public long? GedTypeFichier { get; set; }
         public string GedLibelleFichier { get; set; }
         public string GedDescriptionFichier{ get; set; }
         public string GedFichierSource { get; set; }
         public string GedEntiteName { get; set; }
-        public int GedIdEntite { get; set; }
-        public int GedSysuser { get; set; }
+        public long GedIdEntite { get; set; }
+        public long GedSysuser { get; set; }
 
         public DateTime? GedSysDateCreation { get; set; }
         public DateTime? GedSysDateUpdate { get; set; }

@@ -8,13 +8,13 @@ namespace Store.Model
 {
     public class Parametrage
     {
-        public int ParametrageId { get; set; }
+        public long ParametrageId { get; set; }
         public string ParametrageCode { get; set; }
         public string ParametrageDescription { get; set; }
         public long? TypeParametrage { get; set; }
         public string ParametrageOrdre { get; set; }
-        public Boolean ParametrageActif { get; set; }
-        public int ParametrageSysuser { get; set; }
+        public bool ParametrageActif { get; set; }
+        public long ParametrageSysuser { get; set; }
         public DateTime? ParametrageSysDateCreation { get; set; }
         public DateTime? ParametrageSysDateUpdate { get; set; }
 
@@ -22,8 +22,8 @@ namespace Store.Model
         {
             ParametrageSysDateCreation = DateTime.Now;
         }
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
+        public long ParametrageSocieteId { get; set; }
+        virtual public Societe Societe { get; set; }
 
 
     }

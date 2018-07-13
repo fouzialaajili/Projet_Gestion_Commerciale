@@ -23,5 +23,6 @@ namespace Store.Model
         public bool DepotActif { get; set; }
         public int SocieteId { get; set; }
         public Societe Societe { get; set; }
+        public virtual ICollection<MouvementStock> DepotMouvementStock { get; set; }
     }
 }

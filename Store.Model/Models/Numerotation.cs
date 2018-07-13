@@ -8,7 +8,7 @@ namespace Store.Model
 {
     public class Numerotation
     {
-        public int NumerotationId { get; set; }
+        public long NumerotationId { get; set; }
         public long? NumerotationType { get; set; }
         public string NumerotationExpression { get; set; }
         public int NumerotationNombre { get; set; }
@@ -16,7 +16,7 @@ namespace Store.Model
         public int NumerotationCompteur { get; set; }
         public int NumerotationIncrement { get; set; }
 
-        public int NumerotationSysuser { get; set; }
+        public long NumerotationSysuser { get; set; }
         public DateTime? NumerotationSysDateCreation { get; set; }
         public DateTime? NumerotationSysDateUpdate { get; set; }
 
@@ -24,7 +24,7 @@ namespace Store.Model
         {
             NumerotationSysDateCreation = DateTime.Now;
         }
-        public int SocieteId { get; set; }
-        public Societe Societe { get; set; }
+        public long SocieteId { get; set; }
+        virtual public Societe Societe { get; set; }
     }
 }
