@@ -28,7 +28,7 @@ namespace Store.Data
         public DbSet<DocumentCommercial> DocumentCommercials { get; set; }
         public DbSet<DocumentCommercialDetail> DocumentCommercialDetails { get; set; }
         public DbSet<DocumentCommercialDetailSerie> DocumentCommercialDetailSeries { get; set; }
-        public DbSet<Famille> Familles { get; set; }
+        public DbSet<Famille> Familles { get; set; }a
         public DbSet<Fichetiers> Fichetierss { get; set; }
         public DbSet<FichetiersContact> FichetiersContacts { get; set; }
         public DbSet<FichetiersRepresentants> FichetiersRepresentantss { get; set; }
