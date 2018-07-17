@@ -28,8 +28,8 @@ namespace Store.Model
         }
        /****/ public long OpportuniteSocieteId { get; set; }
         virtual public Societe OpportuniteSociete { get; set; }
-        virtual public Fichetiers OpportuniteFichetier { get; set; }
-        virtual public Devises OpportuniteDevise { get; set; }
+        virtual public Fichetier OpportuniteFichetier { get; set; }
+        virtual public Devise OpportuniteDevise { get; set; }
 
 
         public virtual ICollection<Motif> OpportuniteMotif { get; set; }

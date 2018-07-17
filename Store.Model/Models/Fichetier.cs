@@ -63,6 +63,7 @@ namespace Store.Model
         public virtual ICollection<Opportunite> FichetiersOpportunite { get; set; }
         public virtual ICollection<OpportuniteDetail> FichetiersOpportuniteDetail { get; set; }
         public virtual ICollection<Reglement> FichetiersReglement { get; set; }
+        public virtual ICollection<CrmContact> FichetiersCrmContact { get; set; }
 
     }
 }

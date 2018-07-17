@@ -22,7 +22,7 @@ namespace Store.Data.Configuration
 
 
 
-        HasOptional<Articles>(a => a.NomenclatureArticle)
+        HasOptional<Article>(a => a.NomenclatureArticle)
                   .WithMany(d => d.ArticleNomenclature)
                   .HasForeignKey<long?>(a => a.NomenclatureIdarticle);
             }

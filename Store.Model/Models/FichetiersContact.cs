@@ -29,7 +29,7 @@ namespace Store.Model
             FichetiersContactSysDateCreation = DateTime.Now;
         }
 
-        virtual public Fichetiers FichetiersContactFichetier { get; set; }
+        virtual public Fichetier FichetiersContactFichetier { get; set; }
 
 
         public virtual ICollection<Ticket> FichetiersContactTicket { get; set; }

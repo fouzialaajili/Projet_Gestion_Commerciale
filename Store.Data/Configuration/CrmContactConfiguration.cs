@@ -21,7 +21,7 @@ namespace Store.Data.Configuration
             HasOptional<Opportunite>(a => a.CrmContactOpportunite)
 .WithMany(d => d.OpportuniteCrmContact)
 .HasForeignKey<long?>(a => a.CrmContactOpportuniteId);
-            HasOptional<Fichetiers>(a => a.CrmContactFichetiers)
+            HasOptional<Fichetier>(a => a.CrmContactFichetiers)
 .WithMany(d => d.FichetiersCrmContact)
 .HasForeignKey<long?>(a => a.CrmContactFichetiersId);
 

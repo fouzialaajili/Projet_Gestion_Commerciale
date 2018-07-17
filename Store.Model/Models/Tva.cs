@@ -21,7 +21,7 @@ namespace Store.Model
         public long TvaSocieteId { get; set; }
         public virtual Societe TvaSociete { get; set; }
         public virtual ICollection<Fichetier> TvaFichetier { get; set; }
-        public virtual ICollection<Societe> TvaSocietes { get; set; }
+       /// public virtual ICollection<Societe> TvaSocietes { get; set; }
     }
 
      

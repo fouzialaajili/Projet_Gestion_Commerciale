@@ -34,7 +34,7 @@ namespace Store.Data.Configuration
                                 .WithMany(d => d.FichetiersOpportunite)
                                 .HasForeignKey<long?>(a => a.OpportuniteIdcommercial);
 
-            HasOptional<Devises>(a => a.OpportuniteDevise)
+            HasOptional<Devise>(a => a.OpportuniteDevise)
                                .WithMany(d => d.DeviseOpportunite)
                                .HasForeignKey<long?>(a => a.OpportuniteIdDevise);
 

@@ -25,7 +25,7 @@ namespace Store.Model
             TicketDetailSysDateCreation = DateTime.Now;
         }
 
-        virtual public Fichetiers TicketDetailFichetier { get; set; }
+        virtual public Fichetier TicketDetailFichetier { get; set; }
         virtual public Ticket TicketDetailTicket { get; set; }
        
 

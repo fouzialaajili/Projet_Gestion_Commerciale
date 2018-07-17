@@ -30,7 +30,7 @@ namespace Store.Model
       public bool SocieteActif { get; set; }
         public long SocieteSysuser { get; set; }
         public DateTime? SocieteSysDateCreation { get; set; }
-        virtual public Tva SocieteTva { get; set; }
+      
         public DateTime? SocieteSysDateUpdate { get; set; }
 
         public Societe()
@@ -60,7 +60,7 @@ namespace Store.Model
         public virtual ICollection<Impression> SocieteImpression { get; set; }
         public virtual ICollection<Marque> SocieteMarque { get; set; }
         public virtual ICollection<Tolerance> SocieteTolerance { get; set; }
-        public virtual ICollection<Tva> SocieteTva{ get; set; }
+       public virtual ICollection<Tva> SocietesTva{ get; set; }
         public virtual ICollection<Unite> SocieteUnite { get; set; }
        
 

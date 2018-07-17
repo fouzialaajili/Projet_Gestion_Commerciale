@@ -40,7 +40,7 @@ namespace Store.Model
         public long MouvementStockSocieteId { get; set; }
         virtual public Societe MouvementStockSociete { get; set; }
         virtual  public Depot MouvementStocksDepot { get; set; }
-        virtual public Articles MouvementStockArticles { get; set; }
+        virtual public Article MouvementStockArticles { get; set; }
         virtual public DocumentCommercial MouvementStockDocumentCommercial { get; set; }
 
 

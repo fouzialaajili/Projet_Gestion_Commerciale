@@ -25,7 +25,7 @@ namespace Store.Model
         public long TicketSysuser { get; set; }
         public DateTime? TicketSysDateCreation { get; set; }
         public DateTime? TicketSysDateUpdate { get; set; }
-        virtual public Fichetiers TicketFichetier { get; set; }
+        virtual public Fichetier TicketFichetier { get; set; }
         virtual public Representant TicketRepresentant { get; set; }
         virtual public FichetiersContact TicketFichetiersContact { get; set; }
         public Ticket()

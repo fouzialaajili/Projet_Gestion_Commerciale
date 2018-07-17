@@ -22,9 +22,7 @@ namespace Store.Data.Configuration
 
 
 
-        HasOptional<Tva>(a => a.SocieteTva)
-                          .WithMany(d => d.TvaSocietes)
-                          .HasForeignKey<long?>(a => a.SocieteIdentifiantTVA);
+       
 
         }
     }

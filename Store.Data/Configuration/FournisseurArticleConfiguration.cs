@@ -26,8 +26,8 @@ namespace Store.Data.Configuration
                 .WithMany(d => d.FournisseurArticleFichetier)
                 .HasForeignKey<long?>(a => a.FournisseurArticleIdfournisseur);
 
-            HasOptional<Articles>(a => a.FournisseurArticleArticle)
-                    .WithMany(d => d.ArticlesFournisseurArticle)
+            HasOptional<Article>(a => a.FournisseurArticleArticle)
+                    .WithMany(d => d.ArticleFournisseurArticle)
                     .HasForeignKey<long?>(a => a.FournisseurArticleIdArticle);
 
         }

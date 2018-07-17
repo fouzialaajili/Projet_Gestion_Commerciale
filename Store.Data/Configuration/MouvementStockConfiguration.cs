@@ -32,7 +32,7 @@ namespace Store.Data.Configuration
                     .WithMany(d => d.DepotMouvementStock)
                     .HasForeignKey<long?>(a => a.MouvementStockIddepot);
 
-            HasOptional<Articles>(a => a.MouvementStockArticles)
+            HasOptional<Article>(a => a.MouvementStockArticles)
                   .WithMany(d => d.ArticleMouvementStock)
                   .HasForeignKey<long?>(a => a.MouvementStockIdarticle);
 

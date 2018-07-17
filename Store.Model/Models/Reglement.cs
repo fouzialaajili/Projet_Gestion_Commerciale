@@ -34,7 +34,7 @@ namespace Store.Model
         }
        /***/ public long ReglementSocieteId { get; set; }
         virtual public Societe ReglementSociete { get; set; }
-        virtual public Fichetiers ReglementFichetier { get; set; }
+        virtual public Fichetier ReglementFichetier { get; set; }
 
 
 
