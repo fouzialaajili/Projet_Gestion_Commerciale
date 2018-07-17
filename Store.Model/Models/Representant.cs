@@ -38,8 +38,9 @@ namespace Store.Model
             RepresentantSysDateCreation = DateTime.Now;
         }
        /***/ public long RepresentantSocieteId { get; set; }
-        virtual public Societe Societe { get; set; }
-        public virtual ICollection<Object> RepresentantObject { get; set; }
+        virtual public Societe RepresentantSociete { get; set; }
+        public virtual ICollection<Objectif> RepresentantObject { get; set; }
+        public virtual ICollection<Fichetier> RepresentantFichetier { get; set; }
         public virtual ICollection<Ticket> RepresentantTicket { get; set; }
 
 

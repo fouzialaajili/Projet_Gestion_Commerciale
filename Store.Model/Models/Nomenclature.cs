@@ -20,6 +20,6 @@ namespace Store.Model
         {
             NomenclatureSysDateCreation = DateTime.Now;
         }
-        virtual public Articles Articles { get; set; }
+        virtual public Articles NomenclatureArticle { get; set; }
     }
 }

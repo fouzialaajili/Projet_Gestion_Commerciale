@@ -14,8 +14,8 @@ namespace Store.Model
         public string ReglementLibelle { get; set; }
         public DateTime? ReglementDatereglement { get; set; }
         public DateTime? ReglementDateecheance { get; set; }
-   /**/     public long ReglementIdtiers { get; set; }
-/****/      public long ReglementIdmoyenpaiement { get; set; }
+   /***/     public long ReglementIdtiers { get; set; }
+  /***/      public long ReglementIdmoyenpaiement { get; set; }
         public int DevisesId { get; set; }
         public int ReglementMontant { get; set; }
  /***/    public long ReglementBanqueId { get; set; }
@@ -34,7 +34,7 @@ namespace Store.Model
         }
        /***/ public long ReglementSocieteId { get; set; }
         virtual public Societe ReglementSociete { get; set; }
-        virtual public Fichetiers ReglementFichetiers { get; set; }
+        virtual public Fichetiers ReglementFichetier { get; set; }
 
 
 

@@ -1,4 +1,4 @@
-﻿using System;
+﻿+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,7 +58,7 @@ public string ArticlesImage
         public  virtual Marque ArticlesMarque { get; set; }
 
         public virtual ICollection<FournisseurArticle> ArticlesFournisseurArticle { get; set; }
-        public virtual ICollection<MouvementStock> ArticlesMouvementStock { get; set; }
-        public virtual ICollection<Nomenclature> ArticlesNomenclature { get; set; }
+        public virtual ICollection<MouvementStock> ArticleMouvementStock { get; set; }
+        public virtual ICollection<Nomenclature> ArticleNomenclature { get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace Store.Model
         {
             ProfilSysDateCreation = DateTime.Now;
         }
-    /***/    public long SocieteId { get; set; }
-        virtual public Societe Societe { get; set; }
+    /***/    public long ProfilSocieteId { get; set; }
+        virtual public Societe ProfilSociete { get; set; }
     }
 }

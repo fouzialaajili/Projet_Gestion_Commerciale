@@ -20,5 +20,6 @@ namespace Store.Model
         public DateTime DevisesSysDateUpdate { get; set; }
         public long  DevisesSocieteId { get; set; }
         public Societe DevisesSociete { get; set; }
+        public virtual ICollection<Opportunite> DeviseOpportunite { get; set; }
     }
 }

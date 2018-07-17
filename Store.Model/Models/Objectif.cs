@@ -25,8 +25,8 @@ namespace Store.Model
             ObjectifSysDateCreation = DateTime.Now;
         }
      /***/   public long ObjectifSocieteId { get; set; }
-        virtual public Societe Societe { get; set; }
-        virtual public Representant Representant { get; set; }
+        virtual public Societe ObjectifSociete { get; set; }
+        virtual public Representant ObjectifRepresentant { get; set; }
 
     }
 }

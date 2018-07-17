@@ -21,9 +21,9 @@ namespace Store.Model
         {
             MotifTicketSysDateCreation = DateTime.Now;
         }
-    /***/    public long SocieteId { get; set; }
-           public Ticket Ticket { get; set; }
-          virtual public Societe Societe { get; set; }
+    /***/    public long MotifTicketSocieteId { get; set; }
+           public Ticket MotifTicketTicket { get; set; }
+          virtual public Societe MotifTicketSociete { get; set; }
 
     }
 

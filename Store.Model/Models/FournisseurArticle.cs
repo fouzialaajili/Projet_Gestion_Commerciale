@@ -28,8 +28,8 @@ namespace Store.Model
             FournisseurArticleSysDateCreation = DateTime.Now;
         }
 
-        virtual public Fichetiers Fichetiers { get; set; }
-        virtual public Articles Articles { get; set; }
+        virtual public Fichetiers FournisseurArticleFichetier { get; set; }
+        virtual public Articles FournisseurArticleArticle{ get; set; }
 
 
 

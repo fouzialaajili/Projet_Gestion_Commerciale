@@ -12,9 +12,9 @@ namespace Store.Model
         public int OpportuniteNumero { get; set; }
       /**/  public long OpportuniteIdtiers { get; set; }
         public DateTime? OpportuniteDateopportunite { get; set; }
-     /***/   public int OpportuniteIdcommercial { get; set; }
+     /***/   public long OpportuniteIdcommercial { get; set; }
         public string OpportuniteStatut { get; set; }
-     /****/   public int OpportuniteIdDevise { get; set; }
+     /****/   public long OpportuniteIdDevise { get; set; }
         public int OpportuniteBudgetClient { get; set; }
         public int OpportuniteBudgetEstime { get; set; }
         public string OpportuniteLibelle { get; set; }
@@ -26,13 +26,13 @@ namespace Store.Model
         {
             OpportuniteSysDateCreation = DateTime.Now;
         }
-       /****/ public long SocieteId { get; set; }
-        virtual public Societe Societe { get; set; }
-        virtual public Fichetiers Fichetiers { get; set; }
-        virtual public Devises Devises { get; set; }
-
+       /****/ public long OpportuniteSocieteId { get; set; }
+        virtual public Societe OpportuniteSociete { get; set; }
+        virtual public Fichetiers OpportuniteFichetier { get; set; }
+        virtual public Devises OpportuniteDevise { get; set; }
 
 
         public virtual ICollection<Motif> OpportuniteMotif { get; set; }
+        public virtual ICollection<OpportuniteDetail> OpportuniteOpportuniteDetail{ get; set; }
     }
 }

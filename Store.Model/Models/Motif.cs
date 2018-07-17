@@ -20,8 +20,8 @@ namespace Store.Model
         {
             MotifSysDateCreation = DateTime.Now;
         }
-        virtual public Opportunite Opportunite { get; set; }
+        virtual public Opportunite MotifOpportunite { get; set; }
    /***/     public long MotifSocieteId { get; set; }
-        virtual public Societe Societe { get; set; }
+        virtual public Societe MotifSociete { get; set; }
     }
 }
