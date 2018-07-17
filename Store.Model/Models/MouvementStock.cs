@@ -37,11 +37,11 @@ namespace Store.Model
         {
             MouvementStockSysDateCreation = DateTime.Now;
         }
-        public int MouvementStockSocieteId { get; set; }
-        virtual public Societe ZenSociete { get; set; }
-        virtual  public Depot Depot { get; set; }
-        virtual public Articles ZenArticles { get; set; }
-        virtual public DocumentCommercial DocumentCommercial { get; set; }
+        public long MouvementStockSocieteId { get; set; }
+        virtual public Societe MouvementStockSociete { get; set; }
+        virtual  public Depot MouvementStocksDepot { get; set; }
+        virtual public Article MouvementStockArticles { get; set; }
+        virtual public DocumentCommercial MouvementStockDocumentCommercial { get; set; }
 
 
 

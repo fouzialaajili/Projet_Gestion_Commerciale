@@ -25,6 +25,6 @@ namespace Store.Model
         public virtual Opportunite CrmContactOpportunite { get; set; }
 
         public long  CrmContactFichetiersId { get; set; }
-        public virtual Fichetiers CrmContactFichetiers { get; set; }
+        public virtual Fichetier CrmContactFichetiers { get; set; }
     }
 }

@@ -25,17 +25,17 @@ namespace Store.Model
         public long TicketSysuser { get; set; }
         public DateTime? TicketSysDateCreation { get; set; }
         public DateTime? TicketSysDateUpdate { get; set; }
-        virtual public Fichetiers Fichetiers { get; set; }
-        virtual public Representant Representant { get; set; }
-        virtual public FichetiersContact FichetiersContact { get; set; }
+        virtual public Fichetier TicketFichetier { get; set; }
+        virtual public Representant TicketRepresentant { get; set; }
+        virtual public FichetiersContact TicketFichetiersContact { get; set; }
         public Ticket()
         {
             TicketSysDateCreation = DateTime.Now;
         }
   /***/      public long TicketSocieteId { get; set; }
-        virtual  public Societe Societe { get; set; }
+        virtual  public Societe TicketSociete { get; set; }
 
         public virtual ICollection<MotifTicket> TicketMotifTicket { get; set; }
-        public virtual ICollection<TicketDetail> TicketMotifTicketDetail { get; set; }
+        public virtual ICollection<TicketDetail> TicketTicketDetail { get; set; }
     }
 }

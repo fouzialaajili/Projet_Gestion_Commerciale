@@ -1,4 +1,5 @@
 ﻿using Store.Model;
+
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
@@ -8,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Configuration
 {
-    class FichetiersConfiguration : EntityTypeConfiguration<Fichetiers>
+    class FichetiersConfiguration : EntityTypeConfiguration<Fichetier>
     {
         public FichetiersConfiguration()
         {
-            ToTable("Fichetiers");
+            ToTable("Fichetier");
             HasKey(x => x.FichetiersId);
-         /*   Property(g => g.FichetiersNatureTiers).IsRequired().HasMaxLength(20);
+            /*Property(g => g.FichetiersNatureTiers).IsRequired().HasMaxLength(20);
             Property(g => g.FichetiersCode).IsRequired();
             Property(g => g.FichetiersRaisonSociale).IsRequired();
             Property(g => g.FichetiersActivite).IsRequired();
@@ -39,29 +40,22 @@ namespace Store.Data.Configuration
             Property(g => g.RepresentantId).IsRequired();
 
 
+            /***********************************/
+            //    virtual public Societe FichetierSociete { get; set; }
+            //virtual public Paiement FichetierPaiement { get; set; }
+            //virtual public Tva FichetierTva { get; set; }
+            //     virtual public FichetiersRepresentants FichetiersRepresentants { get; set; }
 
 
-            HasOptional<Paiement>(a => a.Fichetiers)
-                .WithMany(d => d.Agence)
-                .HasForeignKey<long?>(a => a.PaiementId);
+            HasOptional<Paiement>(a => a.FichetierPaiement)
+                .WithMany(d => d.PaiementFichetier)
+                .HasForeignKey<long?>(a => a.FichetierIdmodepaie);
 
-            HasOptional<Devise>(a => a.PartenaireDevise)
-                .WithMany(d => d.Partenaire)
-                .HasForeignKey<long?>(a => a.PartenaireIdDeviseDefault);
+            HasOptional<Societe>(a => a.FichetierSociete)
+                        .WithMany(d => d.SocieteFichetier)
+                        .HasForeignKey<long?>(a => a.FichetierSocieteId);
 
-
-            HasOptional<TypePaiement>(a => a.PartenaireTypePaiement)
-               .WithMany(i => i.Agence)
-               .HasForeignKey<long?>(a => a.PartenaireIdEcheancement);
-
-            HasOptional<CompteG>(a => a.PartenaireCompteG_CompteCollectifClient)
-                .WithMany(i => i.Agence_CompteCollectifClient)
-                .HasForeignKey<long?>(a => a.PartenaireIdCompteCollectifClient);
-
-            HasOptional<CompteG>(a => a.PartenaireCompteG_CompteCollectifFournisseur)
-                .WithMany(i => i.Agence_CompteCollectifFournisseur)
-                .HasForeignKey<long?>(a => a.PartenaireIdCompteCollectifFournisseur);
-                */
+          
 
 
         }

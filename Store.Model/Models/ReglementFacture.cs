@@ -12,5 +12,6 @@ namespace Store.Model
         public long ReglementId { set; get; }
        /****/ public long ReglementFactureIdfacture { set; get; }
         public long ReglementFacturePaye{ set; get; }
+
 }
 }

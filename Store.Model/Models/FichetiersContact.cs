@@ -23,13 +23,13 @@ namespace Store.Model
 
         public DateTime? FichetiersContactSysDateCreation { get; set; }
         public DateTime? FichetiersContactSysDateUpdate { get; set; }
-      /***/  public long FichetiersContactIdFicheTiers { get; set; }
+      /***/  public long FichetierContactIdFicheTiers { get; set; }
         public FichetiersContact()
         {
             FichetiersContactSysDateCreation = DateTime.Now;
         }
 
-        virtual public Fichetiers Fichetiers { get; set; }
+        virtual public Fichetier FichetiersContactFichetier { get; set; }
 
 
         public virtual ICollection<Ticket> FichetiersContactTicket { get; set; }

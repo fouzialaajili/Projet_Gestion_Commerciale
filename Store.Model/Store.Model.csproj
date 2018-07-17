@@ -56,8 +56,8 @@
     <Compile Include="Models\DocumentCommercialDetail.cs" />
     <Compile Include="Models\DocumentCommercialDetailSerie.cs" />
     <Compile Include="Models\Famille.cs" />
-    <Compile Include="Models\Fichetiers.cs" />
-    <Compile Include="Models\FichetiersRepresentants.cs" />
+    <Compile Include="Models\Fichetier.cs" />
+    <Compile Include="Models\FichetiersRepresentant.cs" />
     <Compile Include="Models\FichetiersContact.cs" />
     <Compile Include="Models\FournisseurArticle.cs" />
     <Compile Include="Models\Ged.cs" />

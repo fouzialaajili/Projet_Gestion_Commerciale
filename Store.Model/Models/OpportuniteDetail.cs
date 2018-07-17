@@ -18,8 +18,8 @@ namespace Store.Model
         public long OpportuniteDetailSysuser { get; set; }
         public DateTime? OpportuniteDetailSysDateCreation { get; set; }
         public DateTime? OpportuniteDetailSysDateUpdate { get; set; }
-        virtual public Fichetiers Fichetiers { get; set; }
-        virtual public Opportunite Opportunite { get; set; }
+        virtual public Fichetier OpportuniteDetailFichetier { get; set; }
+        virtual public Opportunite OpportuniteDetailOpportunite { get; set; }
         public OpportuniteDetail()
         {
             OpportuniteDetailSysDateCreation = DateTime.Now;

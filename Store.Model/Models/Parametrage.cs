@@ -23,7 +23,7 @@ namespace Store.Model
             ParametrageSysDateCreation = DateTime.Now;
         }
         public long ParametrageSocieteId { get; set; }
-        virtual public Societe Societe { get; set; }
+        virtual public Societe ParametrageSociete { get; set; }
 
 
     }
