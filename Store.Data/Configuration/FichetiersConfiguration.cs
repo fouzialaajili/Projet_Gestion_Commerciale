@@ -14,7 +14,7 @@ namespace Store.Data.Configuration
         {
             ToTable("Fichetiers");
             HasKey(x => x.FichetiersId);
-            Property(g => g.FichetiersNatureTiers).IsRequired().HasMaxLength(20);
+         /*   Property(g => g.FichetiersNatureTiers).IsRequired().HasMaxLength(20);
             Property(g => g.FichetiersCode).IsRequired();
             Property(g => g.FichetiersRaisonSociale).IsRequired();
             Property(g => g.FichetiersActivite).IsRequired();
@@ -61,7 +61,7 @@ namespace Store.Data.Configuration
             HasOptional<CompteG>(a => a.PartenaireCompteG_CompteCollectifFournisseur)
                 .WithMany(i => i.Agence_CompteCollectifFournisseur)
                 .HasForeignKey<long?>(a => a.PartenaireIdCompteCollectifFournisseur);
-
+                */
 
 
         }

@@ -13,9 +13,9 @@ namespace Store.Data.Configuration
 
             ToTable("ArticlesPrix");
             HasKey(a => a.ArticlesPrixId);
-            HasOptional<Articles>(a => a.ArticlesPrixArticles)
-.WithMany(d => d.ArticlesArticlesPrix)
-.HasForeignKey<long?>(a => a.ArticlesPrixArticlesId);
+            HasOptional<Article>(a => a.ArticlesPrixArticle)
+.WithMany(d => d.ArticleArticlesPrix)
+.HasForeignKey<long?>(a => a.ArticlesPrixArticleId);
             
 
     }

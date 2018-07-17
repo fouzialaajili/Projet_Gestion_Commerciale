@@ -20,6 +20,7 @@ namespace Store.Model
         public long UniteSocieteId { get; set; }
        public virtual  Societe UniteSociete { get; set; }
 
-        public virtual ICollection<Articles> UniteArticles { get; set; }
+        public virtual ICollection<Article> UniteArticle { get; set; }
     }
 }
+ 

@@ -26,10 +26,11 @@ public int DocumentCommercialDetailCodeLiaison { get; set; }
         public int DocumentCommercialSysuser { get; set; }
         public DateTime DocumentCommercialSysDateCreation { get; set; }
         public DateTime DocumentCommercialSysDateUpdate { get; set; }
-        public long DocumentCommercialDetailArticlesId { get; set; }
-        public virtual Articles DocumentCommercialDetailArticles { get; set; }
+        public long DocumentCommercialDetailArticleId { get; set; }
+        public virtual Article DocumentCommercialDetailArticle { get; set; }
         public  long DocumentCommercialIdDocumentCommercial { get; set; }
       public virtual DocumentCommercial DocumentCommercialDetailDocumentCommercial { get; set; }
+        public virtual ICollection<DocumentCommercialDetailSerie> DocumentCommercialDetailDocumentCommercialDetailSerie { get; set; }
 
 
     }

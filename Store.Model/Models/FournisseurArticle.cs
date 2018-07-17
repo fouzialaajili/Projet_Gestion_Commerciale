@@ -29,7 +29,7 @@ namespace Store.Model
         }
 
         virtual public Fichetiers Fichetiers { get; set; }
-        virtual public Articles Articles { get; set; }
+        virtual public Article Articles { get; set; }
 
 
 

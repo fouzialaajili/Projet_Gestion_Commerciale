@@ -13,6 +13,10 @@ namespace Store.Data.Configuration
         public  FamilleConfiguration(){
             ToTable("Famille");
             HasKey(a => a.FamilleId);
+            HasOptional<Societe>(a => a.FamilleSociete)
+            .WithMany(d => d.SocieteFamille)
+            .HasForeignKey<long?>(a => a.FamilleSocieteId);
+
         }
 
     }

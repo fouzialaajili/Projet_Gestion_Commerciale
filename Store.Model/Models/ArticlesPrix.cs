@@ -20,8 +20,8 @@ namespace Store.Model
         public int ArticlesPrixSysuser { get; set; }
         public DateTime ArticlesPrixSysDateCreation { get; set; }
         public DateTime ArticlesPrixSysDateUpdate { get; set; }
-        public long ArticlesPrixArticlesId { get; set; }
-        public virtual Articles ArticlesPrixArticles { get; set; }
+        public long ArticlesPrixArticleId { get; set; }
+        public virtual Article ArticlesPrixArticle { get; set; }
 
     }
 }
