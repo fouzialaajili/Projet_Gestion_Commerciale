@@ -34,6 +34,9 @@ namespace Store.Model
 
         public virtual ICollection<MouvementStock> DocumentCommercialMouvementStock { get; set; }
 
+        public virtual ICollection<DocumentCommercialDetail> DocumentCommercialDocumentCommercialDetail { get; set; }
+
+
 
 
 

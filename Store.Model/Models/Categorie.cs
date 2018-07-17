@@ -18,5 +18,6 @@ namespace Store.Model
         public bool CategorieActif{ get; set; }
     public long  CategorieSocieteId { get; set; }
         public virtual Societe CategorieSociete { get; set; }
+        public virtual ICollection<Article> CategorieArticle { get; set; }
     }
 }

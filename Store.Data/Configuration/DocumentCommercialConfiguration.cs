@@ -14,6 +14,10 @@ namespace Store.Data.Configuration
         {
             ToTable("DocumentCommercial");
             HasKey(a => a.DocumentCommercialId);
+HasOptional<Societe>(a => a.DocumentCommercialSociete)
+      .WithMany(d => d.SocieteDocumentCommercial)
+      .HasForeignKey<long?>(a => a.DocumentCommercialSocieteId);
+ 
         }
     }
 }

@@ -13,8 +13,11 @@ namespace Store.Data.Configuration
 
             ToTable("ArticlesPrix");
             HasKey(a => a.ArticlesPrixId);
+            HasOptional<Article>(a => a.ArticlesPrixArticle)
+.WithMany(d => d.ArticleArticlesPrix)
+.HasForeignKey<long?>(a => a.ArticlesPrixArticleId);
+            
 
-
-        }
+    }
     }
 }

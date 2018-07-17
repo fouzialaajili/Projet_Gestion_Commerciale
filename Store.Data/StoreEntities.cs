@@ -13,16 +13,16 @@ namespace Store.Data
     {
         public StoreEntities() : base("StoreEntities") { }
 
-        public DbSet<Admin> Admins{ get; set; }
+        public DbSet<Admin> Admins { get; set; }
         public DbSet<Affaire> Affaires { get; set; }
-        public DbSet<Articles> Articless { get; set; }
-        public DbSet<ArticlesKits> ArticlesKitss { get; set; }
+        public DbSet<Article> Articless { get; set; }
+        public DbSet<ArticlesKit> ArticlesKitss { get; set; }
         public DbSet<ArticlesPrix> ArticlesPrixs { get; set; }
         public DbSet<Categorie> Categories { get; set; }
         public DbSet<CrmContact> CrmContacts { get; set; }
         public DbSet<Depot> Depots { get; set; }
         public DbSet<DepotContact> DepotContacts { get; set; }
-        public DbSet<Devises> Devisess { get; set; }
+        public DbSet<Devise> Devises { get; set; }
         public DbSet<Doclie> Doclies { get; set; }
         public DbSet<Doclieart> Docliearts { get; set; }
         public DbSet<DocumentCommercial> DocumentCommercials { get; set; }
@@ -42,13 +42,13 @@ namespace Store.Data
         public DbSet<Motif> Motifs { get; set; }
         public DbSet<MotifTicket> MotifTickets { get; set; }
         public DbSet<MouvementStock> MouvementStocks { get; set; }
-        public DbSet<Nomenclature> Nomenclatures { get; set; }
+        public DbSet<Nomenclature> Nomenclatures { get; set; } 
         public DbSet<Objectif> Objectifs { get; set; }
         public DbSet<Opportunite> Opportunites { get; set; }
         public DbSet<OpportuniteDetail> OpportuniteDetails { get; set; }
         public DbSet<Paiement> Paiements
         { get; set; }
-           public DbSet<Parametrage> Parametrage { get; set; }
+           public DbSet<Parametrage> Parametrages { get; set; }
         public DbSet<Periode> Periodes { get; set; }
 
         public DbSet<Profil> Profils { get; set; }
@@ -79,8 +79,8 @@ namespace Store.Data
         {
             modelBuilder.Configurations.Add(new AdminConfiguration());
             modelBuilder.Configurations.Add(new AffaireConfiguration());
-            modelBuilder.Configurations.Add(new ArticlesConfiguration());
-            modelBuilder.Configurations.Add(new ArticlesKitsConfiguration());
+            modelBuilder.Configurations.Add(new ArticleConfiguration());
+            modelBuilder.Configurations.Add(new ArticlesKitConfiguration());
 
             modelBuilder.Configurations.Add(new ArticlesPrixConfiguration());
             modelBuilder.Configurations.Add(new CategorieConfiguration());
@@ -88,7 +88,7 @@ namespace Store.Data
             modelBuilder.Configurations.Add(new DepotConfiguration());
 
             modelBuilder.Configurations.Add(new DepotContactConfiguration());
-            modelBuilder.Configurations.Add(new DevisesConfiguration());
+            modelBuilder.Configurations.Add(new DeviseConfiguration());
             modelBuilder.Configurations.Add(new DoclieConfiguration());
             modelBuilder.Configurations.Add(new DoclieartConfiguration());
 

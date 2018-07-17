@@ -15,7 +15,30 @@ namespace Store.Data.Configuration
         {
             ToTable("Fichetiers");
             HasKey(x => x.FichetiersId);
-          
+            Property(g => g.FichetiersNatureTiers).IsRequired().HasMaxLength(20);
+            Property(g => g.FichetiersCode).IsRequired();
+            Property(g => g.FichetiersRaisonSociale).IsRequired();
+            Property(g => g.FichetiersActivite).IsRequired();
+            Property(g => g.FichetiersAdresse).IsRequired();
+            Property(g => g.FichetiersAdresseLivraison).IsRequired();
+            Property(g => g.FichetiersTel).IsRequired();
+            Property(g => g.FichetiersFax).IsRequired();
+            Property(g => g.FichetiersEmail).IsRequired();
+            Property(g => g.FichetiersVille).IsRequired();
+            Property(g => g.FichetiersPays).IsRequired();
+            Property(g => g.FichetiersIdentifiantFiscale).IsRequired();
+            Property(g => g.TvaId).IsRequired();
+            Property(g => g.FichetiersIce).IsRequired();
+            Property(g => g.FichetiersPatente).IsRequired();
+            Property(g => g.RepresentantId).IsRequired();
+            Property(g => g.FichetiersDeviseFacturation).IsRequired();
+            Property(g => g.FichetiersEncours).IsRequired();
+            Property(g => g.PaiementId).IsRequired();
+            Property(g => g.FichetiersRisque).IsRequired();
+            Property(g => g.FichetiersActif).IsRequired();
+            Property(g => g.FichetiersSys_user).IsRequired();
+            Property(g => g.RepresentantId).IsRequired();
+
 
             /***********************************/
             //    virtual public Societe FichetierSociete { get; set; }
@@ -32,13 +55,10 @@ namespace Store.Data.Configuration
                         .WithMany(d => d.SocieteFichetier)
                         .HasForeignKey<long?>(a => a.FichetierSocieteId);
 
-            HasOptional<Tva>(a => a.FichetierTva)
-                       .WithMany(d => d.TvaFichetier)
-                       .HasForeignKey<long?>(a => a.FichetierIdentifiantTVA);
+            HasOptional<CompteG>(a => a.PartenaireCompteG_CompteCollectifFournisseur)
+                .WithMany(i => i.Agence_CompteCollectifFournisseur)
+                .HasForeignKey<long?>(a => a.PartenaireIdCompteCollectifFournisseur);
 
-            HasOptional<Representant>(a => a.FichetierRepresentant)
-                 .WithMany(d => d.RepresentantFichetier)
-                 .HasForeignKey<long?>(a => a.FichetierIdrepresentant);
 
 
         }

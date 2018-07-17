@@ -50,19 +50,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Configuration\ToleranceConfiguration.cs" />
     <!--<<<<<<< HEAD-->
     <Compile Include="Configuration\FichetiersConfiguration.cs" />
     <!--=======-->
     <Compile Include="Configuration\AdminConfiguration.cs" />
     <Compile Include="Configuration\AffaireConfiguration.cs" />
-    <Compile Include="Configuration\ArticlesConfiguration.cs" />
-    <Compile Include="Configuration\ArticlesKitsConfiguration.cs" />
+    <Compile Include="Configuration\ArticleConfiguration.cs" />
+    <Compile Include="Configuration\ArticlesKitConfiguration.cs" />
     <Compile Include="Configuration\ArticlesPrixConfiguration.cs" />
     <Compile Include="Configuration\CategorieConfiguration.cs" />
     <Compile Include="Configuration\CrmContactConfiguration.cs" />
     <Compile Include="Configuration\DepotConfiguration.cs" />
     <Compile Include="Configuration\DepotContactConfiguration.cs" />
-    <Compile Include="Configuration\DevisesConfiguration.cs" />
+    <Compile Include="Configuration\DeviseConfiguration.cs" />
     <Compile Include="Configuration\DoclieartConfiguration.cs" />
     <Compile Include="Configuration\DoclieConfiguration.cs" />
     <Compile Include="Configuration\DocumentCommercialConfiguration.cs" />
@@ -100,6 +101,12 @@
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="Configuration\ImpressionConfiguration.cs" />
+    <Compile Include="Configuration\LicenceConfiguration.cs" />
+    <Compile Include="Configuration\MarqueConfiguration.cs" />
+    <Compile Include="Configuration\TvaConfiguration.cs" />
+    <Compile Include="Configuration\UniteConfiguration.cs" />
+    <!-->>>>>>> 2267e92627d70391d6d45f5590325e078926f7fb-->
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\FichetierRepository.cs" />
     <Compile Include="Repositories\FichetiersContactRepository.cs" />

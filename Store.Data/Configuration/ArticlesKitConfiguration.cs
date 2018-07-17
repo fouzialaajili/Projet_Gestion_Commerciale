@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Configuration
 {
-   public  class DevisesConfiguration : EntityTypeConfiguration<Devises>
+    class ArticlesKitConfiguration : EntityTypeConfiguration<ArticlesKit>
     {
-        public DevisesConfiguration()
-        {
-            ToTable("Devises");
-            HasKey(a => a.DevisesId);
-
+        public ArticlesKitConfiguration(){
+            ToTable("ArticlesKit");
+            HasKey(a => a.ArticlesKitId);
         }
     }
 }

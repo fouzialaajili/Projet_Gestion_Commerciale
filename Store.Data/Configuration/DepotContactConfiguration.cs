@@ -14,7 +14,11 @@ namespace Store.Data.Configuration
         {
             ToTable("Depot de Contact");
             HasKey(a => a.DepotContactID);
+            HasOptional<Depot>(a => a.DepotContactDepot)
+.WithMany(d => d.DepotDepotContact)
+.HasForeignKey<long?>(a => a.DepotContactDepotId);
+     
 
-        }
+    }
     }
 }

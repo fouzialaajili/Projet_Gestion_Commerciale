@@ -33,6 +33,7 @@ namespace Store.Model
 
 
         public virtual ICollection<Motif> OpportuniteMotif { get; set; }
+        public virtual ICollection<CrmContact> OpportuniteCrmContact { get; set; }
         public virtual ICollection<OpportuniteDetail> OpportuniteOpportuniteDetail{ get; set; }
     }
 }
