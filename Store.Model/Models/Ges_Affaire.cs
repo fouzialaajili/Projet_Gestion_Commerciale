@@ -19,7 +19,7 @@ namespace Store.Model
         public DateTime AffaireSysDateUpdate { get; set; }
 
         public long AffaireSocieteId { get; set; }
-        public virtual GES_Societe AffaireSociete { get; set; }
+        public virtual GEN_Dossiers AffaireSociete { get; set; }
 
     }
 }

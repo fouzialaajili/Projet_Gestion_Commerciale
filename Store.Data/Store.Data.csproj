@@ -52,7 +52,6 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Configuration\GES_ToleranceConfiguration.cs" />
     <Compile Include="Configuration\GEN_TypePaiementDetailConfiguration.cs" />
-    <Compile Include="Configuration\ToleranceConfiguration.cs" />
     <!--<<<<<<< HEAD-->
     <Compile Include="Configuration\GEN_TiersConfiguration.cs" />
     <!--=======-->
@@ -62,9 +61,7 @@
     <Compile Include="Configuration\GES_ArticlesKitConfiguration.cs" />
     <Compile Include="Configuration\GES_ArticlesPrixConfiguration.cs" />
     <Compile Include="Configuration\GES_CategorieConfiguration.cs" />
-    <Compile Include="Configuration\CrmContactConfiguration.cs" />
     <Compile Include="Configuration\GES_DepotConfiguration.cs" />
-    <Compile Include="Configuration\DepotContactConfiguration.cs" />
     <Compile Include="Configuration\GES_DeviseConfiguration.cs" />
     <Compile Include="Configuration\GES_DoclieartConfiguration.cs" />
     <Compile Include="Configuration\GES_DoclieConfiguration.cs" />

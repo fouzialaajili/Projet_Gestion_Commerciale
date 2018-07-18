@@ -41,7 +41,7 @@ namespace Store.Model
         virtual public GEN_Dossiers MouvementStockSociete { get; set; }
        virtual  public GES_Depot MouvementStocksDepot { get; set; }
         virtual public GES_Article MouvementStockArticles { get; set; }
-        virtual public DocumentCommercial MouvementStockDocumentCommercial { get; set; }
+        virtual public GES_DocumentCommercial MouvementStockDocumentCommercial { get; set; }
 
 
 

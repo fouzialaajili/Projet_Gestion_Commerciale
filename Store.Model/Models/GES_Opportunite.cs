@@ -29,7 +29,7 @@ namespace Store.Model
        /****/ public long OpportuniteSocieteId { get; set; }
         virtual public GEN_Dossiers OpportuniteSociete { get; set; }
         virtual public GEN_Tiers OpportuniteFichetier { get; set; }
-        virtual public Devise OpportuniteDevise { get; set; }
+        virtual public GEN_Devise OpportuniteDevise { get; set; }
         public virtual ICollection<GES_Motif> OpportuniteMotif { get; set; }
       //  public virtual ICollection<CrmContact> OpportuniteCrmContact { get; set; }
         public virtual ICollection<GES_OpportuniteDetail> OpportuniteOpportuniteDetail{ get; set; }

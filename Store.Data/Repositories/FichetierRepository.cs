@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class FichetierRepository:RepositoryBase<Fichetier>, IFichetierRepository
+    class FichetierRepository:RepositoryBase<GES_Fichetier>, IFichetierRepository
     {
         public FichetierRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
