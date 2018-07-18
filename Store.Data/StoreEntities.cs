@@ -19,52 +19,52 @@ namespace Store.Data
         public DbSet<GES_ArticlesKit> ArticlesKitss { get; set; }
         public DbSet<GES_ArticlesPrix> ArticlesPrixs { get; set; }
         public DbSet<GES_Categorie> Categories { get; set; }
-        public DbSet<CrmContact> CrmContacts { get; set; }
+       
         public DbSet<GES_Depot> Depots { get; set; }
-        public DbSet<DepotContact> DepotContacts { get; set; }
-        public DbSet<Devise> Devises { get; set; }
+      
+        public DbSet<GEN_Devises> Devises { get; set; }
         public DbSet<GES_Doclie> Doclies { get; set; }
         public DbSet<GES_Doclieart> Docliearts { get; set; }
         public DbSet<GES_DocumentCommercial> DocumentCommercials { get; set; }
         public DbSet<GES_DocumentCommercialDetail> DocumentCommercialDetails { get; set; }
         public DbSet<GES_DocumentCommercialDetailSerie> DocumentCommercialDetailSeries { get; set; }
         public DbSet<GES_Famille> Familles { get; set; }
-        public DbSet<Fichetier> Fichetierss { get; set; }
-        public DbSet<FichetiersContact> FichetiersContacts { get; set; }
-        public DbSet<FichetiersRepresentant> FichetiersRepresentantss { get; set; }
-        public DbSet<FournisseurArticle> FournisseurArticles { get; set; }
-        public DbSet<Ged> Geds { get; set; }
+       // public DbSet<Fichetier> Fichetierss { get; set; }
+       // public DbSet<FichetiersContact> FichetiersContacts { get; set; }
+        //public DbSet<FichetiersRepresentant> FichetiersRepresentantss { get; set; }
+        public DbSet<GES_FournisseurArticle> FournisseurArticles { get; set; }
+        public DbSet<GES_Ged> Geds { get; set; }
         public DbSet<GEN_Items> GEN_Itemss { get; set; }
         public DbSet<GEN_Model> GEN_Models { get; set; }
         public DbSet<GES_Impression> Impressions { get; set; }
         public DbSet<GES_Licence> Licences { get; set; }
         public DbSet<GES_Marque> Marques { get; set; }
-        public DbSet<Motif> Motifs { get; set; }
-        public DbSet<MotifTicket> MotifTickets { get; set; }
-        public DbSet<MouvementStock> MouvementStocks { get; set; }
-        public DbSet<Nomenclature> Nomenclatures { get; set; } 
-        public DbSet<Objectif> Objectifs { get; set; }
-        public DbSet<Opportunite> Opportunites { get; set; }
-        public DbSet<OpportuniteDetail> OpportuniteDetails { get; set; }
-        public DbSet<Paiement> Paiements
+        public DbSet<GES_Motif> Motifs { get; set; }
+        public DbSet<GES_MotifTicket> MotifTickets { get; set; }
+        public DbSet<GES_MouvementStock> MouvementStocks { get; set; }
+        public DbSet<GES_Nomenclature> Nomenclatures { get; set; } 
+        public DbSet<GES_Objectif> Objectifs { get; set; }
+        public DbSet<GES_Opportunite> Opportunites { get; set; }
+        public DbSet<GES_OpportuniteDetail> OpportuniteDetails { get; set; }
+       /* public DbSet<Paiement> Paiements
         { get; set; }
-           public DbSet<Parametrage> Parametrages { get; set; }
-        public DbSet<Periode> Periodes { get; set; }
+           public DbSet<Parametrage> Parametrages { get; set; }*/
+        public DbSet<GES_Periode> Periodes { get; set; }
 
-        public DbSet<Profil> Profils { get; set; }
-        public DbSet<ProfilDetail> ProfilDetails { get; set; }
+       // public DbSet<Profil> Profils { get; set; }
+       // public DbSet<ProfilDetail> ProfilDetails { get; set; }
 
-        public DbSet<Reglement> Reglements { get; set; }
-        public DbSet<ReglementFacture> ReglementFactures { get; set; }
+        public DbSet<GES_Reglement> Reglements { get; set; }
+        public DbSet<GES_ReglementFacture> ReglementFactures { get; set; }
 
-        public DbSet<Representant> Representants { get; set; }
-        public DbSet<Societe> Societes { get; set; }
+        public DbSet<GES_Representant> Representants { get; set; }
+        public DbSet<GEN_Dossiers> Societes { get; set; }
 
-        public DbSet<Ticket> Tickets { get; set; }
-        public DbSet<TicketDetail> TicketDetails { get; set; }
+        public DbSet<GES_Ticket> Tickets { get; set; }
+        public DbSet<GES_TicketDetail> TicketDetails { get; set; }
 
         public DbSet<GES_Tolerance> Tolerances { get; set; }
-        public DbSet<GES_Tva> Tvas { get; set; }
+    
 
         public DbSet<GES_Unite> Unites { get; set; }
        
@@ -84,18 +84,17 @@ namespace Store.Data
 
             modelBuilder.Configurations.Add(new GES_ArticlesPrixConfiguration());
             modelBuilder.Configurations.Add(new GES_CategorieConfiguration());
-            modelBuilder.Configurations.Add(new CrmContactConfiguration());
-            modelBuilder.Configurations.Add(new GES_DepotConfiguration());
+             modelBuilder.Configurations.Add(new GES_DepotConfiguration());
 
-            modelBuilder.Configurations.Add(new DepotContactConfiguration());
+           
             modelBuilder.Configurations.Add(new GES_DeviseConfiguration());
             modelBuilder.Configurations.Add(new GES_DoclieConfiguration());
             modelBuilder.Configurations.Add(new GES_DoclieartConfiguration());
 
             modelBuilder.Configurations.Add(new GES_DocumentCommercialConfiguration());
             modelBuilder.Configurations.Add(new GES_DocumentCommercialDetailConfiguration());
-            modelBuilder.Configurations.Add(new DocumentCommercialDetailSerieConfiguration());
-            modelBuilder.Configurations.Add(new FamilleConfiguration());
+            modelBuilder.Configurations.Add(new GES_DocumentCommercialDetailSerieConfiguration());
+            modelBuilder.Configurations.Add(new GES_FamilleConfiguration());
             /****************************/
             modelBuilder.Configurations.Add(new GEN_TiersConfiguration());
             modelBuilder.Configurations.Add(new GEN_TiersContactsConfiguration());

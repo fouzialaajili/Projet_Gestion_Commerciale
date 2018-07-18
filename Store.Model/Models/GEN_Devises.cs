@@ -34,7 +34,9 @@ namespace Store.Model
 
         public DateTime? Devisessys_dateCreation { get; set; }
 
-
+       
+            public long DeviseSocieteId { get; set; }
+        public virtual GEN_Dossiers DeviseSociete { get; set; }
 
         public virtual ICollection<CPT_ComptesBancaires> CPT_ComptesBancaires { get; set; }
 

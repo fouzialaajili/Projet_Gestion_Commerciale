@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Configuration
 {
-    class DocumentCommercialDetailSerieConfiguration : EntityTypeConfiguration<GES_DocumentCommercialDetailSerie>
+    class GES_DocumentCommercialDetailSerieConfiguration : EntityTypeConfiguration<GES_DocumentCommercialDetailSerie>
     {
-        public DocumentCommercialDetailSerieConfiguration()
+        public GES_DocumentCommercialDetailSerieConfiguration()
         {
             ToTable("DocumentCommercialDetailSerie");
             HasKey(a => a.DocumentCommercialDetailSerieId);

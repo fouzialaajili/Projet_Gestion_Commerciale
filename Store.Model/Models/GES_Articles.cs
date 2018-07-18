@@ -49,11 +49,11 @@ namespace Store.Model
         public long ArticleSocieteId { get; set; }
         public virtual GEN_Dossiers  ArticleSociete { get; set; }
         public long ArticleDepotId { get; set; }
-        public virtual GES_Depot Ges_ArticleDepot { get; set; }
+        public virtual GES_Depot ArticleDepot { get; set; }
         public long ArticleCategorieId { get; set; }
         public virtual GES_Categorie ArticleCategorie { get; set; }
         public long ArticleUniteId { get; set; }
-        public virtual GES_Unite Ges_ArticleUnite { get; set; }
+        public virtual GES_Unite ArticleUnite { get; set; }
         public long ArticleMarqueId { get; set; }
         public virtual GES_Marque ArticleMarque { get; set; }
 

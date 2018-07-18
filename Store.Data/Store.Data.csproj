@@ -67,8 +67,8 @@
     <Compile Include="Configuration\GES_DoclieConfiguration.cs" />
     <Compile Include="Configuration\GES_DocumentCommercialConfiguration.cs" />
     <Compile Include="Configuration\GES_DocumentCommercialDetailConfiguration.cs" />
-    <Compile Include="Configuration\DocumentCommercialDetailSerieConfiguration.cs" />
-    <Compile Include="Configuration\FamilleConfiguration.cs" />
+    <Compile Include="Configuration\GES_DocumentCommercialDetailSerieConfiguration.cs" />
+    <Compile Include="Configuration\GES_FamilleConfiguration.cs" />
     <!-->>>>>>> 2267e92627d70391d6d45f5590325e078926f7fb-->
     <Compile Include="Configuration\GEN_TiersContactsConfiguration.cs" />
     <Compile Include="Configuration\FichetiersRepresentantsConfiguration.cs" />
@@ -103,7 +103,6 @@
     <Compile Include="Configuration\GES_ImpressionConfiguration.cs" />
     <Compile Include="Configuration\GES_LicenceConfiguration.cs" />
     <Compile Include="Configuration\GES_MarqueConfiguration.cs" />
-    <Compile Include="Configuration\GES_TvaConfiguration.cs" />
     <Compile Include="Configuration\GES_UniteConfiguration.cs" />
     <!-->>>>>>> 2267e92627d70391d6d45f5590325e078926f7fb-->
     <Compile Include="Properties\AssemblyInfo.cs" />

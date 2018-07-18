@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Configuration
 {
-   public  class GES_DeviseConfiguration : EntityTypeConfiguration<Devise>
+   public  class GES_DeviseConfiguration : EntityTypeConfiguration<GEN_Devises>
     {
         public GES_DeviseConfiguration()
         {
             ToTable("Devise");
-            HasKey(a => a.DeviseId);
+            HasKey(a => a.DevisesId);
 
 
-            HasOptional<Societe>(a => a.DeviseSociete)
+            HasOptional<GEN_Dossiers>(a => a.DeviseSociete)
 .WithMany(d => d.SocieteDevise)
 .HasForeignKey<long?>(a => a.DeviseSocieteId);
         }

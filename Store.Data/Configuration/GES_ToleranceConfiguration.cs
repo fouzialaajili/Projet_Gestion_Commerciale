@@ -15,7 +15,7 @@ namespace Store.Data.Configuration
             ToTable("Tolerance");
             HasKey(a => a.ToleranceId);
 
-            HasOptional<GES_Societe>(a => a.ToleranceSociete)
+            HasOptional<GEN_Dossiers>(a => a.ToleranceSociete)
               .WithMany(d => d.SocieteTolerance)
               .HasForeignKey<long?>(a => a.ToleranceSocieteId);
         }

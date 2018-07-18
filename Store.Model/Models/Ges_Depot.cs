@@ -25,7 +25,7 @@ namespace Store.Model
       
 
         public long DepotSocieteId { get; set; }
-        public virtual GES_Societe DepotSociete { get; set; }
+        public virtual GEN_Dossiers DepotSociete { get; set; }
         public virtual ICollection<GES_MouvementStock> DepotMouvementStock { get; set; }
         public virtual ICollection<GES_Article> DepotArticle { get; set; }
      

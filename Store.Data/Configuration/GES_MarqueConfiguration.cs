@@ -14,7 +14,7 @@ namespace Store.Data.Configuration
         {
             ToTable("Marque");
             HasKey(a => a.MarqueId);
-            HasOptional<GES_Societe>(a => a.MarqueSociete)
+            HasOptional<GEN_Dossiers>(a => a.MarqueSociete)
                 .WithMany(d => d.SocieteMarque)
                 .HasForeignKey<long?>(a => a.MarqueSocieteId);
         }

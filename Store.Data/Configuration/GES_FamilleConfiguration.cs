@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Configuration
 {
-    public class FamilleConfiguration : EntityTypeConfiguration<Famille>
+    public class GES_FamilleConfiguration : EntityTypeConfiguration<GES_Famille>
     {
-        public  FamilleConfiguration(){
+        public  GES_FamilleConfiguration(){
             ToTable("Famille");
             HasKey(a => a.FamilleId);
-            HasOptional<Societe>(a => a.FamilleSociete)
+            HasOptional<GEN_Dossiers>(a => a.FamilleSociete)
             .WithMany(d => d.SocieteFamille)
             .HasForeignKey<long?>(a => a.FamilleSocieteId);
 
