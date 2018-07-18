@@ -40,22 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Admin.cs" />
-    <Compile Include="Models\Affaire.cs" />
-    <Compile Include="Models\Article.cs" />
-    <Compile Include="Models\ArticlesKit.cs" />
-    <Compile Include="Models\ArticlesPrix.cs" />
-    <Compile Include="Models\Categorie.cs" />
+    <Compile Include="Models\GES_Admin.cs" />
+    <Compile Include="Models\GES_Affaire.cs" />
+    <Compile Include="Models\GES_Article.cs" />
+    <Compile Include="Models\GES_ArticlesKit.cs" />
+    <Compile Include="Models\GES_ArticlesPrix.cs" />
+    <Compile Include="Models\GES_Categorie.cs" />
     <Compile Include="Models\CrmContact.cs" />
-    <Compile Include="Models\Depot.cs" />
+    <Compile Include="Models\GES_Depot.cs" />
     <Compile Include="Models\DepotContact.cs" />
     <Compile Include="Models\Devise.cs" />
-    <Compile Include="Models\Doclie.cs" />
-    <Compile Include="Models\Doclieart.cs" />
-    <Compile Include="Models\DocumentCommercial.cs" />
-    <Compile Include="Models\DocumentCommercialDetail.cs" />
-    <Compile Include="Models\DocumentCommercialDetailSerie.cs" />
-    <Compile Include="Models\Famille.cs" />
+    <Compile Include="Models\GES_Doclie.cs" />
+    <Compile Include="Models\GES_Doclieart.cs" />
+    <Compile Include="Models\GES_DocumentCommercial.cs" />
+    <Compile Include="Models\GES_DocumentCommercialDetail.cs" />
+    <Compile Include="Models\GES_DocumentCommercialDetailSerie.cs" />
+    <Compile Include="Models\GES_Famille.cs" />
     <Compile Include="Models\Fichetier.cs" />
     <Compile Include="Models\FichetiersRepresentant.cs" />
     <Compile Include="Models\FichetiersContact.cs" />
@@ -63,9 +63,9 @@
     <Compile Include="Models\Ged.cs" />
     <Compile Include="Models\GEN_Items.cs" />
     <Compile Include="Models\GEN_Model.cs" />
-    <Compile Include="Models\Impression.cs" />
-    <Compile Include="Models\Licence.cs" />
-    <Compile Include="Models\Marque.cs" />
+    <Compile Include="Models\GES_Impression.cs" />
+    <Compile Include="Models\GES_Licence.cs" />
+    <Compile Include="Models\GES_Marque.cs" />
     <Compile Include="Models\Motif.cs" />
     <Compile Include="Models\MotifTicket.cs" />
     <Compile Include="Models\MouvementStock.cs" />
@@ -85,9 +85,9 @@
     <Compile Include="Models\Societe.cs" />
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\TicketDetail.cs" />
-    <Compile Include="Models\Tolerance.cs" />
-    <Compile Include="Models\Tva.cs" />
-    <Compile Include="Models\Unite.cs" />
+    <Compile Include="Models\GES_Tolerance.cs" />
+    <Compile Include="Models\Ges_Tva.cs" />
+    <Compile Include="Models\GES_Unite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
