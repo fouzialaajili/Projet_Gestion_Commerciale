@@ -19,7 +19,7 @@ namespace Store.Model
         public DateTime DocumentCommercialDetailSerieSysDateUpdate { get; set; }
     
         public long  DocumentCommercialDetailSerieSocieteId { get; set; }
-        public virtual Societe DocumentCommercialDetailSerieSociete { get; set; }
+        public virtual GEN_Dossiers DocumentCommercialDetailSerieSociete { get; set; }
         public long  DocumentCommercialDetailSerieDocumentCommercialDetailIdDocumentDetail { get; set; }
         public virtual DocumentCommercialDetail DocumentCommercialDetailSerieDocumentCommercialDetail { get; set; }
 

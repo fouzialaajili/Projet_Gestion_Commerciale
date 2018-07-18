@@ -18,7 +18,7 @@ namespace Store.Model
         public DateTime UniteSysDateCreation { get; set; }
        public DateTime UniteSysDateUpdate { get; set; }
         public long UniteSocieteId { get; set; }
-       public virtual  Societe UniteSociete { get; set; }
+       public virtual  GEN_Dossiers UniteSociete { get; set; }
 
         public virtual ICollection<Article> UniteArticle { get; set; }
     }

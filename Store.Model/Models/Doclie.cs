@@ -15,6 +15,6 @@ namespace Store.Model
         public DateTime DoclieSysDateCreation { get; set; }
         public DateTime DoclieSysDateUpdate { get; set; }
         public long  DoclieSocieteId { get; set; }
-        public virtual Societe DoclieSociete { get; set; }
+        public virtual GEN_Dossiers DoclieSociete { get; set; }
     }
 }

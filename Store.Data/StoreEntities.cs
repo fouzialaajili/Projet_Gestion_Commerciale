@@ -97,20 +97,20 @@ namespace Store.Data
             modelBuilder.Configurations.Add(new DocumentCommercialDetailSerieConfiguration());
             modelBuilder.Configurations.Add(new FamilleConfiguration());
             /****************************/
-            modelBuilder.Configurations.Add(new FichetiersConfiguration());
-            modelBuilder.Configurations.Add(new FichetiersContactConfiguration());
+            modelBuilder.Configurations.Add(new GEN_TiersConfiguration());
+            modelBuilder.Configurations.Add(new GEN_TiersContactsConfiguration());
             modelBuilder.Configurations.Add(new FichetiersRepresentantsConfiguration());
-            modelBuilder.Configurations.Add(new FournisseurArticleConfiguration());
-            modelBuilder.Configurations.Add(new GedConfiguration());
-            modelBuilder.Configurations.Add(new MotifConfiguration());
-            modelBuilder.Configurations.Add(new MotifTicketConfiguration());
-            modelBuilder.Configurations.Add(new MouvementStockConfiguration());
+            modelBuilder.Configurations.Add(new GES_FournisseurArticleConfiguration());
+            modelBuilder.Configurations.Add(new GES_GedConfiguration());
+            modelBuilder.Configurations.Add(new GES_MotifConfiguration());
+            modelBuilder.Configurations.Add(new GES_MotifTicketConfiguration());
+            modelBuilder.Configurations.Add(new GES_MouvementStockConfiguration());
             modelBuilder.Configurations.Add(new NomenclatureConfiguration());
             modelBuilder.Configurations.Add(new NumerotationConfiguration());
             modelBuilder.Configurations.Add(new ObjectifConfiguration());
             modelBuilder.Configurations.Add(new OpportuniteConfiguration());
             modelBuilder.Configurations.Add(new OpportuniteDetailConfiguration());
-            modelBuilder.Configurations.Add(new PaiementConfiguration());
+            modelBuilder.Configurations.Add(new GEN_TypePaiementConfiguration());
             modelBuilder.Configurations.Add(new ParametrageConfiguration());
             modelBuilder.Configurations.Add(new PeriodeConfiguration());
             modelBuilder.Configurations.Add(new ProfilConfiguration());

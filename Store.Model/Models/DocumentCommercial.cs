@@ -30,7 +30,7 @@ namespace Store.Model
         public DateTime DocumentCommercialSysDateCreation { get; set; }
         public DateTime DocumentCommercialSysDateUpdate { get; set; }
       public long  DocumentCommercialSocieteId { get; set; }
-        public virtual Societe DocumentCommercialSociete { get; set; }
+        public virtual GEN_Dossiers DocumentCommercialSociete { get; set; }
 
         public virtual ICollection<MouvementStock> DocumentCommercialMouvementStock { get; set; }
 

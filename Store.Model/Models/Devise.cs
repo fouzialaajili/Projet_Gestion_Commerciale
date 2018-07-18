@@ -19,7 +19,7 @@ namespace Store.Model
         public DateTime DeviseSysDateCreation { get; set; }
         public DateTime DeviseSysDateUpdate { get; set; }
         public long  DeviseSocieteId { get; set; }
-        public virtual Societe DeviseSociete { get; set; }
-        public virtual ICollection<Opportunite> DeviseOpportunite { get; set; }
+        public virtual GEN_Dossiers DeviseSociete { get; set; }
+        public virtual ICollection<GES_Opportunite> DeviseOpportunite { get; set; }
     }
 }

@@ -26,9 +26,5 @@ namespace Store.Data.Infrastructure
             DbContext.Commit();
         }
 
-
-
-
-
     }
 }

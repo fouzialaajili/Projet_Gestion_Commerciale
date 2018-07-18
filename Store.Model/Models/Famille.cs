@@ -15,6 +15,6 @@ public int FamilleSyuser { get; set; }
         public DateTime FamilleSysDateCreation { get; set; }
         public DateTime FamilleSysDateUpdate { get; set; }
         public long  FamilleSocieteId { get; set; }
-        public virtual Societe FamilleSociete { get; set; }
+        public virtual GEN_Dossiers FamilleSociete { get; set; }
     }
 }

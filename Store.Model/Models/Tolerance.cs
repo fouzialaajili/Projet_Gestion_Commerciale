@@ -12,7 +12,7 @@ namespace Store.Model
        public int ToleranceEntier { get; set; }
 
       public long ToleranceSocieteId { get; set; }
-        public virtual Societe ToleranceSociete { get; set; }
+        public virtual GEN_Dossiers ToleranceSociete { get; set; }
 
   }
 }

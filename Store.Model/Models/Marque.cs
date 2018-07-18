@@ -16,7 +16,7 @@ namespace Store.Model
        public DateTime MarqueSys_DateCreation { get; set; }
        public DateTime MarqueSys_DateUpdate { get; set; }
        public long MarqueSocieteId { get; set; }
-       public virtual Societe MarqueSociete { get; set; }
+       public virtual GEN_Dossiers MarqueSociete { get; set; }
         public virtual ICollection<Article> MarqueArticle { get; set; }
        
     }
