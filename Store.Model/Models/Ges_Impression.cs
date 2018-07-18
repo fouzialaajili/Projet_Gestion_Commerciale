@@ -14,7 +14,7 @@ namespace Store.Model
       public string ImpressionChemin { get; set; }
       public string ImpressionLogo { get; set; }
      /***/ public long ImpressionSocieteId { get; set; }
-        public  virtual GES_Societe ImpressionSociete { get; set; }
+        public  virtual GEN_Dossiers ImpressionSociete { get; set; }
 
 
     }

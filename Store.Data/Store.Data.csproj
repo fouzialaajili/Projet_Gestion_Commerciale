@@ -51,8 +51,10 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Configuration\GES_ToleranceConfiguration.cs" />
+    <Compile Include="Configuration\GEN_TypePaiementDetailConfiguration.cs" />
+    <Compile Include="Configuration\ToleranceConfiguration.cs" />
     <!--<<<<<<< HEAD-->
-    <Compile Include="Configuration\FichetiersConfiguration.cs" />
+    <Compile Include="Configuration\GEN_TiersConfiguration.cs" />
     <!--=======-->
     <Compile Include="Configuration\GES_AdminConfiguration.cs" />
     <Compile Include="Configuration\GES_AffaireConfiguration.cs" />
@@ -71,19 +73,19 @@
     <Compile Include="Configuration\DocumentCommercialDetailSerieConfiguration.cs" />
     <Compile Include="Configuration\FamilleConfiguration.cs" />
     <!-->>>>>>> 2267e92627d70391d6d45f5590325e078926f7fb-->
-    <Compile Include="Configuration\FichetiersContactConfiguration.cs" />
+    <Compile Include="Configuration\GEN_TiersContactsConfiguration.cs" />
     <Compile Include="Configuration\FichetiersRepresentantsConfiguration.cs" />
-    <Compile Include="Configuration\FournisseurArticleConfiguration.cs" />
-    <Compile Include="Configuration\GedConfiguration.cs" />
-    <Compile Include="Configuration\MotifConfiguration.cs" />
-    <Compile Include="Configuration\MotifTicketConfiguration.cs" />
-    <Compile Include="Configuration\MouvementStockConfiguration.cs" />
+    <Compile Include="Configuration\GES_FournisseurArticleConfiguration.cs" />
+    <Compile Include="Configuration\GES_GedConfiguration.cs" />
+    <Compile Include="Configuration\GES_MotifConfiguration.cs" />
+    <Compile Include="Configuration\GES_MotifTicketConfiguration.cs" />
+    <Compile Include="Configuration\GES_MouvementStockConfiguration.cs" />
     <Compile Include="Configuration\NomenclatureConfiguration.cs" />
     <Compile Include="Configuration\NumerotationConfiguration.cs" />
     <Compile Include="Configuration\ObjectifConfiguration.cs" />
     <Compile Include="Configuration\OpportuniteConfiguration.cs" />
     <Compile Include="Configuration\OpportuniteDetailConfiguration.cs" />
-    <Compile Include="Configuration\PaiementConfiguration.cs" />
+    <Compile Include="Configuration\GEN_TypePaiementConfiguration.cs" />
     <Compile Include="Configuration\ParametrageConfiguration.cs" />
     <Compile Include="Configuration\PeriodeConfiguration.cs" />
     <Compile Include="Configuration\ProfilConfiguration.cs" />

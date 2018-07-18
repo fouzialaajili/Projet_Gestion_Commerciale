@@ -18,6 +18,8 @@ namespace Store.Model
        public long MarqueSocieteId { get; set; }
        public virtual Societe GES_MarqueSociete { get; set; }
         public virtual ICollection<GES_Article> MarqueArticle { get; set; }
+       public virtual GEN_Dossiers MarqueSociete { get; set; }
+        public virtual ICollection<Article> MarqueArticle { get; set; }
        
     }
 }

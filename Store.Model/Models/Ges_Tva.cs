@@ -19,8 +19,8 @@ namespace Store.Model
        public DateTime TvaSys_DateUpdate { get; set; }
        
         public long TvaSocieteId { get; set; }
-        public virtual Ges_Societe TvaSociete { get; set; }
-        public virtual ICollection<Ges_Fichetier> TvaFichetier { get; set; }
+        public virtual GEN_Dossiers TvaSociete { get; set; }
+        public virtual ICollection<GEN_Tiers> TvaFichetier { get; set; }
        /// public virtual ICollection<Societe> TvaSocietes { get; set; }
     }
 

@@ -8,12 +8,7 @@ namespace Store.Model
 {
     public partial class GEN_Model
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public GEN_Model()
-        {
-            GEN_Items = new HashSet<GEN_Items>();
-        }
-
+        
         public long Id { get; set; }
 
         public string Model { get; set; }
