@@ -6,7 +6,7 @@ namespace Store.Model
 
     public partial class CPT_ParametrageComptable
     {
-        public long Id { get; set; }
+        public long CPT_ParametrageComptableId { get; set; }
      
         public string NumeroPiece { get; set; }
 
