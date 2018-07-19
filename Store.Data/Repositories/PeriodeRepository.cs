@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositoriess
 {
-    class PeriodeRepository : RepositoryBase<Periode>, IPeriodeRepository
+    class PeriodeRepository : RepositoryBase<GES_Periode>, IPeriodeRepository
     {
         public PeriodeRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface IPeriodeRepository : IRepository<Periode>
+    public interface IPeriodeRepository : IRepository<GES_Periode>
     {
 
     }

@@ -24,8 +24,8 @@ namespace Store.Model
         {
             ObjectifSysDateCreation = DateTime.Now;
         }
-     /***/   public long ObjectifSocieteId { get; set; }
-        virtual public GEN_Dossiers ObjectifSociete { get; set; }
+     /***/   public long ObjectifDossierId { get; set; }
+        virtual public GEN_Dossiers ObjectifDossier{ get; set; }
         virtual public GES_Representant ObjectifRepresentant { get; set; }
 
     }

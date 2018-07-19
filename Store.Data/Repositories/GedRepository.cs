@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class GedRepository : RepositoryBase<Ged>, IGedRepository
+    class GedRepository : RepositoryBase<GES_Ged>, IGedRepository
     {
         public GedRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface IGedRepository : IRepository<Ged>
+    public interface IGedRepository : IRepository<GES_Ged>
     {
 
     }

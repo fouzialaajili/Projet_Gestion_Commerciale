@@ -24,7 +24,7 @@ namespace Store.Model
         {
             NumerotationSysDateCreation = DateTime.Now;
         }
-        public long NumerotationSocieteId { get; set; }
-        virtual public GEN_Dossiers NumerotationSociete { get; set; }
+        public long NumerotationDossierId { get; set; }
+        virtual public GEN_Dossiers NumerotationDossier { get; set; }
     }
 }

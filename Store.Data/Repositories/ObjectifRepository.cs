@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class ObjectifRepository : RepositoryBase<Objectif>, IObjectifRepository
+    class ObjectifRepository : RepositoryBase<GES_Objectif>, IObjectifRepository
     {
         public ObjectifRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface IObjectifRepository : IRepository<Objectif>
+    public interface IObjectifRepository : IRepository<GES_Objectif>
     {
 
     }

@@ -33,10 +33,10 @@ namespace Store.Model
         {
             TicketSysDateCreation = DateTime.Now;
         }
-  /***/ public long TicketSocieteId { get; set; }
-        virtual  public GEN_Dossiers TicketSociete { get; set; }
+  /***/ public long TicketDossierId { get; set; }
+        virtual  public GEN_Dossiers TicketDossier { get; set; }
 
         public virtual ICollection<GES_MotifTicket> TicketMotifTicket { get; set; }
-        public virtual ICollection<GES_TicketDetail> TicketTicketDetail { get; set; }
+        public virtual ICollection<GES_TicketDetail> GES_TicketDetail { get; set; }
     }
 }

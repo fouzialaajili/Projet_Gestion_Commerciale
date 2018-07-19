@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class OpportuniteRepository : RepositoryBase<Opportunite>, IOpportuniteRepository
+    class OpportuniteRepository : RepositoryBase<GES_Opportunite>, IOpportuniteRepository
     {
         public OpportuniteRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface IOpportuniteRepository : IRepository<Opportunite>
+    public interface IOpportuniteRepository : IRepository<GES_Opportunite>
     {
 
     }

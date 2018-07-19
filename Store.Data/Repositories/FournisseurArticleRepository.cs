@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class FournisseurArticleRepository : RepositoryBase<FournisseurArticle>, IFournisseurArticleRepository
+    class FournisseurArticleRepository : RepositoryBase<GES_FournisseurArticle>, IFournisseurArticleRepository
     {
         public FournisseurArticleRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface IFournisseurArticleRepository : IRepository<FournisseurArticle>
+    public interface IFournisseurArticleRepository : IRepository<GES_FournisseurArticle>
     {
 
     }

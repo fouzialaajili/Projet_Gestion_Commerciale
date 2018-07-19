@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class TicketRepository : RepositoryBase<Ticket>, ITicketRepository
+    class TicketRepository : RepositoryBase<GES_Ticket>, ITicketRepository
     {
         public TicketRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface ITicketRepository : IRepository<Ticket>
+    public interface ITicketRepository : IRepository<GES_Ticket>
     {
 
     }

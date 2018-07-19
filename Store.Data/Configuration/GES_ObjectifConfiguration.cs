@@ -8,26 +8,26 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Configuration
 {
-    class ObjectifConfiguration : EntityTypeConfiguration<Objectif>
+    class GES_ObjectifConfiguration : EntityTypeConfiguration<GES_Objectif>
     {
-        public ObjectifConfiguration()
+        public GES_ObjectifConfiguration()
         {
             ToTable("Objectif");
             HasKey(x => x.ObjectifId);
 
 
             /***********************************/
-        //      virtual public Societe ObjectifSociete { get; set; }
-        //virtual public Representant ObjectifRepresentant { get; set; }
+        // virtual public GEN_Dossiers ObjectifDossier { get; set; }
+        //virtual public GES_Representant ObjectifRepresentant { get; set; }
 
 
 
 
-        HasOptional<Societe>(a => a.ObjectifSociete)
-                      .WithMany(d => d.SocieteObject)
-                      .HasForeignKey<long?>(a => a.ObjectifSocieteId);
+        HasOptional<GEN_Dossiers>(a => a.ObjectifDossier)
+                      .WithMany(d => d.GES_Objectif)
+                      .HasForeignKey<long?>(a => a.ObjectifDossierId);
 
-            HasOptional<Representant>(a => a.ObjectifRepresentant)
+            HasOptional<GES_Representant>(a => a.ObjectifRepresentant)
                           .WithMany(d => d.RepresentantObject)
                           .HasForeignKey<long?>(a => a.ObjectifRepresentantId);
         }

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Configuration
 {
-    class NomenclatureConfiguration : EntityTypeConfiguration<Nomenclature>
+    class GES_NomenclatureConfiguration : EntityTypeConfiguration<GES_Nomenclature>
     {
-        public NomenclatureConfiguration()
+        public GES_NomenclatureConfiguration()
         {
             ToTable("Nomenclature");
             HasKey(x => x.NomenclatureId);
@@ -22,7 +22,7 @@ namespace Store.Data.Configuration
 
 
 
-        HasOptional<Article>(a => a.NomenclatureArticle)
+        HasOptional<GES_Article>(a => a.NomenclatureArticle)
                   .WithMany(d => d.ArticleNomenclature)
                   .HasForeignKey<long?>(a => a.NomenclatureIdarticle);
             }

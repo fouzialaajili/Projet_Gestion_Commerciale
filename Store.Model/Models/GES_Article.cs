@@ -46,7 +46,7 @@ public string ArticleImage
         public DateTime ArticleSysDateCreation { get; set; }
         public DateTime ArticlesSysDateUpdate { get; set; }
       
-        public long ArticleSocieteId { get; set; }
+        public long ArticleDossierId { get; set; }
         public virtual GEN_Dossiers ArticleSociete { get; set; }
         public long ArticleDepotId { get; set; }
        public  virtual GES_Depot ArticleDepot { get; set; }

@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class FichetierRepository:RepositoryBase<Fichetier>, IFichetierRepository
+    class DossiersRepository : RepositoryBase<GEN_Dossiers>, ISocieteRepository
     {
-        public FichetierRepository(IDbFactory dbFactory)
+        public DossiersRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
-}
-    public interface IFichetierRepository : IRepository<Fichetier>
+    }
+
+    public interface ISocieteRepository : IRepository<GEN_Dossiers>
     {
 
     }

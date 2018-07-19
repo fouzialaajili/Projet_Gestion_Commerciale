@@ -8,15 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class ParametrageRepository : RepositoryBase<Parametrage>, IParametrageRepository
+    class TiersRepository:RepositoryBase<GEN_Tiers>, IFichetierRepository
     {
-        public ParametrageRepository(IDbFactory dbFactory)
+        public TiersRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
-    }
-
-    public interface IParametrageRepository : IRepository<Parametrage>
+}
+    public interface IFichetierRepository : IRepository<GEN_Tiers>
     {
 
     }
 }
-

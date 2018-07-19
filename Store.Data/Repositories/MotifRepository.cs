@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class MotifRepository : RepositoryBase<Motif>, IMotifRepository
+    class MotifRepository : RepositoryBase<GES_Motif>, IMotifRepository
     {
         public MotifRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface IMotifRepository : IRepository<Motif>
+    public interface IMotifRepository : IRepository<GES_Motif>
     {
 
     }

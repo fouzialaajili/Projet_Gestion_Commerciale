@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class PaiementRepository : RepositoryBase<Paiement>, IPaiementRepository
+    class PaiementRepository : RepositoryBase<GEN_TypePaiement>, IPaiementRepository
     {
         public PaiementRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface IPaiementRepository : IRepository<Paiement>
+    public interface IPaiementRepository : IRepository<GEN_TypePaiement>
     {
 
     }

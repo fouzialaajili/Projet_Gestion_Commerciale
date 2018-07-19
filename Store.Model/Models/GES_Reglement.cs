@@ -32,8 +32,8 @@ namespace Store.Model
         {
             ReglementSysDateCreation = DateTime.Now;
         }
-       /***/ public long ReglementSocieteId { get; set; }
-        virtual public GEN_Dossiers ReglementSociete { get; set; }
+       /***/ public long ReglementDossierId { get; set; }
+        virtual public GEN_Dossiers ReglementDossier { get; set; }
         virtual public GEN_Tiers ReglementFichetier { get; set; }
 
 

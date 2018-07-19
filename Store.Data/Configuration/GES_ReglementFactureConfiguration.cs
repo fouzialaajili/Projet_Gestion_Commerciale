@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Configuration
 {
-    class ReglementFactureConfiguration : EntityTypeConfiguration<ReglementFacture>
+    class GES_ReglementFactureConfiguration : EntityTypeConfiguration<GES_ReglementFacture>
     {
-        public ReglementFactureConfiguration()
+        public GES_ReglementFactureConfiguration()
         {
             ToTable("ReglementFacture");
             HasKey(x => x.ReglementFactureId);

@@ -26,10 +26,10 @@ namespace Store.Model
         {
             OpportuniteSysDateCreation = DateTime.Now;
         }
-       /****/ public long OpportuniteSocieteId { get; set; }
-        virtual public GEN_Dossiers OpportuniteSociete { get; set; }
+       /****/ public long OpportuniteDossierd { get; set; }
+        virtual public GEN_Dossiers OpportuniteDossier { get; set; }
         virtual public GEN_Tiers OpportuniteFichetier { get; set; }
-        virtual public Devise OpportuniteDevise { get; set; }
+        virtual public GEN_Devises OpportuniteDevise { get; set; }
         public virtual ICollection<GES_Motif> OpportuniteMotif { get; set; }
       //  public virtual ICollection<CrmContact> OpportuniteCrmContact { get; set; }
         public virtual ICollection<GES_OpportuniteDetail> OpportuniteOpportuniteDetail{ get; set; }

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Configuration
 {
-    class OpportuniteDetailConfiguration : EntityTypeConfiguration<OpportuniteDetail>
+    class GES_OpportuniteDetailConfiguration : EntityTypeConfiguration<GES_OpportuniteDetail>
     {
-        public OpportuniteDetailConfiguration()
+        public GES_OpportuniteDetailConfiguration()
         {
             ToTable(" OpportuniteDetail");
             HasKey(x => x.OpportuniteDetailId);
@@ -18,14 +18,14 @@ namespace Store.Data.Configuration
 
             /***********************************/
 
-        //       virtual public Fichetiers OpportuniteDetailFichetier { get; set; }
-        //virtual public Opportunite OpportuniteDetailOpportunite { get; set; }
+        // virtual public GEN_Tiers OpportuniteDetailFichetier { get; set; }
+        //virtual public GES_Opportunite OpportuniteDetailOpportunite { get; set; }
 
-        HasOptional<Fichetier>(a => a.OpportuniteDetailFichetier)
-                                  .WithMany(d => d.FichetiersOpportuniteDetail)
+        HasOptional<GEN_Tiers>(a => a.OpportuniteDetailFichetier)
+                                  .WithMany(d => d.GES_OpportuniteDetail)
                                   .HasForeignKey<long?>(a => a.OpportuniteDetailIdcommercial);
 
-            HasOptional<Opportunite>(a => a.OpportuniteDetailOpportunite)
+            HasOptional<GES_Opportunite>(a => a.OpportuniteDetailOpportunite)
                                   .WithMany(d => d.OpportuniteOpportuniteDetail)
                                   .HasForeignKey<long?>(a => a.OpportuniteDetailIdopportunite);
 

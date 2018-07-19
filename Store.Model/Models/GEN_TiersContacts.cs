@@ -6,7 +6,7 @@ namespace Store.Model
 
     public partial class GEN_TiersContacts
     {
-        public long Id { get; set; }
+        public long GEN_TiersContactsId { get; set; }
 
 
         public string Civilite { get; set; }
@@ -37,5 +37,6 @@ namespace Store.Model
         public DateTime? sys_dateCreation { get; set; }
 
         public virtual GEN_Tiers GEN_Tiers { get; set; }
+        public virtual ICollection<GES_Ticket> GES_Ticket { get; set; }
     }
 }

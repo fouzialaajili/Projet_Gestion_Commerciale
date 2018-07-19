@@ -25,19 +25,19 @@ namespace Store.Data.Configuration
 
 
         HasOptional<GEN_Dossiers>(a => a.MouvementStockSociete)
-                        .WithMany(d => d.SocieteMouvementStock)
-                        .HasForeignKey<long?>(a => a.MouvementStockSocieteId);
+                        .WithMany(d => d.GES_MouvementStock)
+                        .HasForeignKey<long?>(a => a.MouvementStockDossierId);
 
             HasOptional<GES_Depot>(a => a.MouvementStocksDepot)
-                    .WithMany(d => d.DepotMouvementStock)
+                    .WithMany(d => d.GES_MouvementStock)
                     .HasForeignKey<long?>(a => a.MouvementStockIddepot);
 
             HasOptional<GES_Article>(a => a.MouvementStockArticles)
                   .WithMany(d => d.ArticleMouvementStock)
                   .HasForeignKey<long?>(a => a.MouvementStockIdarticle);
 
-            HasOptional<DocumentCommercial>(a => a.MouvementStockDocumentCommercial)
-                  .WithMany(d => d.DocumentCommercialMouvementStock)
+            HasOptional<GES_DocumentCommercial>(a => a.MouvementStockDocumentCommercial)
+                  .WithMany(d => d.GES_MouvementStock)
                   .HasForeignKey<long?>(a => a.MouvementStockIddocument);
 
         }

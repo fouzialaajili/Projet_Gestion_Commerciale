@@ -5,7 +5,7 @@ namespace Store.Model
  
     public partial class GEN_TypePaiementDetail
     {
-        public long Id { get; set; }
+        public long TypePaiementDetailId { get; set; }
       
         public long? IdTypePaiement { get; set; }
     

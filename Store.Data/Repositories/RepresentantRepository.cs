@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class RepresentantRepository : RepositoryBase<Representant>, IRepresentantRepository
+    class RepresentantRepository : RepositoryBase<GES_Representant>, IRepresentantRepository
     {
         public RepresentantRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface IRepresentantRepository : IRepository<Representant>
+    public interface IRepresentantRepository : IRepository<GES_Representant>
     {
 
     }

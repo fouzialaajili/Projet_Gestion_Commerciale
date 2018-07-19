@@ -105,23 +105,23 @@ namespace Store.Data
             modelBuilder.Configurations.Add(new GES_MotifConfiguration());
             modelBuilder.Configurations.Add(new GES_MotifTicketConfiguration());
             modelBuilder.Configurations.Add(new GES_MouvementStockConfiguration());
-            modelBuilder.Configurations.Add(new NomenclatureConfiguration());
-            modelBuilder.Configurations.Add(new NumerotationConfiguration());
-            modelBuilder.Configurations.Add(new ObjectifConfiguration());
-            modelBuilder.Configurations.Add(new OpportuniteConfiguration());
-            modelBuilder.Configurations.Add(new OpportuniteDetailConfiguration());
+            modelBuilder.Configurations.Add(new GES_NomenclatureConfiguration());
+            modelBuilder.Configurations.Add(new GES_NumerotationConfiguration());
+            modelBuilder.Configurations.Add(new GES_ObjectifConfiguration());
+            modelBuilder.Configurations.Add(new GES_OpportuniteConfiguration());
+            modelBuilder.Configurations.Add(new GES_OpportuniteDetailConfiguration());
             modelBuilder.Configurations.Add(new GEN_TypePaiementConfiguration());
             modelBuilder.Configurations.Add(new ParametrageConfiguration());
-            modelBuilder.Configurations.Add(new PeriodeConfiguration());
+            modelBuilder.Configurations.Add(new GES_PeriodeConfiguration());
             modelBuilder.Configurations.Add(new ProfilConfiguration());
             modelBuilder.Configurations.Add(new ProfilDetailConfiguration());
-            modelBuilder.Configurations.Add(new PeriodeConfiguration());
-            modelBuilder.Configurations.Add(new ReglementConfiguration());
-            modelBuilder.Configurations.Add(new ReglementFactureConfiguration());
-            modelBuilder.Configurations.Add(new RepresentantConfiguration());
+            modelBuilder.Configurations.Add(new GES_PeriodeConfiguration());
+            modelBuilder.Configurations.Add(new GES_ReglementConfiguration());
+            modelBuilder.Configurations.Add(new GES_ReglementFactureConfiguration());
+            modelBuilder.Configurations.Add(new GES_RepresentantConfiguration());
             modelBuilder.Configurations.Add(new SocieteConfiguration());
-            modelBuilder.Configurations.Add(new TicketConfiguration());
-            modelBuilder.Configurations.Add(new TicketDetailConfiguration());
+            modelBuilder.Configurations.Add(new GES_TicketConfiguration());
+            modelBuilder.Configurations.Add(new GES_TicketDetailConfiguration());
         }
     }
 }

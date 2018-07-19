@@ -105,5 +105,10 @@ namespace Store.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GES_FournisseurArticle> GES_FournisseurArticle { get; set; }
+        public virtual ICollection<GES_Opportunite> GES_Opportunite { get; set; }
+        public virtual ICollection<GES_OpportuniteDetail> GES_OpportuniteDetail { get; set; }
+        public virtual ICollection<GES_Reglement> GES_Reglement { get; set; }
+        public virtual ICollection<GES_Ticket> GES_Ticket { get; set; }
+        public virtual ICollection<GES_TicketDetail> GES_TicketDetail { get; set; }
     }
 }

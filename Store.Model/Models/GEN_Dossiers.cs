@@ -1,5 +1,6 @@
 namespace Store.Model
 {
+    using Model;
     using System;
     using System.Collections.Generic;
 
@@ -67,7 +68,7 @@ namespace Store.Model
 
         public DateTime? Dossiersys_dateCreation { get; set; }
 
-        public virtual GEN_Societes GEN_Societes { get; set; }
+       // public virtual GEN_Societes GEN_Societes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CPT_Classe> CPT_Classe { get; set; }
@@ -109,6 +110,7 @@ namespace Store.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GEN_Numeration> GEN_Numeration { get; set; }
+        public virtual ICollection<GES_Numerotation> GES_Numerotation { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GEN_Preferences> GEN_Preferences { get; set; }
@@ -125,9 +127,13 @@ namespace Store.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GES_MotifTicket> GES_MotifTicket { get; set; }
+        public virtual ICollection<GES_MouvementStock> GES_MouvementStock { get; set; }
+        public virtual ICollection<GES_Objectif> GES_Objectif { get; set; }
+        public virtual ICollection<GES_Opportunite> GES_Opportunite { get; set; }
 
-
-
-
+        public virtual ICollection<GES_Periode> GES_Periode { get; set; }
+        public virtual ICollection<GES_Reglement> GES_Reglement { get; set; }
+        public virtual ICollection<GES_Representant> GES_Representant { get; set; }
+        public virtual ICollection<GES_Ticket> GES_Ticket { get; set; }
     }
 }

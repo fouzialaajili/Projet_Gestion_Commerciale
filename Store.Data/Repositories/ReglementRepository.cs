@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class ReglementRepository : RepositoryBase<Reglement>, IReglementRepository
+    class ReglementRepository : RepositoryBase<GES_Reglement>, IReglementRepository
     {
         public ReglementRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface IReglementRepository : IRepository<Reglement>
+    public interface IReglementRepository : IRepository<GES_Reglement>
     {
 
     }

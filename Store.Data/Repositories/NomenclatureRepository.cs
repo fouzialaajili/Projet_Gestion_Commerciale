@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class NomenclatureRepository : RepositoryBase<Nomenclature>, INomenclatureRepository
+    class NomenclatureRepository : RepositoryBase<GES_Nomenclature>, INomenclatureRepository
     {
         public NomenclatureRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface INomenclatureRepository : IRepository<Nomenclature>
+    public interface INomenclatureRepository : IRepository<GES_Nomenclature>
     {
 
     }

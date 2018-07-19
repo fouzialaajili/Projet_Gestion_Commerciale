@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class NumerotationRepository : RepositoryBase<Numerotation>, INumerotationRepository
+    class NumerotationRepository : RepositoryBase<GES_Numerotation>, INumerotationRepository
     {
         public NumerotationRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface INumerotationRepository : IRepository<Numerotation>
+    public interface INumerotationRepository : IRepository<GES_Numerotation>
     {
 
     }

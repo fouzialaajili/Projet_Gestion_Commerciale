@@ -8,7 +8,7 @@ namespace Store.Model
     {
       
 
-        public long Id { get; set; }
+        public long DeviseId{ get; set; }
 
      
         public string Code { get; set; }
@@ -64,5 +64,6 @@ namespace Store.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GEN_Tiers> GEN_Tiers { get; set; }
+        public virtual ICollection<GES_Opportunite> GES_Opportunite { get; set; }
     }
 }

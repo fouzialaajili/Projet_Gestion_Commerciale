@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Configuration
 {
-    class PeriodeConfiguration : EntityTypeConfiguration<Periode>
+    class GES_PeriodeConfiguration : EntityTypeConfiguration<GES_Periode>
     {
-        public PeriodeConfiguration()
+        public GES_PeriodeConfiguration()
         {
             ToTable("Periode");
             HasKey(x => x.PeriodeId);
 
 
             /***********************************/
-            //      virtual public Societe PeriodeSociete { get; set; }
+            //        virtual public GEN_Dossiers PeriodeSociete { get; set; }
 
 
-            HasOptional<Societe>(a => a.PeriodeSociete)
-                            .WithMany(d => d.SocietePeriode)
+            HasOptional<GEN_Dossiers>(a => a.PeriodeSociete)
+                            .WithMany(d => d.GES_Periode)
                             .HasForeignKey<long?>(a => a.PeriodeSocieteId);
 
 

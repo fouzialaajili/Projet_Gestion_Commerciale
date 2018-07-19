@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class MouvementStockRepository : RepositoryBase<MouvementStock>, IMouvementStockRepository
+    class MouvementStockRepository : RepositoryBase<GES_MouvementStock>, IMouvementStockRepository
     {
         public MouvementStockRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface IMouvementStockRepository : IRepository<MouvementStock>
+    public interface IMouvementStockRepository : IRepository<GES_MouvementStock>
     {
 
     }

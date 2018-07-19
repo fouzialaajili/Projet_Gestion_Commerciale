@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    public class DocumentCommercial
+    public class GES_DocumentCommercial
     {
         public long  DocumentCommercialId { get; set; }
         public String DocumentCommercialNumeroPiece { get; set; }
@@ -32,7 +32,7 @@ namespace Store.Model
       public long  DocumentCommercialSocieteId { get; set; }
         public virtual GEN_Dossiers DocumentCommercialSociete { get; set; }
 
-        public virtual ICollection<MouvementStock> DocumentCommercialMouvementStock { get; set; }
+        public virtual ICollection<GES_MouvementStock> GES_MouvementStock { get; set; }
 
         public virtual ICollection<DocumentCommercialDetail> DocumentCommercialDocumentCommercialDetail { get; set; }
 

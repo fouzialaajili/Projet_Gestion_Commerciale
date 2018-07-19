@@ -67,10 +67,11 @@
     <Compile Include="Models\Devise.cs" />
     <Compile Include="Models\Doclie.cs" />
     <Compile Include="Models\Doclieart.cs" />
-    <Compile Include="Models\DocumentCommercial.cs" />
+    <Compile Include="Models\GES_DocumentCommercial.cs" />
     <Compile Include="Models\DocumentCommercialDetail.cs" />
     <Compile Include="Models\DocumentCommercialDetailSerie.cs" />
     <Compile Include="Models\Famille.cs" />
+    <Compile Include="Models\GES_Depot.cs" />
     <Compile Include="Models\GES_FournisseurArticle.cs" />
     <Compile Include="Models\GES_Ged.cs" />
     <Compile Include="Models\GEN_Devises.cs" />

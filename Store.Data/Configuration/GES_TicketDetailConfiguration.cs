@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Configuration
 {
-    class TicketDetailConfiguration : EntityTypeConfiguration<TicketDetail>
+    class GES_TicketDetailConfiguration : EntityTypeConfiguration<GES_TicketDetail>
     {
-        public TicketDetailConfiguration()
+        public GES_TicketDetailConfiguration()
         {
             ToTable("TicketDetail");
             HasKey(x => x.TicketDetailId);
@@ -18,15 +18,15 @@ namespace Store.Data.Configuration
 
             /***********************************/
 
-        //virtual public Fichetiers TicketDetailFichetier { get; set; }
-        //virtual public Ticket TicketDetailTicket { get; set; }
+        //virtual public GEN_Tiers TicketDetailFichetier { get; set; }
+        //virtual public GES_Ticket TicketDetailTicket { get; set; }
 
-        HasOptional<Fichetier>(a => a.TicketDetailFichetier)
-                              .WithMany(d => d.FichetiersTicketDetail)
+        HasOptional<GEN_Tiers>(a => a.TicketDetailFichetier)
+                              .WithMany(d => d.GES_TicketDetail)
                               .HasForeignKey<long?>(a => a.TicketDetailIdcommercial);
 
-            HasOptional<Ticket>(a => a.TicketDetailTicket)
-                                  .WithMany(d => d.TicketTicketDetail)
+            HasOptional<GES_Ticket>(a => a.TicketDetailTicket)
+                                  .WithMany(d => d.GES_TicketDetail)
                                   .HasForeignKey<long?>(a => a.TicketDetailIdTicket);
 
         }
