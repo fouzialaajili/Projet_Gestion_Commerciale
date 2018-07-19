@@ -13,6 +13,12 @@ namespace Store.Data.Configuration
         public GES_ArticlesKitConfiguration(){
             ToTable("ArticlesKit");
             HasKey(a => a.ArticlesKitId);
+            HasOptional<GES_Article>(a => a.ArticlesKitArticle)
+.WithMany(d => d.ArticleArticlesKit)
+.HasForeignKey<long?>(a => a.ArticlesKitArticlesId);
+            HasOptional<GES_Article>(a => a.ArticlesKitArticle)
+.WithMany(d => d.ArticleArticlesKit1)
+.HasForeignKey<long?>(a => a.ArticlesKitArticleId1);
         }
     }
 }

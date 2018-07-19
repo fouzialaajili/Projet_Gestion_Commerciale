@@ -62,6 +62,8 @@ namespace Store.Model
         public virtual ICollection<GES_Nomenclature> ArticleNomenclature { get; set; }
         public virtual ICollection<GES_ArticlesPrix> ArticleArticlesPrix { get; set; }
         public virtual ICollection<GES_DocumentCommercialDetail> ArticleDocumentCommercialDetail { get; set; }
+        public virtual ICollection<GES_ArticlesKit> ArticleArticlesKit { get; set; }
+        public virtual ICollection<GES_ArticlesKit> ArticleArticlesKit1 { get; set; }
 
 
     }

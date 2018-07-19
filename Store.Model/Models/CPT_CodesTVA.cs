@@ -55,5 +55,9 @@ namespace Store.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CPT_CompteGDetailTVA> CPT_CompteGDetailTVA { get; set; }
+
+        public long TvaSocieteId { get; set; }
+        public virtual GEN_Dossiers TvaSociete { get; set; }
+        public virtual ICollection<GEN_Tiers> TvaFichetier { get; set; }
     }
 }

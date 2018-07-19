@@ -121,6 +121,9 @@ namespace Store.Data
             modelBuilder.Configurations.Add(new SocieteConfiguration());
             modelBuilder.Configurations.Add(new GES_TicketConfiguration());
             modelBuilder.Configurations.Add(new GES_TicketDetailConfiguration());
+            modelBuilder.Configurations.Add(new CPT_CodesTVAConfiguration());
+           
+         //   modelBuilder.Configurations.Add(new GES_());
         }
     }
 }
