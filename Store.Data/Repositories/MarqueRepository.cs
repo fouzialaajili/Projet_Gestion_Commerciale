@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 namespace Store.Data.Repositories
 {
    
-    public interface IMarqueRepository : IRepository<Marque>
+    public interface IMarqueRepository : IRepository<GES_Marque>
     {
 
     }
 
 
-    public class MarqueRepositoy : RepositoryBase<Marque>, IMarqueRepository
+    public class MarqueRepositoy : RepositoryBase<GES_Marque>, IMarqueRepository
     {
         public MarqueRepositoy(IDbFactory dbFactory) : base(dbFactory) { }
 

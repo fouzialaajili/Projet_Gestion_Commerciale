@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 namespace Store.Data.Repositories
 {
     
-    public interface IImpressionRepositoy : IRepository<Impression>
+    public interface IImpressionRepositoy : IRepository<GES_Impression>
     {
 
     }
 
 
-    public class ImpressionRepositoy : RepositoryBase<Impression>, IImpressionRepositoy
+    public class ImpressionRepositoy : RepositoryBase<GES_Impression>, IImpressionRepositoy
     {
         public ImpressionRepositoy(IDbFactory dbFactory) : base(dbFactory) { }
 

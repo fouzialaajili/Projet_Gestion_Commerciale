@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 namespace Store.Data.Repositories
 {
   
-    public interface ILicenceRepository : IRepository<Licence>
+    public interface ILicenceRepository : IRepository<GES_Licence>
     {
 
     }
 
 
-    public class LicenceRepositoy : RepositoryBase<Licence>, ILicenceRepository
+    public class LicenceRepositoy : RepositoryBase<GES_Licence>, ILicenceRepository
     {
         public LicenceRepositoy(IDbFactory dbFactory) : base(dbFactory) { }
 

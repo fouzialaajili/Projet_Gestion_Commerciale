@@ -29,7 +29,7 @@ namespace Store.Data.Configuration
                         .HasForeignKey<long?>(a => a.MouvementStockDossierId);
 
             HasOptional<GES_Depot>(a => a.MouvementStocksDepot)
-                    .WithMany(d => d.GES_MouvementStock)
+                    .WithMany(d => d.DepotMouvementStock)
                     .HasForeignKey<long?>(a => a.MouvementStockIddepot);
 
             HasOptional<GES_Article>(a => a.MouvementStockArticles)
@@ -37,7 +37,7 @@ namespace Store.Data.Configuration
                   .HasForeignKey<long?>(a => a.MouvementStockIdarticle);
 
             HasOptional<GES_DocumentCommercial>(a => a.MouvementStockDocumentCommercial)
-                  .WithMany(d => d.GES_MouvementStock)
+                  .WithMany(d => d.DocumentCommercialMouvementStock)
                   .HasForeignKey<long?>(a => a.MouvementStockIddocument);
 
         }

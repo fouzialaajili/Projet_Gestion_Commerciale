@@ -13,7 +13,7 @@ namespace Store.Data.Configuration
         public GEN_TiersContactsConfiguration()
         {
             ToTable("tiersContact");
-            HasKey(x => x.Id);
+            HasKey(x => x.GEN_TiersContactsId);
 
 
             /***********************************/
