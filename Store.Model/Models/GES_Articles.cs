@@ -21,39 +21,39 @@ namespace Store.Model
         public string ArticleEstSerialiser
         { get; set; }
         public bool ArticleEstGererEnStock { get; set; }
-        public bool  ArticleEstVendu
+        public bool ArticleEstVendu
         { get; set; }
         public bool ArticleEstAchat { get; set; }
-    public double  ArticlePrixAchatDefault
+        public double ArticlePrixAchatDefault
         { get; set; }
         public double ArticlePrixVenteDefault { get; set; }
         public double ArticleCoefficientMarge
         { get; set; }
-        public int  ArticleSeuilStockMin { get; set; }
-        public int  ArticleSeuilStockMax
+        public int ArticleSeuilStockMin { get; set; }
+        public int ArticleSeuilStockMax
         { get; set; }
-        public bool  ArticleGarantieMaintenance { get; set; }
-    public int ArticleGarantiemois
+        public bool ArticleGarantieMaintenance { get; set; }
+        public int ArticleGarantiemois
         { get; set; }
 
 
         public bool ArticlePubliable { get; set; }
-    public bool ArticleActif
+        public bool ArticleActif
         { get; set; }
-public string ArticleImage
+        public string ArticleImage
         { get; set; }
         public int ArticleSysuser { get; set; }
         public DateTime ArticleSysDateCreation { get; set; }
         public DateTime ArticlesSysDateUpdate { get; set; }
-      
-        public long ArticleDossierId { get; set; }
-        public virtual GEN_Dossiers ArticleSociete { get; set; }
+
+        public long ArticleSocieteId { get; set; }
+        public virtual GEN_Dossiers  ArticleSociete { get; set; }
         public long ArticleDepotId { get; set; }
-        public  virtual GES_Depot Ges_ArticleDepot { get; set; }
+        public virtual GES_Depot ArticleDepot { get; set; }
         public long ArticleCategorieId { get; set; }
         public virtual GES_Categorie ArticleCategorie { get; set; }
-        public long  ArticleUniteId { get; set; }
-        public virtual GES_Unite Ges_ArticleUnite { get; set; }
+        public long ArticleUniteId { get; set; }
+        public virtual GES_Unite ArticleUnite { get; set; }
         public long ArticleMarqueId { get; set; }
         public virtual GES_Marque ArticleMarque { get; set; }
 

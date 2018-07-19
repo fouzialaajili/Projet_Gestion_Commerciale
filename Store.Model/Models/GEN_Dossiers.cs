@@ -70,66 +70,66 @@ namespace Store.Model
 
        // public virtual GEN_Societes GEN_Societes { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CPT_Classe> CPT_Classe { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CPT_CodesTVA> CPT_CodesTVA { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CPT_CompteG> CPT_CompteG { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CPT_ComptesBancaires> CPT_ComptesBancaires { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CPT_Journaux> CPT_Journaux { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CPT_ParametrageComptable> CPT_ParametrageComptable { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CPT_Pieces> CPT_Pieces { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<GEN_Devises> GEN_Devises { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+    
         public virtual ICollection<GEN_Documents> GEN_Documents { get; set; }
 
       
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GEN_DossiersContacts> GEN_DossiersContacts { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GEN_DossiersSites> GEN_DossiersSites { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GEN_Exercices> GEN_Exercices { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GEN_Numeration> GEN_Numeration { get; set; }
         public virtual ICollection<GES_Numerotation> GES_Numerotation { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GEN_Preferences> GEN_Preferences { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GEN_Tiers> GEN_Tiers { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GEN_TypePaiement> GEN_TypePaiement { get; set; }
 
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GES_Motif> GES_Motif { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GES_MotifTicket> GES_MotifTicket { get; set; }
         public virtual ICollection<GES_MouvementStock> GES_MouvementStock { get; set; }
         public virtual ICollection<GES_Objectif> GES_Objectif { get; set; }
         public virtual ICollection<GES_Opportunite> GES_Opportunite { get; set; }
+
+        public virtual ICollection<GES_Article> SocieteArticle { get; set; }
+    
+       public virtual ICollection<GES_Affaire> SocieteAffaire { get; set; }
+      public virtual ICollection<GES_Categorie> SocieteCategorie { get; set; }
+      
+       public virtual ICollection<GES_Depot> SocieteDepot { get; set; }
+      public virtual ICollection<GEN_Devises> SocieteDevise { get; set; }
+       public virtual ICollection<GES_Doclie> SocieteDoclie { get; set; }
+       public virtual ICollection<GES_Doclieart> SocieteDoclieart { get; set; }
+       public virtual ICollection<GES_DocumentCommercial> SocieteDocumentCommercial { get; set; }
+        public virtual ICollection<GES_DocumentCommercialDetailSerie> SocieteDocumentCommercialDetailSerie { get; set; }
+       public virtual ICollection<GES_Famille> SocieteFamille { get; set; }
+       public virtual ICollection<GES_Impression> SocieteImpression { get; set; }
+       public virtual ICollection<GES_Marque> SocieteMarque { get; set; }
+      public virtual ICollection<GES_Tolerance> SocieteTolerance { get; set; }
+ 
+      public virtual ICollection<GES_Unite> SocieteUnite { get; set; }
+
 
         public virtual ICollection<GES_Periode> GES_Periode { get; set; }
         public virtual ICollection<GES_Reglement> GES_Reglement { get; set; }
