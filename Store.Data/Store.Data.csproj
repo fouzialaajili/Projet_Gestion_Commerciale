@@ -50,7 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Configuration\CPT_ParametrageComptableConfiguration.cs" />
     <Compile Include="Configuration\GEN_DossiersConfiguration.cs" />
+    <Compile Include="Configuration\GEN_DossiersContactsConfiguration.cs" />
     <Compile Include="Configuration\GES_ToleranceConfiguration.cs" />
     <Compile Include="Configuration\GEN_TypePaiementDetailConfiguration.cs" />
     <!--<<<<<<< HEAD-->
@@ -108,16 +110,15 @@
     <Compile Include="Repositories\ArticlesKitRepository.cs" />
     <Compile Include="Repositories\ArticlesPrixRepository.cs" />
     <Compile Include="Repositories\CategorieRepository.cs" />
+    <Compile Include="Repositories\CPT_ParametrageComptableRepository.cs" />
     <Compile Include="Repositories\DepotRepository.cs" />
     <Compile Include="Repositories\DoclieartRepoitory.cs" />
     <Compile Include="Repositories\DoclieRepository.cs" />
     <Compile Include="Repositories\DocumentCommercialDetailRepository.cs" />
     <Compile Include="Repositories\DocumentCommercialDetailSerieRepository.cs" />
     <Compile Include="Repositories\DocumentCommercialRepository.cs" />
+    <Compile Include="Repositories\DossiersContactsRepository.cs" />
     <Compile Include="Repositories\FamilleRepositoy.cs" />
-    <Compile Include="Repositories\FichetierRepository.cs" />
-    <Compile Include="Repositories\FichetiersContactRepository.cs" />
-    <Compile Include="Repositories\FichetiersRepresentantRepository.cs" />
     <Compile Include="Repositories\TiersRepository.cs" />
     <Compile Include="Repositories\TiersContactRepository.cs" />
     <Compile Include="Repositories\FournisseurArticleRepository.cs" />

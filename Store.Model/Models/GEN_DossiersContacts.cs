@@ -6,7 +6,7 @@ namespace Store.Model
 
     public partial class GEN_DossiersContacts
     {
-        public long Id { get; set; }
+        public long DossiersContactsId { get; set; }
 
       
         public string Civilite { get; set; }

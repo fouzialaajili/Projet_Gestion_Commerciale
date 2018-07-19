@@ -135,5 +135,7 @@ namespace Store.Model
         public virtual ICollection<GES_Reglement> GES_Reglement { get; set; }
         public virtual ICollection<GES_Representant> GES_Representant { get; set; }
         public virtual ICollection<GES_Ticket> GES_Ticket { get; set; }
+        //public virtual ICollection<GEN_DossiersContacts> GEN_DossiersContacts { get; set; }
+ 
     }
 }

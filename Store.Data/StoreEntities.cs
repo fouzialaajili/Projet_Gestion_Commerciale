@@ -98,7 +98,7 @@ namespace Store.Data
             /****************************/
             modelBuilder.Configurations.Add(new GEN_TiersConfiguration());
             modelBuilder.Configurations.Add(new GEN_TiersContactsConfiguration());
-            modelBuilder.Configurations.Add(new FichetiersRepresentantsConfiguration());
+            modelBuilder.Configurations.Add(new GEN_DossiersContactsConfiguration());
             modelBuilder.Configurations.Add(new GES_FournisseurArticleConfiguration());
             modelBuilder.Configurations.Add(new GES_GedConfiguration());
             modelBuilder.Configurations.Add(new GES_MotifConfiguration());
@@ -110,15 +110,16 @@ namespace Store.Data
             modelBuilder.Configurations.Add(new GES_OpportuniteConfiguration());
             modelBuilder.Configurations.Add(new GES_OpportuniteDetailConfiguration());
             modelBuilder.Configurations.Add(new GEN_TypePaiementConfiguration());
-            modelBuilder.Configurations.Add(new ParametrageConfiguration());
+            modelBuilder.Configurations.Add(new GEN_TypePaiementDetailConfiguration());
+            modelBuilder.Configurations.Add(new CPT_ParametrageComptableConfiguration());
             modelBuilder.Configurations.Add(new GES_PeriodeConfiguration());
-            modelBuilder.Configurations.Add(new ProfilConfiguration());
-            modelBuilder.Configurations.Add(new ProfilDetailConfiguration());
+         //   modelBuilder.Configurations.Add(new ProfilConfiguration());
+         //   modelBuilder.Configurations.Add(new ProfilDetailConfiguration());
             modelBuilder.Configurations.Add(new GES_PeriodeConfiguration());
             modelBuilder.Configurations.Add(new GES_ReglementConfiguration());
             modelBuilder.Configurations.Add(new GES_ReglementFactureConfiguration());
             modelBuilder.Configurations.Add(new GES_RepresentantConfiguration());
-            modelBuilder.Configurations.Add(new SocieteConfiguration());
+            modelBuilder.Configurations.Add(new GEN_DossiersConfiguration());
             modelBuilder.Configurations.Add(new GES_TicketConfiguration());
             modelBuilder.Configurations.Add(new GES_TicketDetailConfiguration());
         }
