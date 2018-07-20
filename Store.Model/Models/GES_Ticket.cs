@@ -29,10 +29,7 @@ namespace Store.Model
         virtual public GEN_Tiers TicketFichetier { get; set; }
         virtual public GES_Representant TicketRepresentant { get; set; }
         virtual public GEN_TiersContacts TicketFichetiersContact { get; set; }
-        public GES_Ticket()
-        {
-            TicketSysDateCreation = DateTime.Now;
-        }
+    
   /***/ public long TicketDossierId { get; set; }
         virtual  public GEN_Dossiers TicketDossier { get; set; }
 

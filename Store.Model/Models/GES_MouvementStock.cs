@@ -33,10 +33,6 @@ namespace Store.Model
         public DateTime? MouvementStockSysDateCreation { get; set; }
         public DateTime? MouvementStockSysDateUpdate { get; set; }
 
-        public GES_MouvementStock()
-        {
-            MouvementStockSysDateCreation = DateTime.Now;
-        }
         public long MouvementStockDossierId { get; set; }
         virtual public GEN_Dossiers MouvementStockSociete { get; set; }
        virtual  public GES_Depot MouvementStocksDepot { get; set; }

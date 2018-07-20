@@ -20,10 +20,7 @@ namespace Store.Model
         public DateTime? TicketDetailSysDateCreation { get; set; }
         public DateTime? TicketDetailSysDateUpdate { get; set; }
 
-        public GES_TicketDetail()
-        {
-            TicketDetailSysDateCreation = DateTime.Now;
-        }
+      
 
         virtual public GEN_Tiers TicketDetailFichetier { get; set; }
         virtual public GES_Ticket TicketDetailTicket { get; set; }

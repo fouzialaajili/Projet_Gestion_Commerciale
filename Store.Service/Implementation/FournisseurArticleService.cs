@@ -65,50 +65,13 @@ namespace Store.Service.Implementation
 
         public void DeleteFournisseurArticle(FournisseurArticlePivot fournisseurArticle)
         {
-            throw new NotImplementedException();
+            fournisseurArticleRepository.Delete(Mapper.Map<FournisseurArticlePivot, GES_FournisseurArticle>(fournisseurArticle));
         }
 
         public void UpdateFournisseurArticle(FournisseurArticlePivot fournisseurArticle)
         {
             fournisseurArticleRepository.Update(Mapper.Map<FournisseurArticlePivot, GES_FournisseurArticle>(fournisseurArticle));
         }
-
-
-
-        /*
-
-         public IEnumerable<GES_FournisseurArticle> GetGadgets()
-         {
-             var fournisseurArticles = fournisseurArticleRepository.GetAll();
-             return fournisseurArticles;
-         }
-
-         public IEnumerable<GES_FournisseurArticle> GetTiersFournisseurArticle(string tiersName, string fornisseurArticleName = null)
-         {
-             var tiers = tiersRepository.GetTiersByName(tiersName);
-             return tiers.GES_FournisseurArticle.Where(g => g.Name.ToLower().Contains(tiersName.ToLower().Trim()));
-         }
-         // return tiers.GES_F.Where(g => g.Name.ToLower().Contains(gadgetName.ToLower().Trim()));
-     }
-
-         public GES_FournisseurArticle GetFournisseurArticle(int id)
-         {
-             var FournisseurArticle = fournisseurArticleRepository.GetById(id);
-             return FournisseurArticle;
-         }
-
-         public void CreateFournisseurArticle(GES_FournisseurArticle FournisseurArticle)
-         {
-             fournisseurArticleRepository.Add(FournisseurArticle);
-         }
-
-         public void SaveFournisseurArticle()
-         {
-             unitOfWork.Commit();
-         }
-
-         #endregion
-         */
 
 
     }

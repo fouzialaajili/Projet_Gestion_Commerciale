@@ -16,10 +16,7 @@ namespace Store.Model
         public DateTime? NomenclatureSysDateCreation { get; set; }
         public DateTime? NomenclatureSysDateUpdate { get; set; }
      /***/public long NomenclatureIdarticle { get; set; }
-        public GES_Nomenclature()
-        {
-            NomenclatureSysDateCreation = DateTime.Now;
-        }
+       
         virtual public GES_Article NomenclatureArticle { get; set; }
     }
 }

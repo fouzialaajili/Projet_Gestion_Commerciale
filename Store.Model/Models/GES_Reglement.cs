@@ -28,10 +28,6 @@ namespace Store.Model
         public DateTime? ReglementSysDateCreation { get; set; }
         public DateTime? ReglementSysDateUpdate { get; set; }
 
-        public GES_Reglement()
-        {
-            ReglementSysDateCreation = DateTime.Now;
-        }
        /***/ public long ReglementDossierId { get; set; }
         virtual public GEN_Dossiers ReglementDossier { get; set; }
         virtual public GEN_Tiers ReglementFichetier { get; set; }

@@ -18,11 +18,6 @@ namespace Store.Model
         public int PeriodeSysuser { get; set; }
         public DateTime? PeriodeSysDateCreation { get; set; }
         public DateTime? PeriodeSysDateUpdate { get; set; }
-
-        public GES_Periode()
-        {
-            PeriodeSysDateCreation = DateTime.Now;
-        }
         public bool PeriodeAutoriserVente { get; set; }
         public bool PeriodeAutoriserAchat{ get; set; }
         public bool PeriodeAutoriserMvtStock { get; set; }
