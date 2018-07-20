@@ -38,10 +38,10 @@ namespace Store.Service.Pivot
         public DateTime? MouvementStockSysDateUpdate { get; set; }
 
         public long MouvementStockDossierId { get; set; }
-        public GEN_Dossiers MouvementStockSociete { get; set; }
-         public GES_Depot MouvementStocksDepot { get; set; }
-        public GES_Article MouvementStockArticles { get; set; }
-        public GES_DocumentCommercial MouvementStockDocumentCommercial { get; set; }
+        public DossiersPivot MouvementStockSociete { get; set; }
+         public DepotPivot MouvementStocksDepot { get; set; }
+        public ArticlePivot MouvementStockArticles { get; set; }
+        public DocumentCommercialPivot MouvementStockDocumentCommercial { get; set; }
 
     }
 }

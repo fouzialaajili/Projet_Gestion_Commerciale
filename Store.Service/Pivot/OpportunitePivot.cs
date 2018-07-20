@@ -28,11 +28,11 @@ namespace Store.Service.Pivot
         public DateTime? OpportuniteSysDateUpdate { get; set; }
         /****/
         public long OpportuniteDossierd { get; set; }
-       public GEN_Dossiers OpportuniteDossier { get; set; }
-         public GEN_Tiers OpportuniteFichetier { get; set; }
-      public GEN_Devises OpportuniteDevise { get; set; }
-        public  ICollection<GES_Motif> OpportuniteMotif { get; set; }
+       public DossiersPivot OpportuniteDossier { get; set; }
+         public TiersPivot OpportuniteFichetier { get; set; }
+      public DevisesPivot OpportuniteDevise { get; set; }
+        public  ICollection<MotifPivot> OpportuniteMotif { get; set; }
         //  public virtual ICollection<CrmContact> OpportuniteCrmContact { get; set; }
-        public  ICollection<GES_OpportuniteDetail> OpportuniteOpportuniteDetail { get; set; }
+        public  ICollection<OpportuniteDetailPivot> OpportuniteOpportuniteDetail { get; set; }
     }
 }

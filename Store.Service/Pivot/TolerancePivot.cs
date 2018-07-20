@@ -13,7 +13,7 @@ namespace Store.Service.Pivot
         public int ToleranceEntier { get; set; }
 
         public long ToleranceSocieteId { get; set; }
-        public  GEN_Dossiers ToleranceSociete { get; set; }
+        public DossiersPivot ToleranceSociete { get; set; }
 
     }
 }

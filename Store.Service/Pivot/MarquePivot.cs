@@ -18,8 +18,8 @@ namespace Store.Service.Pivot
         public DateTime MarqueSys_DateUpdate { get; set; }
         public long MarqueSocieteId { get; set; }
 
-        public ICollection<GES_Article> MarqueArticle { get; set; }
-        public  GEN_Dossiers MarqueSociete { get; set; }
+        public ICollection<ArticlePivot> MarqueArticle { get; set; }
+        public  DossiersPivot MarqueSociete { get; set; }
 
 
     }

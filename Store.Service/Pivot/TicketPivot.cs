@@ -29,14 +29,14 @@ namespace Store.Service.Pivot
         public long TicketSysuser { get; set; }
         public DateTime? TicketSysDateCreation { get; set; }
         public DateTime? TicketSysDateUpdate { get; set; }
-        public GEN_Tiers TicketFichetier { get; set; }
-        public GES_Representant TicketRepresentant { get; set; }
-       public GEN_TiersContacts TicketFichetiersContact { get; set; }
+        public TiersPivot TicketFichetier { get; set; }
+        public RepresentantPivot TicketRepresentant { get; set; }
+       public TiersContactsPivot TicketFichetiersContact { get; set; }
        
         public long TicketDossierId { get; set; }
-        public GEN_Dossiers TicketDossier { get; set; }
+        public DossiersPivot TicketDossier { get; set; }
 
-        public ICollection<GES_MotifTicket> TicketMotifTicket { get; set; }
-        public  ICollection<GES_TicketDetail> GES_TicketDetail { get; set; }
+        public ICollection<MotifTicketPivot> TicketMotifTicket { get; set; }
+        public  ICollection<TicketDetailPivot> GES_TicketDetail { get; set; }
     }
 }

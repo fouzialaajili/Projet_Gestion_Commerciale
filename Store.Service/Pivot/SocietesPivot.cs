@@ -36,9 +36,9 @@ namespace Store.Service.Pivot
         public DateTime? sys_dateCreation { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<GEN_Dossiers> GEN_Dossiers { get; set; }
+        public ICollection<DossiersPivot> GEN_Dossiers { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<GEN_Model> GEN_Model { get; set; }
+        public  ICollection<ModelPivot> GEN_Model { get; set; }
     }
 }

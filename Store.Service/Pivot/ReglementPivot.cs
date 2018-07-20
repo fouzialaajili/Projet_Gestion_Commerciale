@@ -33,8 +33,8 @@ namespace Store.Service.Pivot
         public DateTime? ReglementSysDateUpdate { get; set; }
         /***/
         public long ReglementDossierId { get; set; }
-        public GEN_Dossiers ReglementDossier { get; set; }
-         public GEN_Tiers ReglementFichetier { get; set; }
+        public DossiersPivot ReglementDossier { get; set; }
+         public TiersPivot ReglementFichetier { get; set; }
 
 
     }

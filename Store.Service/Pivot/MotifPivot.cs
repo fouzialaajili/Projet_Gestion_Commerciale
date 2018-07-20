@@ -18,9 +18,9 @@ namespace Store.Service.Pivot
         public DateTime? MotifSysDateCreation { get; set; }
         public DateTime? MotifSysDateUpdate { get; set; }
         
-         public GES_Opportunite MotifOpportunite { get; set; }
+         public OpportunitePivot MotifOpportunite { get; set; }
         /***/
         public long MotifdossierId { get; set; }
-         public GEN_Dossiers MotifSociete { get; set; }
+         public DossiersPivot MotifSociete { get; set; }
     }
 }

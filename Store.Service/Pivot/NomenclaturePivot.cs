@@ -19,6 +19,6 @@ namespace Store.Service.Pivot
         /***/
         public long NomenclatureIdarticle { get; set; }
       
-      public GES_Article NomenclatureArticle { get; set; }
+      public ArticlePivot NomenclatureArticle { get; set; }
     }
 }

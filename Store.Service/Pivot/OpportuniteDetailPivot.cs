@@ -23,8 +23,8 @@ namespace Store.Service.Pivot
         public long OpportuniteDetailSysuser { get; set; }
         public DateTime? OpportuniteDetailSysDateCreation { get; set; }
         public DateTime? OpportuniteDetailSysDateUpdate { get; set; }
-         public GEN_Tiers OpportuniteDetailFichetier { get; set; }
-        public GES_Opportunite OpportuniteDetailOpportunite { get; set; }
+         public TiersPivot OpportuniteDetailFichetier { get; set; }
+        public OpportunitePivot OpportuniteDetailOpportunite { get; set; }
      
 
 

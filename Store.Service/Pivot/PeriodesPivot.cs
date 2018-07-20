@@ -33,6 +33,6 @@ namespace Store.Service.Pivot
 
         public DateTime? sys_dateCreation { get; set; }
 
-        public virtual GEN_Exercices GEN_Exercices { get; set; }
+        public  ExercicesPivot GEN_Exercices { get; set; }
     }
 }

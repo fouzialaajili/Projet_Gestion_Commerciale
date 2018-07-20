@@ -18,8 +18,8 @@ namespace Store.Service.Pivot
 
         public long IdExercices { get; set; }
 
-        public virtual GEN_Dossiers GEN_Dossiers { get; set; }
+        public DossiersPivot GEN_Dossiers { get; set; }
 
-        public virtual GEN_Exercices GEN_Exercices { get; set; }
+        public ExercicesPivot GEN_Exercices { get; set; }
     }
 }

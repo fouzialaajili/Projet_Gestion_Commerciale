@@ -24,8 +24,8 @@ namespace Store.Service.Pivot
         public DateTime? TicketDetailSysDateUpdate { get; set; }
 
 
-      public GEN_Tiers TicketDetailFichetier { get; set; }
-       public GES_Ticket TicketDetailTicket { get; set; }
+      public TiersPivot TicketDetailFichetier { get; set; }
+       public TicketPivot TicketDetailTicket { get; set; }
 
     }
 }
