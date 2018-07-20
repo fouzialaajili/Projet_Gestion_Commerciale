@@ -16,7 +16,7 @@ namespace Store.Service.Pivot
         public long? IdSociete { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<GEN_Items> GEN_Items { get; set; }
+        public ICollection<ItemsPivot> GEN_Items { get; set; }
 
 
     }

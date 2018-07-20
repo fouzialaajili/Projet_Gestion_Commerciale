@@ -12,10 +12,33 @@ namespace Store.Data.Repositories
     {
         public GedRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
+
+        public IEnumerable<GES_Ged> GetAll()
+        {
+            return this.DbContext.Geds.ToList();
+        }
+
+        public IEnumerable<GES_Ged> GetItemsByModelLibelle(string identifged)
+        {
+            var geds = this.DbContext.Geds.Where(c => c.GedEntiteName == identifged);
+
+            return geds;
+        }
+
+        public GES_Ged GetById(long id)
+        {
+            var geds = this.DbContext.Geds.Where(c => c.GedId== id).SingleOrDefault();
+
+            return geds;
+        }
     }
 
     public interface IGedRepository : IRepository<GES_Ged>
     {
+        IEnumerable<GES_Ged> GetAll();
+         GES_Ged GetById(long id);
+        IEnumerable<GES_Ged> GetItemsByModelLibelle(string identifged);
+
 
     }
 }

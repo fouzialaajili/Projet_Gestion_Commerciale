@@ -29,37 +29,45 @@ namespace Store.Service.Implementation
 
         public void CreateGed(GedPivot ged)
         {
-            throw new NotImplementedException();
+            GES_Ged item = Mapper.Map<GedPivot, GES_Ged>(ged);
+            gedRepository.Add(item);
         }
 
         public void DeleteGed(GedPivot ged)
         {
-            throw new NotImplementedException();
+            gedRepository.Delete(Mapper.Map<GedPivot, GES_Ged>(ged));
         }
 
         public IEnumerable<GES_Ged> GetALL()
         {
-            throw new NotImplementedException();
+            IEnumerable<GES_Ged> ged = gedRepository.GetAll().ToList();
+            IEnumerable<GES_Ged> geds = Mapper.Map<IEnumerable<GES_Ged>, IEnumerable<GedPivot>>(ged);
+            return geds;
         }
 
         public IEnumerable<GES_Ged> GetGed(string identifged)
         {
-            throw new NotImplementedException();
+            IEnumerable<GES_Ged> geds = gedRepository.GetItemsByModelLibelle(identifged).ToList();
+            IEnumerable<GES_Ged> gedPivots = Mapper.Map<IEnumerable<GES_Ged>, IEnumerable<GedPivot>>(geds);
+            return gedPivots;
         }
 
         public GES_Ged GetGed(long id)
         {
-            throw new NotImplementedException();
+            var item = gedRepository.GetById((int)id);
+           GedPivot gedPivot = Mapper.Map<GES_Ged, GedPivot>(item);
+            return gedPivot;
         }
 
         public void SaveGed()
         {
-            throw new NotImplementedException();
+
+            unitOfWork.Commit();
         }
 
         public void UpdateGed(GedPivot ged)
         {
-            throw new NotImplementedException();
+            gedRepository.Update(Mapper.Map<GedPivot, GES_Ged>(ged));
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Store.Service.Pivot
         public DateTime? ObjectifSysDateUpdate { get; set; }
         /***/
         public long ObjectifDossierId { get; set; }
-       public GEN_Dossiers ObjectifDossier { get; set; }
-       public GES_Representant ObjectifRepresentant { get; set; }
+       public DossiersPivot ObjectifDossier { get; set; }
+       public RepresentantPivot ObjectifRepresentant { get; set; }
     }
 }

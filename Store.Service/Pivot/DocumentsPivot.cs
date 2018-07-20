@@ -29,6 +29,6 @@ namespace Store.Service.Pivot
 
         public DateTime? sys_dateCreation { get; set; }
 
-        public virtual GEN_Dossiers GEN_Dossiers { get; set; }
+        public DossiersPivot GEN_Dossiers { get; set; }
     }
 }

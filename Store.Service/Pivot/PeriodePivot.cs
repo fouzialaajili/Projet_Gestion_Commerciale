@@ -24,6 +24,6 @@ namespace Store.Service.Pivot
         public bool PeriodeAutoriserAchat { get; set; }
         public bool PeriodeAutoriserMvtStock { get; set; }
         public long PeriodeSocieteId { get; set; }
-       public GEN_Dossiers PeriodeSociete { get; set; }
+       public DossiersPivot PeriodeSociete { get; set; }
     }
 }

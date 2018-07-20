@@ -27,8 +27,8 @@ namespace Store.Service.Pivot
         public DateTime? FournisseurArticleSysDateCreation { get; set; }
         public DateTime? FournisseurArticleSysDateUpdate { get; set; }
 
-        public GEN_Tiers FournisseurArticleFichetier { get; set; }
-        public GES_Article FournisseurArticleArticle { get; set; }
+        public TiersPivot FournisseurArticleFichetier { get; set; }
+        public ArticlePivot FournisseurArticleArticle { get; set; }
 
     }
 }

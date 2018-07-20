@@ -27,8 +27,8 @@ namespace Store.Service.Pivot
 
         public string Liaison { get; set; }
 
-        public virtual CPT_Journaux CPT_Journaux { get; set; }
+        public JournauxPivot CPT_Journaux { get; set; }
 
-        public virtual GEN_TypePaiement GEN_TypePaiement { get; set; }
+        public TypePaiementPivot GEN_TypePaiement { get; set; }
     }
 }

@@ -37,9 +37,9 @@ namespace Store.Service.Pivot
        
         /***/
         public long RepresentantDossierId { get; set; }
-     public GEN_Dossiers RepresentantDossier { get; set; }
-        public ICollection<GES_Objectif> RepresentantObject { get; set; }
-        public ICollection<GEN_Tiers> RepresentantFichetier { get; set; }
-        public  ICollection<GES_Ticket> RepresentantTicket { get; set; }
+     public DossiersPivot RepresentantDossier { get; set; }
+        public ICollection<ObjectifPivot> RepresentantObject { get; set; }
+        public ICollection<TiersPivot> RepresentantFichetier { get; set; }
+        public  ICollection<TicketPivot> RepresentantTicket { get; set; }
     }
 }

@@ -22,6 +22,6 @@ namespace Store.Service.Pivot
         public DateTime? NumerotationSysDateUpdate { get; set; }
        
         public long NumerotationDossierId { get; set; }
-       public GEN_Dossiers NumerotationDossier { get; set; }
+       public DossiersPivot NumerotationDossier { get; set; }
     }
 }

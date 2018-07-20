@@ -11,7 +11,9 @@ namespace Store.Data.Repositories
     
     public interface IImpressionRepositoy : IRepository<GES_Impression>
     {
-
+        IEnumerable<GES_Ged> GetAll();
+        GES_Ged GetById(long id);
+        IEnumerable<GES_Ged> GetItemsByModelLibelle(string identifged);
     }
 
 
