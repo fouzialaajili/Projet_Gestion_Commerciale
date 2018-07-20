@@ -20,10 +20,6 @@ namespace Store.Model
         public DateTime? ObjectifSysDateCreation { get; set; }
         public DateTime? ObjectifSysDateUpdate { get; set; }
 
-        public GES_Objectif()
-        {
-            ObjectifSysDateCreation = DateTime.Now;
-        }
      /***/   public long ObjectifDossierId { get; set; }
         virtual public GEN_Dossiers ObjectifDossier{ get; set; }
         virtual public GES_Representant ObjectifRepresentant { get; set; }

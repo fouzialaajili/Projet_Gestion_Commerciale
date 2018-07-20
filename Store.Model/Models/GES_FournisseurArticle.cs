@@ -22,12 +22,6 @@ namespace Store.Model
         public long FournisseurArticleSysuser { get; set; }
         public DateTime? FournisseurArticleSysDateCreation { get; set; }
         public DateTime? FournisseurArticleSysDateUpdate { get; set; }
-
-        public GES_FournisseurArticle()
-        {
-            FournisseurArticleSysDateCreation = DateTime.Now;
-        }
-
         virtual public GEN_Tiers FournisseurArticleFichetier { get; set; }
         virtual public GES_Article FournisseurArticleArticle
         { get; set; }

@@ -33,10 +33,7 @@ namespace Store.Model
         public DateTime? RepresentantSysDateCreation { get; set; }
         public DateTime? ZenRepresentantSysDateUpdate { get; set; }
 
-        public GES_Representant()
-        {
-            RepresentantSysDateCreation = DateTime.Now;
-        }
+      
        /***/ public long RepresentantDossierId { get; set; }
         virtual public GEN_Dossiers RepresentantDossier { get; set; }
         public virtual ICollection<GES_Objectif> RepresentantObject { get; set; }

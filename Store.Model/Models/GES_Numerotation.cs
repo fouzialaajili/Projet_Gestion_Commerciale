@@ -20,10 +20,7 @@ namespace Store.Model
         public DateTime? NumerotationSysDateCreation { get; set; }
         public DateTime? NumerotationSysDateUpdate { get; set; }
 
-        public GES_Numerotation()
-        {
-            NumerotationSysDateCreation = DateTime.Now;
-        }
+     
         public long NumerotationDossierId { get; set; }
         virtual public GEN_Dossiers NumerotationDossier { get; set; }
     }

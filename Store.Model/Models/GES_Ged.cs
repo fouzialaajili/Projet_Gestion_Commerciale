@@ -20,10 +20,6 @@ namespace Store.Model
         public DateTime? GedSysDateCreation { get; set; }
         public DateTime? GedSysDateUpdate { get; set; }
 
-        public GES_Ged()
-        {
-            GedSysDateCreation = DateTime.Now;
-        }
-
+     
     }
 }

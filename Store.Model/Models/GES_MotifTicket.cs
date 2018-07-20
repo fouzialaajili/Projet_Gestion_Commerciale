@@ -17,10 +17,6 @@ namespace Store.Model
         public DateTime? MotifTicketSysDateCreation { get; set;}
         public DateTime? MotifTicketSysDateUpdate { get; set;}
 
-        public GES_MotifTicket()
-        {
-            MotifTicketSysDateCreation = DateTime.Now;
-        }
     /***/    public long MotifTicketSocieteId { get; set; }
          virtual  public GES_Ticket MotifTicketTicket { get; set; }
           virtual public GEN_Dossiers MotifTicketSociete { get; set; }

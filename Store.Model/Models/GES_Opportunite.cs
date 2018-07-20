@@ -22,10 +22,7 @@ namespace Store.Model
         public DateTime? OpportuniteSysDateCreation { get; set; }
         public DateTime? OpportuniteSysDateUpdate { get; set; }
 
-        public GES_Opportunite()
-        {
-            OpportuniteSysDateCreation = DateTime.Now;
-        }
+   
        /****/ public long OpportuniteDossierd { get; set; }
         virtual public GEN_Dossiers OpportuniteDossier { get; set; }
         virtual public GEN_Tiers OpportuniteFichetier { get; set; }
