@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Store.Service.Pivot
 {
-    class RegelementPivot
+   public class RegelementPivot
     {
         public long Id { get; set; }
 

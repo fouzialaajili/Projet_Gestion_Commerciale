@@ -19,14 +19,12 @@ namespace Store.Model
 
         public string sys_user { get; set; }
 
-        public DateTime? sys_dateUpdate { get; set; }
+        public DateTime? Sys_dateUpdate { get; set; }
 
-        public DateTime? sys_dateCreation { get; set; }
+        public DateTime? Sys_dateCreation { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public 
-            
-            rtual ICollection<CPT_Classe> CPT_Classe_Childs { get; set; }
+        public virtual ICollection<CPT_Classe> CPT_Classe_Childs { get; set; }
 
         public virtual CPT_Classe CPT_Classe_Parent { get; set; }
 

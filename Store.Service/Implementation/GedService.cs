@@ -11,11 +11,11 @@ using Store.Data.Infrastructure;
 
 namespace Store.Service.Implementation
 {
-    class GedService : IGedService
+     /*  class GedService : IGedService
     {
 
 
-        private readonly IGedRepository gedRepository;
+     private readonly IGedRepository gedRepository;
       
 
         private readonly IUnitOfWork unitOfWork;
@@ -70,4 +70,5 @@ namespace Store.Service.Implementation
             gedRepository.Update(Mapper.Map<GedPivot, GES_Ged>(ged));
         }
     }
+    */
 }

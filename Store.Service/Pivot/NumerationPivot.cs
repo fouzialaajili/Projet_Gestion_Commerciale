@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Store.Service.Pivot
 {
-    class NumerationPivot
+    public class NumerationPivot
     {
         public long Id { get; set; }
 
@@ -15,11 +15,11 @@ namespace Store.Service.Pivot
 
         public long? idDossier { get; set; }
 
-        public string sys_user { get; set; }
+        public string Sys_user { get; set; }
 
-        public DateTime? sys_dateUpdate { get; set; }
+        public DateTime? Sys_dateUpdate { get; set; }
 
-        public DateTime? sys_dateCreation { get; set; }
+        public DateTime? Sys_dateCreation { get; set; }
 
         public DossiersPivot GEN_Dossiers { get; set; }
     }

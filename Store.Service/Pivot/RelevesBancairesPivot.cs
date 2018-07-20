@@ -1,4 +1,4 @@
-namespace Store.Model
+namespace Store.Service.Pivot
 {
     using System;
     using System.Collections.Generic;
@@ -38,11 +38,11 @@ namespace Store.Model
 
         public byte[] Fichier { get; set; }
 
-        public virtual ComptesBancairesPivot  CPT_ComptesBancaires { get; set; }
+        public ComptesBancairesPivot  CPT_ComptesBancaires { get; set; }
 
-        public virtual DevisesPivot GEN_Devises { get; set; }
+        public  DevisesPivot GEN_Devises { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RelevesBancairesDetailPivot> CPT_RelevesBancairesDetail { get; set; }
+        public ICollection<RelevesBancairesDetailPivot> CPT_RelevesBancairesDetail { get; set; }
     }
 }

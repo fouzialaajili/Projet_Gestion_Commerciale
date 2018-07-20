@@ -12,7 +12,7 @@ namespace Store.Service
     
    
 
-    public class CodesTVAService : ICodesTVAService
+    /*public class CodesTVAService : ICodesTVAService
     {
         private readonly ICodesTvaRepository codesTvaRepository;
         private readonly ISocieteRepository dossieRepository;
@@ -28,12 +28,12 @@ namespace Store.Service
         #region IGadgetService Members
 
 
-       /* public IEnumerable<codesTvaRepository> GetCategoryGadgets(string categoryName, string gadgetName = null)
+       public IEnumerable<codesTvaRepository> GetCategoryGadgets(string categoryName, string gadgetName = null)
         {
             var category = categoryRepository.GetCategoryByName(categoryName);
             return category.Gadgets.Where(g => g.Name.ToLower().Contains(gadgetName.ToLower().Trim()));
         }
-        */
+       
        
 
        
@@ -77,5 +77,5 @@ namespace Store.Service
 
         #endregion
 
-    }
+    }*/
 }

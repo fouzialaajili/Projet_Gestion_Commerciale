@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Service
 {
-    interface IDepotService
+    public interface IDepotService
     {
     }
 }

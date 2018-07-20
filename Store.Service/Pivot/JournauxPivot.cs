@@ -28,11 +28,11 @@ namespace Store.Service.Pivot
 
         public bool Actif { get; set; }
 
-        public string sys_user { get; set; }
+        public string Sys_user { get; set; }
 
-        public DateTime? sys_DateUpdate { get; set; }
+        public DateTime? Sys_DateUpdate { get; set; }
 
-        public DateTime? sys_DateCreation { get; set; }
+        public DateTime? Sys_DateCreation { get; set; }
 
         public CompteGPivot CPT_CompteG { get; set; }
 

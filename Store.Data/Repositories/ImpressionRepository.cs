@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Store.Data.Repositories
 {
     
-    public interface IImpressionRepositoy : IRepository<GES_Impression>
+   /* public interface IImpressionRepositoy : IRepository<GES_Impression>
     {
         IEnumerable<GES_Impression> GetALL();
         GES_Impression GetById(long id);

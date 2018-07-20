@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class GedRepository : RepositoryBase<GES_Ged>, IGedRepository
+    /*class GedRepository : RepositoryBase<GES_Ged>, IGedRepository
     {
         public GedRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
@@ -40,5 +40,5 @@ namespace Store.Data.Repositories
         IEnumerable<GES_Ged> GetItemsByModelLibelle(string identifged);
 
 
-    }
+    }*/
 }

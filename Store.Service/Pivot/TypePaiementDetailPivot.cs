@@ -19,11 +19,11 @@ namespace Store.Service.Pivot
       
         public long? Delai { get; set; }
 
-        public string sys_user { get; set; }
+        public string Sys_user { get; set; }
 
-        public DateTime? sys_dateUpdate { get; set; }
+        public DateTime? Sys_dateUpdate { get; set; }
 
-        public DateTime? sys_dateCreation { get; set; }
+        public DateTime? Sys_dateCreation { get; set; }
 
         public ItemsPivot GEN_Items_ModePaiement { get; set; }
 

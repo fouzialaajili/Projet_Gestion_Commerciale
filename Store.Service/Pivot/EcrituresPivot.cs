@@ -60,9 +60,9 @@ namespace Store.Service.Pivot
         public int? NumOrdre { get; set; }
         public long? IdDossier { get; set; }
         public long? IdDossierSite { get; set; }
-        public string sys_user { get; set; }
-        public DateTime? sys_dateUpdate { get; set; }
-        public DateTime? sys_dateCreation { get; set; }
+        public string Sys_user { get; set; }
+        public DateTime? Sys_dateUpdate { get; set; }
+        public DateTime? Sys_dateCreation { get; set; }
 
         public  CompteGPivot CPT_CompteG { get; set; }
 
