@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Service.Pivot
 {
-    public class PivotFamille
+    public class FamillePivot
     {
         public long FamilleId { get; set; }
         public int FamilleCode { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Store.Service.Pivot
 {
-    class PeriodesPivot
+    public class PeriodesPivot
     {
         public long Id { get; set; }
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Store.Service.Pivot
 {
-    class DossiersSitesPivot
+    public class DossiersSitesPivot
     {
         public long Id { get; set; }
 
@@ -37,11 +37,11 @@ namespace Store.Service.Pivot
 
         public int? ParDefault { get; set; }
 
-        public string sys_user { get; set; }
+        public string Sys_user { get; set; }
 
-        public DateTime? sys_dateUpdate { get; set; }
+        public DateTime? Sys_dateUpdate { get; set; }
 
-        public DateTime? sys_dateCreation { get; set; }
+        public DateTime? Sys_dateCreation { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public  ICollection<EcrituresPivot> CPT_Ecritures { get; set; }

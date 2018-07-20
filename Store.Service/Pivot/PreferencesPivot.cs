@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Store.Service.Pivot
 {
-    class PreferencesPivot
+    public class PreferencesPivot
     {
         public long Id { get; set; }
 
