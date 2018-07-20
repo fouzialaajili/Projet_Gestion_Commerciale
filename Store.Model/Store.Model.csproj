@@ -107,7 +107,6 @@
     <Compile Include="Models\GES_Licence.cs" />
     <Compile Include="Models\GES_Marque.cs" />
     <Compile Include="Models\GES_Tolerance.cs" />
-    <Compile Include="Models\Ges_Tva.cs" />
     <Compile Include="Models\GES_Unite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

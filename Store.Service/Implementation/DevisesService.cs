@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Service
 {
-    public class Class1
+    class DevisesService
     {
     }
 }

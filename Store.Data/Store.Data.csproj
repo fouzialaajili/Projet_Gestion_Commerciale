@@ -111,6 +111,7 @@
     <Compile Include="Repositories\ArticlesKitRepository.cs" />
     <Compile Include="Repositories\ArticlesPrixRepository.cs" />
     <Compile Include="Repositories\CategorieRepository.cs" />
+    <Compile Include="Repositories\CodesTvaRepository.cs" />
     <Compile Include="Repositories\CPT_ParametrageComptableRepository.cs" />
     <Compile Include="Repositories\DepotRepository.cs" />
     <Compile Include="Repositories\DoclieartRepoitory.cs" />

@@ -67,11 +67,107 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Implementation\AdminService.cs" />
+    <Compile Include="Implementation\AffaireService.cs" />
+    <Compile Include="Implementation\ArticlesKitService.cs" />
+    <Compile Include="Implementation\ArticlesPrixService.cs" />
+    <Compile Include="Implementation\ArticlesService.cs" />
+    <Compile Include="Implementation\CategorieService.cs" />
+    <Compile Include="Implementation\DepotService.cs" />
+    <Compile Include="Implementation\DevisesService.cs" />
+    <Compile Include="Implementation\DoclieartService.cs" />
+    <Compile Include="Implementation\DoclieService.cs" />
+    <Compile Include="Implementation\DocumentCommercialService.cs" />
+    <Compile Include="Implementation\DossiersContactsService.cs" />
+    <Compile Include="Implementation\DossiersService.cs" />
+    <Compile Include="Implementation\FamilleService.cs" />
+    <Compile Include="Interface\IAdminService.cs" />
+    <Compile Include="Interface\IAffaireService.cs" />
+    <Compile Include="Interface\IArticlesKitService.cs" />
+    <Compile Include="Interface\IArticlesPrixService.cs" />
+    <Compile Include="Interface\IArticlesService.cs" />
+    <Compile Include="Interface\ICategorieService.cs" />
+    <Compile Include="Interface\ICodesTVAService.cs" />
+    <Compile Include="Implementation\CodesTVASevice.cs" />
+    <Compile Include="Interface\IDepotService.cs" />
+    <Compile Include="Interface\IDevisesService.cs" />
+    <Compile Include="Interface\IDoclieartService.cs" />
+    <Compile Include="Interface\IDoclieService.cs" />
+    <Compile Include="Interface\IDocumentCommercialDetailSerieService.cs" />
+    <Compile Include="Interface\IDocumentCommercialDetailService.cs" />
+    <Compile Include="Interface\IDocumentCommercialService.cs" />
+    <Compile Include="Interface\IDossiersContactsService.cs" />
+    <Compile Include="Interface\IDossiersService.cs" />
+    <Compile Include="Interface\IFamilleService.cs" />
+    <Compile Include="Interface\IParametrageComptableService.cs" />
+    <Compile Include="Interface\ITiersContactsService.cs" />
+    <Compile Include="Interface\ITiersService.cs" />
+    <Compile Include="Interface\ITypePaiementDetailService.cs" />
+    <Compile Include="Interface\ITypePaiementService.cs" />
+    <Compile Include="Implementation\ParametrageComptableService.cs" />
+    <Compile Include="Pivot\PivotClasse.cs" />
+    <Compile Include="Pivot\PivotCompteG.cs" />
+    <Compile Include="Pivot\PivotCompteGDetailTVA.cs" />
+    <Compile Include="Pivot\PivotComptesBancaires.cs" />
+    <Compile Include="Pivot\PivotComptesBancairesTiers.cs" />
+    <Compile Include="Pivot\PivotEcheances.cs" />
+    <Compile Include="Pivot\PivotEcritures.cs" />
+    <Compile Include="Pivot\PivotJournaux.cs" />
+    <Compile Include="Pivot\PivotLettrage.cs" />
+    <Compile Include="Pivot\PivotOperation.cs" />
+    <Compile Include="Pivot\PivotPieces.cs" />
+    <Compile Include="Pivot\PivotPlanAnalytique.cs" />
+    <Compile Include="Pivot\PivotRelevesBancaires.cs" />
+    <Compile Include="Pivot\PivotRelevesBancairesDetail.cs" />
+    <Compile Include="Pivot\PivotTVALettrage.cs" />
+    <Compile Include="Pivot\PivotCodesTVA.cs" />
+    <Compile Include="Pivot\PivotParametrageComptable.cs" />
+    <Compile Include="Pivot\PivotDevises.cs" />
+    <Compile Include="Pivot\PivotDossiers.cs" />
+    <Compile Include="Pivot\PivotDossiersContacts.cs" />
+    <Compile Include="Pivot\PivotTiers.cs" />
+    <Compile Include="Pivot\PivotTiersContacts.cs" />
+    <Compile Include="Pivot\PivotTypePaiement.cs" />
+    <Compile Include="Pivot\PivotTypePaiementDetail.cs" />
+    <Compile Include="Pivot\PivotAdmin.cs" />
+    <Compile Include="Pivot\PivotAffaire.cs" />
+    <Compile Include="Pivot\PivotArticles.cs" />
+    <Compile Include="Pivot\PivotArticlesKit.cs" />
+    <Compile Include="Pivot\PivotArticlesPrix.cs" />
+    <Compile Include="Pivot\PivotCategorie.cs" />
+    <Compile Include="Pivot\PivotDepot.cs" />
+    <Compile Include="Pivot\PivotDoclie.cs" />
+    <Compile Include="Pivot\PivotDoclieart.cs" />
+    <Compile Include="Pivot\PivotDocumentCommercial.cs" />
+    <Compile Include="Pivot\PivotDocumentCommercialDetail.cs" />
+    <Compile Include="Pivot\PivotDocumentCommercialDetailSerie.cs" />
+    <Compile Include="Pivot\PivotFamille.cs" />
+    <Compile Include="Pivot\PivotImpression.cs" />
+    <Compile Include="Pivot\PivotLicence.cs" />
+    <Compile Include="Pivot\PivotMarque.cs" />
+    <Compile Include="Pivot\PivotTolerance.cs" />
+    <Compile Include="Pivot\PivotUnite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Implementation\TiersContactsService.cs" />
+    <Compile Include="Implementation\TiersService.cs" />
+    <Compile Include="Implementation\TypePaiementDetailService.cs" />
+    <Compile Include="Implementation\TypePaiementService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Store.Data\Store.Data.csproj">
+      <Project>{ea59312b-b184-4ed6-a452-86b9f6b0f499}</Project>
+      <Name>Store.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Store.Model\Store.Model.csproj">
+      <Project>{ed1007b2-1f19-4a8b-8b98-1e24b4b4cf2b}</Project>
+      <Name>Store.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mapping\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
