@@ -231,6 +231,10 @@
       <Project>{ed1007b2-1f19-4a8b-8b98-1e24b4b4cf2b}</Project>
       <Name>Store.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Store.web\Store.web.csproj">
+      <Project>{8ba53539-f679-4277-843f-da32f6fb7f23}</Project>
+      <Name>Store.web</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mapping\" />

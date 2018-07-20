@@ -168,10 +168,6 @@
       <Project>{ed1007b2-1f19-4a8b-8b98-1e24b4b4cf2b}</Project>
       <Name>Store.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Store.Service\Store.Service.csproj">
-      <Project>{0d43e4c1-152d-422b-9177-4e7fd1040411}</Project>
-      <Name>Store.Service</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
