@@ -1,12 +1,20 @@
-﻿using System;
+﻿using Store.Service.Pivot;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Store.Service
+namespace Store.Service.Interface
 {
-    interface IDoclieartService
+    public interface IDoclieartService
     {
+        IEnumerable<DoclieartPivot> GetALL();
+        DoclieartPivot  GetDevisesPivot(long id);
+        IEnumerable<DoclieartPivot> GetDoclieartPivotByCode(string DoclieartNomdoc);
+        void DeleteDoclieartPivot(DoclieartPivot doclieart);
+        void UpdateDoclieartPivot(DoclieartPivot doclieart);
+        void CreateDoclieartPivot(DoclieartPivot doclieart);
+        void SaveDoclieartPivot();
     }
 }

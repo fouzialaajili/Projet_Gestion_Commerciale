@@ -1,22 +1,50 @@
 ﻿using Store.Model;
+using Store.Service.Interface;
+using Store.Service.Pivot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Store.Service
+namespace Store.Service.Implementation
 {
-    interface AffaireService
+    class AffaireService : IAffaireService
     {
-        IEnumerable<GES_Affaire> GetAffaires();
-        GES_Affaire GetAffaire(long id);
-        void CreateAffaire(GES_Affaire affaire);
-        void SaveAffaire();
-        IEnumerable<GES_Affaire> GetModelItems(string ModelLibelle);
-        IEnumerable<GES_Affaire> GetItemsByModelLibelle(string modelLibelle);
-        void DeleteAffaire(GES_Affaire item);
-        void UpdateAffaire(GES_Affaire item);
+        public void CreateAffairePivot(AffairePivot affaire)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteAffairePivot(AffairePivot affaire)
+        {
+            throw new NotImplementedException();
+        }
+
+        public AffairePivot GetAffaire(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<AffairePivot> GetAffairePivotByCode(string Code)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<AffairePivot> GetALL()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveAffairePivot()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateAffairePivot(AffairePivot affaire)
+        {
+            throw new NotImplementedException();
+        }
     }
-    
+
 }

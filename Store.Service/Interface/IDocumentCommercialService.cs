@@ -1,12 +1,20 @@
-﻿using System;
+﻿using Store.Service.Pivot;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Store.Service
+namespace Store.Service.Interface
 {
-    interface IDocumentCommercialService
+    public interface IDocumentCommercialService
     {
+        IEnumerable<DocumentCommercialPivot> GetALL();
+        DocumentCommercialPivot GetDocumentCommercialPivot(long id);
+
+        void DeleteDocumentCommercialPivot(DocumentCommercialPivot documentCommercial);
+        void UpdateDocumentCommercialPivot(DocumentCommercialPivot documentCommercial);
+        void CreateDocumentCommercialPivot(DocumentCommercialPivot documentCommercial);
+        void SaveDocumentCommercial();
     }
 }

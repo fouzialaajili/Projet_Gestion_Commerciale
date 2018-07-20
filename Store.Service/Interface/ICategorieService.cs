@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Store.Service.Pivot;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,15 @@ using System.Threading.Tasks;
 
 namespace Store.Service.Interface
 {
-    interface ICategorieService
+    public interface ICategorieService
     {
+        IEnumerable<CategoriePivot> GetALL();
+        CategoriePivot GetArticlePivot(long id);
+        IEnumerable<CategoriePivot> GetCategoriePivotByDescription(string Description);
+ 
+        void DeleteCategoriePivot(CategoriePivot categorie);
+        void UpdateCategoriePivot(CategoriePivot categorie);
+        void CreateCategoriePivot(CategoriePivot categorie);
+        void SaveCategoriePivot();
     }
 }
