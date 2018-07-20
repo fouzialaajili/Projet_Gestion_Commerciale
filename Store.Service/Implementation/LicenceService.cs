@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Store.Service.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Store.Service.Implementation
 {
-    class LicenceService
+    class LicenceService: ILicenceService
     {
     }
 }

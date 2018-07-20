@@ -39,7 +39,7 @@ namespace Store.Service.Implementation
 
         public IEnumerable<GES_Impression> GetALL()
         {
-            IEnumerable<GES_Impression> impression = impressionRepository.GetAll().ToList();
+            IEnumerable<GES_Impression> impression = impressionRepository.GetALL().ToList();
             IEnumerable<GES_Impression> impressions = Mapper.Map<IEnumerable<GES_Impression>, IEnumerable<ImpressionPivot>>(impression);
             return impressions;
         }

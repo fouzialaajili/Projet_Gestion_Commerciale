@@ -15,15 +15,16 @@ namespace Store.Data.Repositories
 
         public IEnumerable<GES_FournisseurArticle> GetALL()
         {
-            return this.DbContext.FournisseurArticles.ToList();
+            return DbContext.FournisseurArticles.ToList();
         }
 
-        public GES_FournisseurArticle GetFournisseurArticle(long id)
+        public GES_FournisseurArticle GetById(long id)
         {
             var fournisseurArticles = this.DbContext.FournisseurArticles.Where(c => c.FournisseurArticleId == id).SingleOrDefault();
 
             return fournisseurArticles;
         }
+
 
         public IEnumerable<GES_FournisseurArticle> GetItemsByModelLibelle(string ReferenceName)
         {
@@ -39,7 +40,7 @@ namespace Store.Data.Repositories
     {
         IEnumerable<GES_FournisseurArticle> GetItemsByModelLibelle(string categoryName);
         IEnumerable<GES_FournisseurArticle> GetALL();
-        GES_FournisseurArticle GetFournisseurArticle(long id);
+        GES_FournisseurArticle GetById(long id);
 
     }
 }
