@@ -21,6 +21,6 @@ namespace Store.Service.Pivot
         public long UniteSocieteId { get; set; }
         public  DossiersPivot UniteSociete { get; set; }
 
-        public  ICollection<ArticlePivot> UniteArticle { get; set; }
+        public  ICollection<GES_Article> UniteArticle { get; set; }
     }
 }
