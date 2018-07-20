@@ -10,12 +10,12 @@ namespace Store.Service.Interface
 {
     interface ILicenceService
     {
-        IEnumerable<GES_Licence> GetALL();
-        GES_Licence GetLicence(long id);
-        IEnumerable<GES_Licence> Licences(string identifged);
-        void DeleteLicence(LicencePivot ged);
-        void UpdateLicence(LicencePivot ged);
-        void CreateLicence(LicencePivot ged);
+        IEnumerable<LicencePivot> GetALL();
+        LicencePivot GetLicence(long id);
+        IEnumerable<LicencePivot> Licences(string identifged);
+        void DeleteLicence(LicencePivot licence);
+        void UpdateLicence(LicencePivot licence);
+        void CreateLicence(LicencePivot licence);
         void SaveLicence();
     }
 }

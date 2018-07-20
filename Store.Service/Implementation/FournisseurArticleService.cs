@@ -8,6 +8,7 @@ using Store.Data.Repositories;
 using Store.Data.Infrastructure;
 using Store.Service.Interface;
 using Store.Service.Pivot;
+using AutoMapper;
 
 namespace Store.Service.Implementation
 {
@@ -35,7 +36,7 @@ namespace Store.Service.Implementation
         public IEnumerable<GES_FournisseurArticle> GetALL()
         {
             IEnumerable<GES_FournisseurArticle> fournisseurArticles = fournisseurArticleRepository.GetALL().ToList();
-            IEnumerable<GES_FournisseurArticle> fournisseurArticlePivots = Mapper.Map<IEnumerable<GES_FournisseurArticle>, IEnumerable<FournisseurArticlePivot>>(fournisseurArticles);
+            IEnumerable<FournisseurArticlePivot> fournisseurArticlePivots = Mapper.Map<IEnumerable<GES_FournisseurArticle>, IEnumerable<FournisseurArticlePivot>>(fournisseurArticles);
             return fournisseurArticlePivots;
         }
 
