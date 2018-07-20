@@ -15,6 +15,6 @@ namespace Store.Service.Pivot
         public string ImpressionLogo { get; set; }
         /***/
         public long ImpressionSocieteId { get; set; }
-        public  GEN_Dossiers ImpressionSociete { get; set; }
+        public  DossiersPivot ImpressionSociete { get; set; }
     }
 }

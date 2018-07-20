@@ -19,8 +19,8 @@ namespace Store.Service.Pivot
         public DateTime UniteSysDateCreation { get; set; }
         public DateTime UniteSysDateUpdate { get; set; }
         public long UniteSocieteId { get; set; }
-        public  GEN_Dossiers UniteSociete { get; set; }
+        public  DossiersPivot UniteSociete { get; set; }
 
-        public  ICollection<GES_Article> UniteArticle { get; set; }
+        public  ICollection<PivotArticle> UniteArticle { get; set; }
     }
 }
