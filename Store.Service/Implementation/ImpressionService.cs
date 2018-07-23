@@ -10,11 +10,11 @@ using Store.Model;
 using Store.Service.Pivot;
 
 namespace Store.Service.Implementation
-{  /*
-    class ImpressionService: IImpressionService
+{
+    class ImpressionService : IImpressionService
     {
 
-      private readonly IImpressionRepositoy impressionRepository;
+        private readonly IImpressionRepositoy impressionRepository;
 
 
         private readonly IUnitOfWork unitOfWork;
@@ -67,5 +67,5 @@ namespace Store.Service.Implementation
         {
             impressionRepository.Update(Mapper.Map<GES_Impression, GES_Impression>(impression));
         }
-    }*/
+    }
 }

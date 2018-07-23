@@ -18,7 +18,7 @@ namespace Store.Model
         public DateTime? MotifTicketSysDateUpdate { get; set;}
 
     /***/    public long MotifTicketSocieteId { get; set; }
-         virtual  public GES_Ticket MotifTicketTicket { get; set; }
+         virtual  public GEN_TiersContact MotifTicketTicket { get; set; }
           virtual public GEN_Dossiers MotifTicketSociete { get; set; }
 
     }

@@ -11,6 +11,9 @@ namespace Store.Data.Repositories
    
     public interface IToleranceRepositoy : IRepository<GES_Tolerance>
     {
+        IEnumerable<GES_Tolerance> GetALL();
+        GES_Tolerance GetById(long id);
+        IEnumerable<GES_Tolerance> GetItemsByModelLibelle(string identifged);
 
     }
 
@@ -19,6 +22,19 @@ namespace Store.Data.Repositories
     {
         public ToleranceRepositoy(IDbFactory dbFactory) : base(dbFactory) { }
 
+        public IEnumerable<GES_Tolerance> GetALL()
+        {
+            throw new NotImplementedException();
+        }
 
+        public GES_Tolerance GetById(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<GES_Tolerance> GetItemsByModelLibelle(string identifged)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

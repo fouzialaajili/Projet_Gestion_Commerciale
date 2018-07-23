@@ -26,7 +26,7 @@ namespace Store.Service.Implementation
 
         public void CreateMotif(MotifPivot Motifs)
         {
-            MotifPivot item = Mapper.Map<MotifPivot, GES_Motif>(Motifs);
+            GES_Motif item = Mapper.Map<MotifPivot, GES_Motif>(Motifs);
             motifRepository.Add(item);
         }
 
@@ -54,7 +54,7 @@ namespace Store.Service.Implementation
         public IEnumerable<MotifPivot> Motifs(string identifged)
         {
             IEnumerable<GES_Motif> motif = motifRepository.GetItemsByModelLibelle(identifged).ToList();
-            IEnumerable<MarquePivot> motifsPivots = Mapper.Map<IEnumerable<GES_Motif>, IEnumerable<MotifPivot>>(motif);
+            IEnumerable<MotifPivot> motifsPivots = Mapper.Map<IEnumerable<GES_Motif>, IEnumerable<MotifPivot>>(motif);
             return motifsPivots;
         }
 

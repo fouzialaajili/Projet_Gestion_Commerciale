@@ -145,6 +145,8 @@
     <Compile Include="Repositories\TicketDetailRepository.cs" />
     <Compile Include="Repositories\TicketRepository.cs" />
     <Compile Include="Repositories\ToleranceRepository.cs" />
+    <Compile Include="Repositories\TypePaiementDetailRepository.cs" />
+    <Compile Include="Repositories\TypePaiementRepository.cs" />
     <Compile Include="Repositories\UniteRepository.cs" />
     <Compile Include="StoreEntities.cs" />
     <Compile Include="StoreSeedData.cs" />

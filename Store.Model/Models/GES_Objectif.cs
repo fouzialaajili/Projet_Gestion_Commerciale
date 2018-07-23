@@ -9,7 +9,7 @@ namespace Store.Model
     public class GES_Objectif
     {
         public long ObjectifId { get; set; }
-     /***/   public long ObjectifRepresentantId { get; set; }
+   /***/public long ObjectifRepresentantId { get; set; }
         public DateTime? ObjectifAnnee { get; set;}
         public int ObjectifPeriode { get; set; }
         public DateTime? ObjectifDatedebut { get; set; }
