@@ -25,7 +25,7 @@ namespace Store.Service.Implementation
         }
         public void CreateMotifTicket(MotifTicketPivot Motif)
         {
-            MotifPivot item = Mapper.Map<MotifTicketPivot, GES_MotifTicket>(Motif);
+            GES_MotifTicket item = Mapper.Map<MotifTicketPivot, GES_MotifTicket>(Motif);
             motifTicketRepository.Add(item);
         }
 

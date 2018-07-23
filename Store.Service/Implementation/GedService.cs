@@ -11,7 +11,7 @@ using Store.Data.Infrastructure;
 
 namespace Store.Service.Implementation
 {
-     /*  class GedService : IGedService
+      class GedService : IGedService
     {
 
 
@@ -70,5 +70,5 @@ namespace Store.Service.Implementation
             gedRepository.Update(Mapper.Map<GedPivot, GES_Ged>(ged));
         }
     }
-    */
+
 }

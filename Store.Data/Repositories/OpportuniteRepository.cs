@@ -12,10 +12,32 @@ namespace Store.Data.Repositories
     {
         public OpportuniteRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
+
+        public IEnumerable<GES_Opportunite> GetALL()
+        {
+            return this.DbContext.Opportunites.ToList();
+        }
+
+        public GES_Opportunite GetById(long id)
+        {
+            var opportunites = this.DbContext.Opportunites.Where(c => c.OpportuniteId == id).SingleOrDefault();
+
+            return opportunites;
+        }
+
+        public IEnumerable<GES_Opportunite> GetItemsByModelLibelle(string identifged)
+        {
+            var numerotations = this.DbContext.Opportunites.Where(c => c.OpportuniteLibelle == identifged);
+
+            return numerotations;
+        }
     }
 
     public interface IOpportuniteRepository : IRepository<GES_Opportunite>
     {
 
+        IEnumerable<GES_Opportunite> GetALL();
+        GES_Opportunite GetById(long id);
+       IEnumerable<GES_Opportunite> GetItemsByModelLibelle(string identifged);
     }
 }

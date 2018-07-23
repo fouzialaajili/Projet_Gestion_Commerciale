@@ -27,7 +27,7 @@ namespace Store.Service.Implementation
 
         public void CreateMarque(MarquePivot Marque)
         {
-            MarquePivot item = Mapper.Map<MarquePivot, GES_Marque>(Marque);
+            GES_Marque item = Mapper.Map<MarquePivot, GES_Marque>(Marque);
             marqueRepository.Add(item);
 
         }

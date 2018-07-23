@@ -12,10 +12,32 @@ namespace Store.Data.Repositories
     {
         public TicketDetailRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
+
+        public IEnumerable<GES_TicketDetail> GetALL()
+        {
+
+            return this.DbContext.TicketDetails.ToList();
+        }
+
+        public GES_TicketDetail GetById(long id)
+        {
+            var objetifs = this.DbContext.TicketDetails.Where(c => c.TicketDetailId == id).SingleOrDefault();
+
+            return objetifs;
+        }
+
+        public IEnumerable<GES_TicketDetail> GetItemsByModelLibelle(string identifged)
+        {
+            var objetifs = this.DbContext.TicketDetails.Where(c => c.TicketDetailDescription == identifged);
+
+            return objetifs;
+        }
     }
 
     public interface ITicketDetailRepository : IRepository<GES_TicketDetail>
     {
-
+        IEnumerable<GES_TicketDetail> GetALL();
+        GES_TicketDetail GetById(long id);
+        IEnumerable<GES_TicketDetail> GetItemsByModelLibelle(string identifged);
     }
 }

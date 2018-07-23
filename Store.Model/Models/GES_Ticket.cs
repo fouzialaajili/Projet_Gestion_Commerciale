@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Store.Model
 {
-    public class GES_Ticket
+    public class GEN_TiersContact
     {
         public long TicketId { get; set; }
         public long TicketNumero { get; set; }

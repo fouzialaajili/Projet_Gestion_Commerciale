@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Configuration
 {
-    class GES_TicketConfiguration : EntityTypeConfiguration<GES_Ticket>
+    class GES_TicketConfiguration : EntityTypeConfiguration<GEN_TiersContact>
     {
         public GES_TicketConfiguration()
         {

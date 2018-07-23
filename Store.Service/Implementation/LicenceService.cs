@@ -26,7 +26,7 @@ namespace Store.Service.Implementation
 
         public void CreateLicence(LicencePivot licence)
         {
-            LicencePivot item = Mapper.Map<LicencePivot, GES_Licence>(licence);
+           GES_Licence item = Mapper.Map<LicencePivot, GES_Licence>(licence);
             licenceRepository.Add(item);
         }
 

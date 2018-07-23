@@ -91,6 +91,7 @@
     <Compile Include="Implementation\FamilleService.cs" />
     <Compile Include="Implementation\FournisseurArticleService.cs" />
     <Compile Include="Implementation\GedService.cs" />
+    <Compile Include="Implementation\GES_TiersContacts.cs" />
     <Compile Include="Implementation\ImpressionService.cs" />
     <Compile Include="Implementation\LicenceService.cs" />
     <Compile Include="Implementation\MarqueService.cs" />
@@ -150,7 +151,7 @@
     <Compile Include="Interface\IRepresentantService.cs" />
     <Compile Include="Interface\ITicketDetailService.cs" />
     <Compile Include="Interface\ITicketService.cs" />
-    <Compile Include="Interface\ITiersContactsService.cs" />
+    <Compile Include="Interface\ITiersContactService.cs" />
     <Compile Include="Interface\ITiersService.cs" />
     <Compile Include="Interface\IToleranceService.cs" />
     <Compile Include="Interface\ITypePaiementDetailService.cs" />

@@ -42,7 +42,9 @@ namespace Store.Data
         public DbSet<GES_Motif> Motifs { get; set; }
         public DbSet<GES_MotifTicket> MotifTickets { get; set; }
         public DbSet<GES_MouvementStock> MouvementStocks { get; set; }
-        public DbSet<GES_Nomenclature> Nomenclatures { get; set; } 
+        public DbSet<GES_Nomenclature> Nomenclatures { get; set; }
+        public DbSet<GES_Numerotation> Numeratations { get; set; }
+        public DbSet<CPT_ParametrageComptable> ParametrageComptables { get; set; }
         public DbSet<GES_Objectif> Objectifs { get; set; }
         public DbSet<GES_Opportunite> Opportunites { get; set; }
         public DbSet<GES_OpportuniteDetail> OpportuniteDetails { get; set; }
@@ -56,11 +58,12 @@ namespace Store.Data
 
         public DbSet<GES_Reglement> Reglements { get; set; }
         public DbSet<GES_ReglementFacture> ReglementFactures { get; set; }
-
+        public DbSet<GEN_Tiers> Tiers { get; set; }
+        public DbSet<GEN_TiersContacts> TiersContacts { get; set; }
         public DbSet<GES_Representant> Representants { get; set; }
         public DbSet<GEN_Dossiers> Societes { get; set; }
 
-        public DbSet<GES_Ticket> Tickets { get; set; }
+        public DbSet<GEN_TiersContact> Tickets { get; set; }
         public DbSet<GES_TicketDetail> TicketDetails { get; set; }
 
         public DbSet<GES_Tolerance> Tolerances { get; set; }

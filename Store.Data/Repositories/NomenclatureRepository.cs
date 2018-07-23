@@ -12,10 +12,32 @@ namespace Store.Data.Repositories
     {
         public NomenclatureRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
+
+        public IEnumerable<GES_Nomenclature> GetALL()
+        {
+            return this.DbContext.Nomenclatures.ToList();
+        }
+
+        public GES_Nomenclature GetById(long id)
+        {
+            var nomenclatures = this.DbContext.Nomenclatures.Where(c => c.NomenclatureId== id).SingleOrDefault();
+
+            return nomenclatures;
+        }
+
+        public IEnumerable<GES_Nomenclature> GetItemsByModelLibelle(string identifged)
+        {
+            var nomenclatures = this.DbContext.Nomenclatures.Where(c => c.NomenclatureLib == identifged);
+
+            return nomenclatures;
+        }
     }
 
     public interface INomenclatureRepository : IRepository<GES_Nomenclature>
     {
+        IEnumerable<GES_Nomenclature> GetALL();
+        GES_Nomenclature GetById(long id);
+        IEnumerable<GES_Nomenclature> GetItemsByModelLibelle(string identifged);
 
     }
 }

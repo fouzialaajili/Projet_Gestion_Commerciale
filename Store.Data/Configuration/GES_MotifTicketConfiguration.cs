@@ -22,7 +22,7 @@ namespace Store.Data.Configuration
         //virtual public GEN_Dossiers MotifTicketSociete { get; set; }
 
 
-        HasOptional<GES_Ticket>(a => a.MotifTicketTicket)
+        HasOptional<GEN_TiersContact>(a => a.MotifTicketTicket)
                     .WithMany(d => d.TicketMotifTicket)
                     .HasForeignKey<long?>(a => a.MotifIdticket);
 

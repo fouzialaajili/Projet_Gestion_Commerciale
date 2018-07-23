@@ -12,10 +12,32 @@ namespace Store.Data.Repositories
     {
         public MouvementStockRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
+
+        public IEnumerable<GES_MouvementStock> GetALL()
+        {
+            return this.DbContext.MouvementStocks.ToList();
+        }
+
+        public GES_MouvementStock GetById(long id)
+        {
+            var mouvementstocks = this.DbContext.MouvementStocks.Where(c => c.MouvementStockId== id).SingleOrDefault();
+
+            return mouvementstocks;
+        }
+
+        public IEnumerable<GES_MouvementStock> GetItemsByModelLibelle(string identifged)
+        {
+            var mouvementstocks = this.DbContext.MouvementStocks.Where(c => c.MouvementStockCode == identifged);
+
+            return mouvementstocks;
+        }
     }
 
     public interface IMouvementStockRepository : IRepository<GES_MouvementStock>
     {
+        IEnumerable<GES_MouvementStock> GetALL();
+        GES_MouvementStock GetById(long id);
+        IEnumerable<GES_MouvementStock> GetItemsByModelLibelle(string identifged);
 
     }
 }

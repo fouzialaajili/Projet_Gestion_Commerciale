@@ -25,7 +25,7 @@ namespace Store.Data.Configuration
                               .WithMany(d => d.GES_TicketDetail)
                               .HasForeignKey<long?>(a => a.TicketDetailIdcommercial);
 
-            HasOptional<GES_Ticket>(a => a.TicketDetailTicket)
+            HasOptional<GEN_TiersContact>(a => a.TicketDetailTicket)
                                   .WithMany(d => d.GES_TicketDetail)
                                   .HasForeignKey<long?>(a => a.TicketDetailIdTicket);
 

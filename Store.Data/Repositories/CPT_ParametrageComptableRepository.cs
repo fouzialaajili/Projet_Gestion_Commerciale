@@ -12,10 +12,34 @@ namespace Store.Data.Repositories
     {
         public CPT_ParametrageComptableRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
+
+        public IEnumerable<CPT_ParametrageComptable> GetALL()
+        {
+            return DbContext.ParametrageComptables.ToList();
+        }
+
+        public CPT_ParametrageComptable GetById(long id)
+        {
+            var _ParametrageComptable = this.DbContext.ParametrageComptables.Where(c => c.CPT_ParametrageComptableId == id).SingleOrDefault();
+
+            return _ParametrageComptable;
+        }
+
+        public IEnumerable<CPT_ParametrageComptable> GetItemsByModelLibelle(string identifged)
+        {
+
+            var _CPT_ParametrageComptable = this.DbContext.ParametrageComptables.Where(c => c.LibelleEcritureANouveau == identifged);
+
+            return _CPT_ParametrageComptable;
+
+           
+        }
     }
 
     public interface ICPT_ParametrageComptableRepository : IRepository<CPT_ParametrageComptable>
     {
-
+        IEnumerable<CPT_ParametrageComptable> GetALL();
+        CPT_ParametrageComptable GetById(long id);
+        IEnumerable<CPT_ParametrageComptable> GetItemsByModelLibelle(string identifged);
     }
 }
