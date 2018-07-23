@@ -1,4 +1,8 @@
-﻿using Store.Service.Interface;
+﻿using AutoMapper;
+using Store.Data.Infrastructure;
+using Store.Data.Repositories;
+using Store.Model;
+using Store.Service.Interface;
 using Store.Service.Pivot;
 using System;
 using System.Collections.Generic;
@@ -10,24 +14,37 @@ namespace Store.Service.Implementation
 {
     public class DoclieService : IDoclieService
     {
-        public void CreateDocliePivot(DocliePivot doclie)
+        private readonly IDoclieRepository doclieRepository;
+        private readonly IUnitOfWork unitOfWork;
+        public DoclieService(IDoclieRepository doclieRepository, IUnitOfWork unitOfWork)
         {
-            throw new NotImplementedException();
+            this.doclieRepository = doclieRepository;
+            this.unitOfWork = unitOfWork;
+
+        }
+public void CreateDocliePivot(DocliePivot doclie)
+        {
+            GES_Doclie doclies = Mapper.Map<DocliePivot, GES_Doclie>(doclie);
+            doclieRepository.Add(doclies);
         }
 
         public void DeleteDocliePivot(DocliePivot doclie)
         {
-            throw new NotImplementedException();
+            doclieRepository.Delete(Mapper.Map<DocliePivot, GES_Doclie>(doclie));
         }
 
         public IEnumerable<DocliePivot> GetALL()
         {
-            throw new NotImplementedException();
+            IEnumerable<GES_Doclie> doclieartPivots = doclieRepository.GetAll().ToList();
+            IEnumerable<DocliePivot> docliePivot = Mapper.Map<IEnumerable<GES_Doclie>, IEnumerable<DocliePivot>>(doclieartPivots);
+            return docliePivot;
         }
 
         public DocliePivot GetDocliePivot(long id)
         {
-            throw new NotImplementedException();
+            var doclie = doclieRepository.GetById((int)id);
+            DocliePivot docliePivot = Mapper.Map<GES_Doclie, DocliePivot>(doclie);
+            return docliePivot;
         }
 
         public IEnumerable<DocliePivot> GetDocliePivotByCode(string DoclieartNomdoc)
@@ -37,12 +54,12 @@ namespace Store.Service.Implementation
 
         public void SaveDocliePivot()
         {
-            throw new NotImplementedException();
+            unitOfWork.Commit();
         }
 
         public void UpdateDocliePivot(DocliePivot doclie)
         {
-            throw new NotImplementedException();
+            doclieRepository.Update(Mapper.Map<DocliePivot, GES_Doclie>(doclie));
         }
     }
 }

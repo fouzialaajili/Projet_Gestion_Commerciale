@@ -10,7 +10,7 @@ namespace Store.Service.Interface
     public interface ICategorieService
     {
         IEnumerable<CategoriePivot> GetALL();
-        CategoriePivot GetArticlePivot(long id);
+        CategoriePivot GetCategoriePivot(long id);
         IEnumerable<CategoriePivot> GetCategoriePivotByDescription(string Description);
  
         void DeleteCategoriePivot(CategoriePivot categorie);

@@ -1,4 +1,8 @@
-﻿using Store.Service.Interface;
+﻿using AutoMapper;
+using Store.Data.Infrastructure;
+using Store.Data.Repositories;
+using Store.Model;
+using Store.Service.Interface;
 using Store.Service.Pivot;
 using System;
 using System.Collections.Generic;
@@ -6,28 +10,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Store.Service
+namespace Store.Service.Implementation
 {
     class ArticlesKitService : IArticlesKitService
     {
-        public void CreateArticlesKitPivot(AffairePivot affaire)
+
+        IArticlesKitRepository articlesKitRepository;
+        IUnitOfWork unitOfWork;
+        public ArticlesKitService(IArticlesKitRepository articlesKitRepository, IUnitOfWork unitOfWork)
         {
-            throw new NotImplementedException();
+            this.articlesKitRepository = articlesKitRepository;
+            this.unitOfWork = unitOfWork;
         }
 
-        public void DeleteArticlesKitPivot(AffairePivot affaire)
+        public void CreateArticlesKitPivot(ArticlesKitPivot articlesKitPivot)
         {
-            throw new NotImplementedException();
+           GES_ArticlesKit  articlesKit = Mapper.Map<ArticlesKitPivot, GES_ArticlesKit>(articlesKitPivot);
+
+           articlesKitRepository.Add(articlesKit);
+           
+        }
+
+        public void DeleteArticlesKitPivot(ArticlesKitPivot articlesKit)
+        {
+            articlesKitRepository.Delete(Mapper.Map<ArticlesKitPivot, GES_ArticlesKit>(articlesKit));
         }
 
         public IEnumerable<ArticlesKitPivot> GetALL()
         {
-            throw new NotImplementedException();
+     
+            IEnumerable<GES_ArticlesKit> articlesKits = articlesKitRepository.GetAll().ToList();
+            IEnumerable<ArticlesKitPivot> articlesKitsPivot = Mapper.Map<IEnumerable<GES_ArticlesKit>, IEnumerable<ArticlesKitPivot>>(articlesKits);
+            return articlesKitsPivot;
         }
 
         public ArticlesKitPivot GetArticlesKit(long id)
         {
-            throw new NotImplementedException();
+            var articleKits = articlesKitRepository.GetById((int)id);
+            ArticlesKitPivot itemPivot = Mapper.Map<GES_ArticlesKit, ArticlesKitPivot>(articleKits);
+            return itemPivot;
         }
 
         public IEnumerable<ArticlesKitPivot> GetArticlesKitPivotByDescription(string Description)
@@ -37,12 +58,17 @@ namespace Store.Service
 
         public void SaveArticlesKitPivot()
         {
-            throw new NotImplementedException();
+            unitOfWork.Commit();
         }
 
-        public void UpdateArticlesKitPivot(AffairePivot affaire)
+        public void UpdateArticlesKitPivot(ArticlesKitPivot articlesKit)
         {
-            throw new NotImplementedException();
+            articlesKitRepository.Update(Mapper.Map<ArticlesKitPivot, GES_ArticlesKit>(articlesKit));
+
         }
+
+
+       
+
     }
 }

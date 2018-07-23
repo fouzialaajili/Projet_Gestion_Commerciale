@@ -1,4 +1,8 @@
-﻿using Store.Service.Interface;
+﻿using AutoMapper;
+using Store.Data.Infrastructure;
+using Store.Data.Repositories;
+using Store.Model;
+using Store.Service.Interface;
 using Store.Service.Pivot;
 using System;
 using System.Collections.Generic;
@@ -10,24 +14,39 @@ namespace Store.Service.Implementation
 {
     public class DoclieartService : IDoclieartService
     {
+        private readonly IDoclieartRepository doclieRepository;
+        private readonly IUnitOfWork unitOfWork;
+        public DoclieartService(IDoclieartRepository doclieRepository, IUnitOfWork unitOfWork)
+        {
+            this.doclieRepository = doclieRepository;
+            this.unitOfWork = unitOfWork;
+
+        }
+
         public void CreateDoclieartPivot(DoclieartPivot doclieart)
         {
-            throw new NotImplementedException();
+            GES_Doclieart docliearts = Mapper.Map<DoclieartPivot, GES_Doclieart>(doclieart);
+            doclieRepository.Add(docliearts);
         }
 
         public void DeleteDoclieartPivot(DoclieartPivot doclieart)
         {
-            throw new NotImplementedException();
+            doclieRepository.Delete(Mapper.Map<DoclieartPivot,GES_Doclieart>(doclieart));
         }
 
         public IEnumerable<DoclieartPivot> GetALL()
         {
-            throw new NotImplementedException();
+            IEnumerable<GES_Doclieart> doclieartPivots = doclieRepository.GetAll().ToList();
+            IEnumerable<DoclieartPivot> DoclieartPivot = Mapper.Map<IEnumerable<GES_Doclieart>, IEnumerable<DoclieartPivot>>(doclieartPivots);
+            return DoclieartPivot;
+         
         }
 
         public DoclieartPivot GetDevisesPivot(long id)
         {
-            throw new NotImplementedException();
+            var doclieart= doclieRepository.GetById((int)id);
+            DoclieartPivot doclieartPivot = Mapper.Map<GES_Doclieart, DoclieartPivot>(doclieart);
+            return doclieartPivot;
         }
 
         public IEnumerable<DoclieartPivot> GetDoclieartPivotByCode(string DoclieartNomdoc)
@@ -37,12 +56,12 @@ namespace Store.Service.Implementation
 
         public void SaveDoclieartPivot()
         {
-            throw new NotImplementedException();
+            unitOfWork.Commit();
         }
 
         public void UpdateDoclieartPivot(DoclieartPivot doclieart)
         {
-            throw new NotImplementedException();
+            doclieRepository.Update(Mapper.Map<DoclieartPivot, GES_Doclieart>(doclieart));
         }
     }
 }

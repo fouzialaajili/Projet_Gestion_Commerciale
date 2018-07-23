@@ -12,9 +12,9 @@ namespace Store.Service.Interface
         IEnumerable<ArticlesKitPivot> GetALL();
         ArticlesKitPivot GetArticlesKit(long id);
         IEnumerable<ArticlesKitPivot> GetArticlesKitPivotByDescription(string Description);
-        void DeleteArticlesKitPivot(AffairePivot affaire);
-        void UpdateArticlesKitPivot(AffairePivot affaire);
-        void CreateArticlesKitPivot(AffairePivot affaire);
+        void DeleteArticlesKitPivot(ArticlesKitPivot articlesKit);
+        void UpdateArticlesKitPivot(ArticlesKitPivot articlesKit);
+        void CreateArticlesKitPivot(ArticlesKitPivot articlesKit);
         void SaveArticlesKitPivot();
     }
 }

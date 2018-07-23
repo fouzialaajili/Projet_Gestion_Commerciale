@@ -10,7 +10,7 @@ namespace Store.Service.Interface
    public  interface IFamilleService
     {
         IEnumerable<FamillePivot> GetALL();
-        FamillePivot GetDossiersPivot(long id);
+        FamillePivot GetFamillePivot(long id);
         IEnumerable<FamillePivot> GetFamillePivotByFamilleCode(string FamilleCode);
         void DeleteFamillePivot(FamillePivot dossiers);
         void UpdateFamillePivot(FamillePivot dossiers);

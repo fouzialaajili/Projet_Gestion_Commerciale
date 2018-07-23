@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    class DossiersRepository : RepositoryBase<GEN_Dossiers>, ISocieteRepository
+    class DossiersRepository : RepositoryBase<GEN_Dossiers>, IDossiersRepository
     {
         public DossiersRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface ISocieteRepository : IRepository<GEN_Dossiers>
+    public interface IDossiersRepository : IRepository<GEN_Dossiers>
     {
 
     }

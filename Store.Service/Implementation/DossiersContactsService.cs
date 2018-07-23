@@ -1,4 +1,8 @@
-﻿using Store.Service.Interface;
+﻿using AutoMapper;
+using Store.Data.Infrastructure;
+using Store.Data.Repositories;
+using Store.Model;
+using Store.Service.Interface;
 using Store.Service.Pivot;
 using System;
 using System.Collections.Generic;
@@ -10,24 +14,39 @@ namespace Store.Service.Implementation
 {
     class DossiersContactsService : IDossiersContactsService
     {
-        public void CreateDossiersContactsPivot(DossiersContactsPivot dossiersContacts)
+        private readonly IDossiersContactsRepository dossiersContactsRepository;
+        private readonly IUnitOfWork unitOfWork;
+
+        public DossiersContactsService(IDossiersContactsRepository dossiersContactsRepository, IUnitOfWork unitOfWork)
         {
-            throw new NotImplementedException();
+            this.dossiersContactsRepository= dossiersContactsRepository;
+            this.unitOfWork = unitOfWork;
+ }
+
+        public void CreateDossiersContactsPivot(DossiersContactsPivot dossiersContactsPivot)
+        {
+            GEN_DossiersContacts dossiersContacts = Mapper.Map<DossiersContactsPivot, GEN_DossiersContacts>(dossiersContactsPivot);
+            dossiersContactsRepository.Add(dossiersContacts);
         }
 
         public void DeleteDossiersContactsPivot(DossiersContactsPivot dossiersContacts)
         {
-            throw new NotImplementedException();
+            dossiersContactsRepository.Delete(Mapper.Map<DossiersContactsPivot, GEN_DossiersContacts>(dossiersContacts));
+
         }
 
         public IEnumerable<DossiersContactsPivot> GetALL()
         {
-            throw new NotImplementedException();
+            IEnumerable<GEN_DossiersContacts> dossiersContacts = dossiersContactsRepository.GetAll().ToList();
+            IEnumerable<DossiersContactsPivot> documentCommercialPivot = Mapper.Map<IEnumerable<GEN_DossiersContacts>, IEnumerable<DossiersContactsPivot>>(dossiersContacts);
+            return documentCommercialPivot;
         }
 
         public DossiersContactsPivot GetDossiersContactsPivot(long id)
         {
-            throw new NotImplementedException();
+            var dossiersContacts= dossiersContactsRepository.GetById((int)id);
+            DossiersContactsPivot documentCommercialPivot = Mapper.Map<GEN_DossiersContacts,DossiersContactsPivot > (dossiersContacts);
+            return documentCommercialPivot;
         }
 
         public IEnumerable<DossiersContactsPivot> GetDossiersContactsPivotByCodeDossier(string CodeDossier)
@@ -37,12 +56,14 @@ namespace Store.Service.Implementation
 
         public void SaveDossiersContacts()
         {
-            throw new NotImplementedException();
+            unitOfWork.Commit();
         }
 
         public void UpdateDossiersContactsPivot(DossiersContactsPivot dossiersContacts)
         {
-            throw new NotImplementedException();
+
+            dossiersContactsRepository.Update(Mapper.Map<DossiersContactsPivot, GEN_DossiersContacts>(dossiersContacts));
+
         }
     }
 }

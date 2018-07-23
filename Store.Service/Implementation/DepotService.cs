@@ -1,4 +1,8 @@
-﻿using Store.Service.Interface;
+﻿using AutoMapper;
+using Store.Data.Infrastructure;
+using Store.Data.Repositories;
+using Store.Model;
+using Store.Service.Interface;
 using Store.Service.Pivot;
 using System;
 using System.Collections.Generic;
@@ -10,24 +14,46 @@ namespace Store.Service
 {
     class DepotService : IDepotService
     {
-        void IDepotService.CreateDepotPivot(DepotPivot depot)
+private readonly IDepotRepository depotRepository;
+private readonly IUnitOfWork unitOfWork;
+
+        public DepotService(IDepotRepository depotRepository, IUnitOfWork unitOfWork)
         {
-            throw new NotImplementedException();
+            this.depotRepository = depotRepository;
+            this.unitOfWork = unitOfWork;
+
+        }
+
+
+
+
+        void IDepotService.CreateDepotPivot(DepotPivot depotPivot)
+        {
+            GES_Depot depot = Mapper.Map<DepotPivot, GES_Depot>(depotPivot);
+            depotRepository.Add(depot);
+           
         }
 
         void IDepotService.DeleteDepotPivot(DepotPivot depot)
         {
-            throw new NotImplementedException();
+
+            depotRepository.Delete(Mapper.Map<DepotPivot, GES_Depot>(depot));
         }
 
         IEnumerable<DepotPivot> IDepotService.GetALL()
         {
-            throw new NotImplementedException();
+            IEnumerable<GES_Depot>  depots= depotRepository.GetAll().ToList();
+            IEnumerable<DepotPivot> codesTVAPivot = Mapper.Map<IEnumerable<GES_Depot>, IEnumerable<DepotPivot>>(depots);
+            return codesTVAPivot;
         }
 
         DepotPivot IDepotService.GetDepotPivot(long id)
+
         {
-            throw new NotImplementedException();
+            var item = depotRepository.GetById((int)id);
+           DepotPivot depotsPivot = Mapper.Map<GES_Depot, DepotPivot>(item);
+            return depotsPivot;
+    
         }
 
         IEnumerable<DepotPivot> IDepotService.GetDepotPivotByLibelleTaux(string Code)
@@ -37,12 +63,13 @@ namespace Store.Service
 
         void IDepotService.SaveDepotPivot()
         {
-            throw new NotImplementedException();
+            unitOfWork.Commit();
         }
 
         void IDepotService.UpdateDepotPivot(DepotPivot depot)
         {
-            throw new NotImplementedException();
+
+            depotRepository.Update(Mapper.Map<DepotPivot, GES_Depot>(depot));
         }
     }
 }

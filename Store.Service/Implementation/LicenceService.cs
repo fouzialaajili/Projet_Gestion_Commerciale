@@ -8,6 +8,7 @@ using Store.Model;
 using Store.Service.Pivot;
 using Store.Data.Repositories;
 using Store.Data.Infrastructure;
+using AutoMapper;
 
 namespace Store.Service.Implementation
 {
@@ -26,7 +27,7 @@ namespace Store.Service.Implementation
 
         public void CreateLicence(LicencePivot licence)
         {
-            LicencePivot item = Mapper.Map<LicencePivot, GES_Licence>(licence);
+            GES_Licence item = Mapper.Map<LicencePivot, GES_Licence>(licence);
             licenceRepository.Add(item);
         }
 

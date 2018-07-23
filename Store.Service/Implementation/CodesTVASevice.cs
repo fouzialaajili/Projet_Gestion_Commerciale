@@ -1,4 +1,5 @@
-﻿using Store.Data.Infrastructure;
+﻿using AutoMapper;
+using Store.Data.Infrastructure;
 using Store.Data.Repositories;
 using Store.Model;
 using Store.Service.Interface;
@@ -10,30 +11,40 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Store.Service
+{public class CodesTVAService : ICodesTVAService
 {
+        private readonly ICodesTvaRepository codesTvaRepository;
 
+        private readonly IUnitOfWork unitOfWork;
+        public CodesTVAService(ICodesTvaRepository codesTvaRepository,IUnitOfWork unitOfWork)
+        {
+            this.codesTvaRepository = codesTvaRepository;
+            this.unitOfWork = unitOfWork;
 
-
-    public class CodesTVAService : ICodesTVAService
-    {
+        }
         public void CreateCodesTVAPivot(CodesTVAPivot codesTVAPivot)
         {
-            throw new NotImplementedException();
+            CPT_CodesTVA codesTVA = Mapper.Map<CodesTVAPivot, CPT_CodesTVA>(codesTVAPivot);
+            codesTvaRepository.Add(codesTVA);
         }
 
         public void DeleteCodesTVAPivot(CodesTVAPivot codesTVAPivot)
         {
-            throw new NotImplementedException();
+            codesTvaRepository.Delete(Mapper.Map<CodesTVAPivot, CPT_CodesTVA>(codesTVAPivot));
         }
 
         public IEnumerable<CodesTVAPivot> GetALL()
         {
-            throw new NotImplementedException();
+            IEnumerable<CPT_CodesTVA> codesTVAPivots = codesTvaRepository.GetAll().ToList();
+            IEnumerable<CodesTVAPivot> codesTVAPivot = Mapper.Map<IEnumerable<CPT_CodesTVA>, IEnumerable<CodesTVAPivot>>(codesTVAPivots);
+            return codesTVAPivot;
         }
 
         public CodesTVAPivot GetCodesTVAPivot(long id)
         {
-            throw new NotImplementedException();
+            var item = codesTvaRepository.GetById((int)id);
+            CodesTVAPivot codesTVAPivot = Mapper.Map<CPT_CodesTVA, CodesTVAPivot>(item);
+            return codesTVAPivot;
         }
 
         public IEnumerable<CodesTVAPivot> GetCodesTVAPivotByLibelleTaux(string LibelleTaux)
@@ -43,12 +54,12 @@ namespace Store.Service
 
         public void SaveCodesTVAPivot()
         {
-            throw new NotImplementedException();
+            unitOfWork.Commit();
         }
 
         public void UpdateCodesTVAPivot(CodesTVAPivot codesTVAPivot)
         {
-            throw new NotImplementedException();
+            codesTvaRepository.Update(Mapper.Map<CodesTVAPivot, CPT_CodesTVA>(codesTVAPivot));
         }
     }
 }

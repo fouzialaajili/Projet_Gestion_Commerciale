@@ -1,4 +1,8 @@
-﻿using Store.Service.Interface;
+﻿using AutoMapper;
+using Store.Data.Infrastructure;
+using Store.Data.Repositories;
+using Store.Model;
+using Store.Service.Interface;
 using Store.Service.Pivot;
 using System;
 using System.Collections.Generic;
@@ -10,24 +14,38 @@ namespace Store.Service.Implementation
 {
     class FamilleService : IFamilleService
     {
-        public void CreateFamillePivot(FamillePivot dossiers)
+        private readonly IFamilleRepositoy familleRepository;
+        private readonly IUnitOfWork unitOfWork;
+        public   FamilleService(IFamilleRepositoy familleRepository, IUnitOfWork unitOfWork)
         {
-            throw new NotImplementedException();
+            this.familleRepository = familleRepository;
+            this.unitOfWork = unitOfWork;
+        }
+       
+        public void CreateFamillePivot(FamillePivot familles)
+        {
+            GES_Famille famille = Mapper.Map<FamillePivot, GES_Famille>(familles);
+            familleRepository.Add(famille);
         }
 
         public void DeleteFamillePivot(FamillePivot dossiers)
         {
-            throw new NotImplementedException();
+            familleRepository.Delete(Mapper.Map<FamillePivot, GES_Famille>(dossiers));
+
         }
 
         public IEnumerable<FamillePivot> GetALL()
         {
-            throw new NotImplementedException();
+            IEnumerable<GES_Famille> familles = familleRepository.GetAll().ToList();
+            IEnumerable<FamillePivot > famillePivot = Mapper.Map<IEnumerable<GES_Famille>, IEnumerable<FamillePivot>>(familles);
+            return famillePivot;
         }
 
-        public FamillePivot GetDossiersPivot(long id)
+        public FamillePivot GetFamillePivot(long id)
         {
-            throw new NotImplementedException();
+            var dossiers = familleRepository.GetById((int)id);
+            FamillePivot famillePivot = Mapper.Map<GES_Famille, FamillePivot>(dossiers);
+            return famillePivot;
         }
 
         public IEnumerable<FamillePivot> GetFamillePivotByFamilleCode(string FamilleCode)
@@ -37,12 +55,13 @@ namespace Store.Service.Implementation
 
         public void SaveFamille()
         {
-            throw new NotImplementedException();
+            unitOfWork.Commit();
         }
 
         public void UpdateFamillePivot(FamillePivot dossiers)
         {
-            throw new NotImplementedException();
+            familleRepository.Update(Mapper.Map<FamillePivot, GES_Famille>(dossiers));
+
         }
     }
 }

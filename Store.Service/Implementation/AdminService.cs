@@ -1,4 +1,8 @@
-﻿using Store.Service.Interface;
+﻿using AutoMapper;
+using Store.Data.Infrastructure;
+using Store.Data.Repositories;
+using Store.Model;
+using Store.Service.Interface;
 using Store.Service.Pivot;
 using System;
 using System.Collections.Generic;
@@ -10,34 +14,47 @@ namespace Store.Service.Implementation
 {
     class AdminService : IAdminService
     {
-        public void CreateAdminPivot(AdminPivot admin)
+        private readonly IAdminRepository adminRepository;
+        private readonly IUnitOfWork unitOfWork;
+
+        public AdminService(IAdminRepository adminRepository, IUnitOfWork unitOfWork)
         {
-            throw new NotImplementedException();
+            this.adminRepository = adminRepository;
+            this.unitOfWork = unitOfWork;
+        }
+        public void CreateAdminPivot(AdminPivot adminPivot)
+        {
+            GES_Admin admin = Mapper.Map<AdminPivot, GES_Admin>(adminPivot);
+            adminRepository.Add(admin);
         }
 
         public void DeleteAdminPivot(AdminPivot admin)
         {
-            throw new NotImplementedException();
+            adminRepository.Delete(Mapper.Map<AdminPivot, GES_Admin>(admin));
         }
 
         public AdminPivot GetAdmin(long id)
         {
-            throw new NotImplementedException();
+            var admin= adminRepository.GetById((int)id);
+            AdminPivot itemPivot = Mapper.Map<GES_Admin, AdminPivot>(admin);
+            return itemPivot;
         }
 
         public IEnumerable<AdminPivot> GetALL()
         {
-            throw new NotImplementedException();
+            IEnumerable<GES_Admin> admins = adminRepository.GetAll().ToList();
+            IEnumerable<AdminPivot> adminPivots = Mapper.Map<IEnumerable<GES_Admin>, IEnumerable<AdminPivot>>(admins);
+            return adminPivots;
         }
 
         public void SaveAdminPivot()
         {
-            throw new NotImplementedException();
+            unitOfWork.Commit();
         }
 
         public void UpdateAdminPivot(AdminPivot admin)
         {
-            throw new NotImplementedException();
+            adminRepository.Update(Mapper.Map<AdminPivot, GES_Admin>(admin));
         }
     }
 }
