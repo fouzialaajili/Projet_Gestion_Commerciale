@@ -8,7 +8,7 @@ using Store.Service.Pivot;
 using Store.Data.Repositories;
 using Store.Data.Infrastructure;
 using Store.Model;
-
+using AutoMapper;
 namespace Store.Service.Implementations
 {
     class ReglementFactureService : IReglementFactureService
@@ -52,8 +52,8 @@ namespace Store.Service.Implementations
 
         public IEnumerable<ReglementFacturePivot> ReglementFactures(string identifged)
         {
-            IEnumerable<GES_MotifTicket> motif = reglementFactureRepository.GetItemsByModelLibelle(identifged).ToList();
-            IEnumerable<ReglementFacturePivot> reglementFacturePivots = Mapper.Map<IEnumerable<GES_MotifTicket>, IEnumerable<ReglementFacturePivot>>(motif);
+            IEnumerable<GES_ReglementFacture> motif = reglementFactureRepository.GetItemsByModelLibelle(identifged).ToList();
+            IEnumerable<ReglementFacturePivot> reglementFacturePivots = Mapper.Map<IEnumerable<GES_ReglementFacture>, IEnumerable<ReglementFacturePivot>>(motif);
             return reglementFacturePivots;
         }
 

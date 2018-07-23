@@ -11,7 +11,7 @@ namespace Store.Service.Interface
     {
         IEnumerable<ObjectifPivot> GetALL();
         ObjectifPivot GetObjectif(long id);
-        IEnumerable<ObjectifPivot> Objectifs(string identifged);
+        //IEnumerable<ObjectifPivot> Objectifs(string identifged);
         void DeleteObjectif(ObjectifPivot objectif);
         void UpdateObjectif(ObjectifPivot objectif);
         void CreateObjectif(ObjectifPivot objectif);

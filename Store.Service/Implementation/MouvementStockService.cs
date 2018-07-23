@@ -8,6 +8,7 @@ using Store.Service.Pivot;
 using Store.Data.Repositories;
 using Store.Data.Infrastructure;
 using Store.Model;
+using AutoMapper;
 
 namespace Store.Service.Implementation
 {
@@ -45,7 +46,7 @@ namespace Store.Service.Implementation
         public MouvementStockPivot GetMouvementStocks(long id)
         {
             var item = mouvementStockRepository.GetById((int)id);
-            MotifPivot motifPivot = Mapper.Map<GES_MouvementStock, MouvementStockPivot>(item);
+            MouvementStockPivot  motifPivot = Mapper.Map<GES_MouvementStock, MouvementStockPivot>(item);
             return motifPivot;
         }
 

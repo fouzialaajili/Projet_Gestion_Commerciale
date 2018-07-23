@@ -8,6 +8,7 @@ using Store.Service.Pivot;
 using Store.Data.Repositoriess;
 using Store.Data.Infrastructure;
 using Store.Model;
+using AutoMapper;
 
 namespace Store.Service.Implementation
 {
@@ -47,7 +48,7 @@ namespace Store.Service.Implementation
         public PeriodePivot GetPeriodes(long id)
         {
             var item = periodeRepository.GetById((int)id);
-            ObjectifPivot periodePivot = Mapper.Map<GES_Periode, PeriodePivot>(item);
+            PeriodePivot periodePivot = Mapper.Map<GES_Periode, PeriodePivot>(item);
             return periodePivot;
         }
 

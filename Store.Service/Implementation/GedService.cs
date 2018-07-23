@@ -8,12 +8,13 @@ using Store.Model;
 using Store.Service.Pivot;
 using Store.Data.Repositories;
 using Store.Data.Infrastructure;
+using AutoMapper;
 
 namespace Store.Service.Implementation
 {
     class GedService : IGedService
     {
-        /* 
+   
 
     private readonly IGedRepository gedRepository;
 
@@ -38,21 +39,21 @@ namespace Store.Service.Implementation
            gedRepository.Delete(Mapper.Map<GedPivot, GES_Ged>(ged));
        }
 
-       public IEnumerable<GES_Ged> GetALL()
+       public IEnumerable<GedPivot> GetALL()
        {
            IEnumerable<GES_Ged> ged = gedRepository.GetAll().ToList();
-           IEnumerable<GES_Ged> geds = Mapper.Map<IEnumerable<GES_Ged>, IEnumerable<GedPivot>>(ged);
+           IEnumerable<GedPivot> geds = Mapper.Map<IEnumerable<GES_Ged>, IEnumerable<GedPivot>>(ged);
            return geds;
        }
 
-       public IEnumerable<GES_Ged> GetGed(string identifged)
+       public IEnumerable<GedPivot> GetGed(string identifged)
        {
            IEnumerable<GES_Ged> geds = gedRepository.GetItemsByModelLibelle(identifged).ToList();
-           IEnumerable<GES_Ged> gedPivots = Mapper.Map<IEnumerable<GES_Ged>, IEnumerable<GedPivot>>(geds);
+           IEnumerable<GedPivot> gedPivots = Mapper.Map<IEnumerable<GES_Ged>, IEnumerable<GedPivot>>(geds);
            return gedPivots;
        }
 
-       public GES_Ged GetGed(long id)
+       public GedPivot GetGed(long id)
        {
            var item = gedRepository.GetById((int)id);
           GedPivot gedPivot = Mapper.Map<GES_Ged, GedPivot>(item);
@@ -68,41 +69,8 @@ namespace Store.Service.Implementation
        public void UpdateGed(GedPivot ged)
        {
            gedRepository.Update(Mapper.Map<GedPivot, GES_Ged>(ged));
-       }   */
-        public void CreateGed(GedPivot ged)
-        {
-            throw new NotImplementedException();
-        }
+       }   
 
-        public void DeleteGed(GedPivot ged)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<GES_Ged> GetALL()
-        {
-            throw new NotImplementedException();
-        }
-
-        public GES_Ged GetGed(long id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<GES_Ged> GetGed(string identifged)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SaveGed()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateGed(GedPivot ged)
-        {
-            throw new NotImplementedException();
-        }
     }
 
 }

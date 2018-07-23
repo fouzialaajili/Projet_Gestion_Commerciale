@@ -8,6 +8,7 @@ using Store.Service.Pivot;
 using Store.Data.Repositories;
 using Store.Data.Infrastructure;
 using Store.Model;
+using AutoMapper;
 
 namespace Store.Service.Implementation
 {
@@ -35,27 +36,27 @@ namespace Store.Service.Implementation
 
         public void DeleteNumerotation(NumerotationPivot numerotation)
         {
-            numerotationRepository.Delete(Mapper.Map<NumerationPivot, GES_Numerotation>(numerotation));
+            numerotationRepository.Delete(Mapper.Map<NumerotationPivot, GES_Numerotation>(numerotation));
         }
 
         public IEnumerable<NumerotationPivot> GetALL()
         {
             IEnumerable<GES_Numerotation> numerotation= numerotationRepository.GetALL().ToList();
-            IEnumerable<NomenclaturePivot> numerotationPivots = Mapper.Map<IEnumerable<GES_Numerotation>, IEnumerable<NumerationPivot>>(numerotation);
+            IEnumerable<NumerotationPivot> numerotationPivots = Mapper.Map<IEnumerable<GES_Numerotation>, IEnumerable<NumerotationPivot>>(numerotation);
             return numerotationPivots;
         }
 
         public NumerotationPivot GetNumerotation(long id)
         {
             var item = numerotationRepository.GetById((int)id);
-            NumerationPivot numerotationPivot = Mapper.Map<GES_Numerotation, NumerationPivot>(item);
+            NumerotationPivot numerotationPivot = Mapper.Map<GES_Numerotation, NumerotationPivot>(item);
             return numerotationPivot;
         }
 
         public IEnumerable<NumerotationPivot> Numerotations(string identifged)
         {
             IEnumerable<GES_Numerotation> numerotation = numerotationRepository.GetItemsByModelLibelle(identifged).ToList();
-            IEnumerable<NumerationPivot> numerotationPivots = Mapper.Map<IEnumerable<GES_Numerotation>, IEnumerable<NumerationPivot>>(numerotation);
+            IEnumerable<NumerotationPivot> numerotationPivots = Mapper.Map<IEnumerable<GES_Numerotation>, IEnumerable<NumerotationPivot>>(numerotation);
             return numerotationPivots;
         }
 
@@ -66,7 +67,7 @@ namespace Store.Service.Implementation
 
         public void UpdateNumerotation(NumerotationPivot numerotation)
         {
-            numerotationRepository.Update(Mapper.Map<NumerationPivot, GES_Numerotation>(numerotation));
+            numerotationRepository.Update(Mapper.Map<NumerotationPivot, GES_Numerotation>(numerotation));
         }
     }
 }

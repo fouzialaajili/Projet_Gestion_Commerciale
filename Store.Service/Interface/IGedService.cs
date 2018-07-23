@@ -10,9 +10,9 @@ namespace Store.Service.Interface
 {
     interface IGedService
     {
-        IEnumerable<GES_Ged> GetALL();
-        GES_Ged GetGed(long id);
-        IEnumerable<GES_Ged> GetGed(string identifged);
+        IEnumerable<GedPivot> GetALL();
+        GedPivot  GetGed(long id);
+        IEnumerable<GedPivot> GetGed(string identifged);
         void DeleteGed(GedPivot ged);
         void UpdateGed(GedPivot ged);
         void CreateGed(GedPivot ged);

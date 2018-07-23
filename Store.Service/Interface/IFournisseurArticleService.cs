@@ -11,9 +11,9 @@ namespace Store.Service.Interface
 {
    public interface IFournisseurArticleService
     {
-        IEnumerable<GES_FournisseurArticle> GetALL();
-        GES_FournisseurArticle GetFournisseurArticle(long id);
-        IEnumerable<GES_FournisseurArticle> GetTiersFournisseurArticle(string tiersArticle);
+        IEnumerable<FournisseurArticlePivot> GetALL();
+        FournisseurArticlePivot  GetFournisseurArticle(long id);
+        IEnumerable<FournisseurArticlePivot> GetTiersFournisseurArticle(string tiersArticle);
         void DeleteFournisseurArticle(FournisseurArticlePivot fournisseurArticle);
         void UpdateFournisseurArticle(FournisseurArticlePivot fournisseurArticle);
         void CreateFournisseurArticle(FournisseurArticlePivot fournisseurArticle);

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Store.Model;
 using Store.Service.Pivot;
+using AutoMapper;
 
 namespace Store.Service.Implementation
 {
@@ -37,24 +38,24 @@ namespace Store.Service.Implementation
             impressionRepository.Delete(Mapper.Map<ImpressionPivot, GES_Impression>(impression));
         }
 
-        public IEnumerable<GES_Impression> GetALL()
+        public IEnumerable<ImpressionPivot> GetALL()
         {
             IEnumerable<GES_Impression> impression = impressionRepository.GetALL().ToList();
-            IEnumerable<GES_Impression> impressions = Mapper.Map<IEnumerable<GES_Impression>, IEnumerable<ImpressionPivot>>(impression);
+            IEnumerable<ImpressionPivot> impressions = Mapper.Map<IEnumerable<GES_Impression>, IEnumerable<ImpressionPivot>>(impression);
             return impressions;
         }
 
-        public GES_Impression GetImpression(long id)
+        public ImpressionPivot GetImpression(long id)
         {
             var item = impressionRepository.GetById((int)id);
-            ImpressionPivot impressionPivot = Mapper.Map<GES_Ged, GedPivot>(item);
+            ImpressionPivot impressionPivot = Mapper.Map<GES_Impression, ImpressionPivot>(item);
             return impressionPivot;
         }
 
-        public IEnumerable<GES_Impression> Impressions(string identifged)
+        public IEnumerable<ImpressionPivot> Impressions(string identifged)
         {
             IEnumerable<GES_Impression> impression = impressionRepository.GetItemsByModelLibelle(identifged).ToList();
-            IEnumerable<GES_Impression> impressions = Mapper.Map<IEnumerable<GES_Impression>, IEnumerable<ImpressionPivot>>(impression);
+            IEnumerable<ImpressionPivot> impressions = Mapper.Map<IEnumerable<GES_Impression>, IEnumerable<ImpressionPivot>>(impression);
             return impressions;
         }
 
@@ -65,7 +66,7 @@ namespace Store.Service.Implementation
 
         public void UpdateImpression(ImpressionPivot impression)
         {
-            impressionRepository.Update(Mapper.Map<GES_Impression, GES_Impression>(impression));
+            impressionRepository.Update(Mapper.Map<ImpressionPivot, GES_Impression>(impression));
         }
     }
 }

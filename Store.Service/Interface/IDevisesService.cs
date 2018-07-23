@@ -11,7 +11,7 @@ namespace Store.Service.Interface
     {
         IEnumerable<DevisesPivot> GetALL();
         DevisesPivot GetDevisesPivot(long id);
-        IEnumerable<DevisesPivot> GetDevisesPivotByCode(string Code);
+        //IEnumerable<DevisesPivot> GetDevisesPivotByCode(string Code);
         void DeleteDevisesPivot(DevisesPivot devises);
         void UpdateDevisesPivot(DevisesPivot devises);
         void CreateDevisesPivot(DevisesPivot devises);

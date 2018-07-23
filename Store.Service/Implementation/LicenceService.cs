@@ -39,14 +39,14 @@ namespace Store.Service.Implementation
         public IEnumerable<LicencePivot> GetALL()
         {
             IEnumerable<GES_Licence> licences = licenceRepository.GetALL().ToList();
-            IEnumerable<LicencePivot> licencePivots = Mapper.Map<IEnumerable<GES_FournisseurArticle>, IEnumerable<FournisseurArticlePivot>>(licences);
+            IEnumerable<LicencePivot> licencePivots = Mapper.Map<IEnumerable<GES_Licence>, IEnumerable<LicencePivot>>(licences);
             return licencePivots;
         }
 
         public LicencePivot GetLicence(long id)
         {
             var item = licenceRepository.GetById((int)id);
-            LicencePivot licencePivot = Mapper.Map<GES_FournisseurArticle, FournisseurArticlePivot>(item);
+            LicencePivot licencePivot = Mapper.Map<GES_Licence, LicencePivot>(item);
             return licencePivot;
         }
 

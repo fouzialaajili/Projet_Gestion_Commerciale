@@ -9,6 +9,7 @@ using Store.Data;
 using Store.Data.Repositories;
 using Store.Data.Infrastructure;
 using Store.Model;
+using AutoMapper;
 
 namespace Store.Service.Implementation
 {

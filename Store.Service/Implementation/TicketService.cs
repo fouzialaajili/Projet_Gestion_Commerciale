@@ -8,6 +8,7 @@ using Store.Service.Pivot;
 using Store.Data.Repositories;
 using Store.Data.Infrastructure;
 using Store.Model;
+using AutoMapper;
 
 namespace Store.Service.Implementation
 {
@@ -65,7 +66,7 @@ namespace Store.Service.Implementation
 
         public void UpdateTicket(TicketPivot Tickets)
         {
-            ticketRepository.Update(Mapper.Map<TicketPivot, TicketPivot>(Tickets));
+            ticketRepository.Update(Mapper.Map<TicketPivot, GEN_TiersContact>(Tickets));
         }
     }
 }

@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace Store.Data.Repositories
 {
-    /*class GedRepository : RepositoryBase<GES_Ged>, IGedRepository
+ class GedRepository : RepositoryBase<GES_Ged>, IGedRepository
     {
         public GedRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
 
-        public IEnumerable<GES_Ged> GetAll()
-        {
-            return this.DbContext.Geds.ToList();
-        }
+        //public IEnumerable<GES_Ged> GetAll()
+        //{
+        //    return this.DbContext.Geds.ToList();
+        //}
 
         public IEnumerable<GES_Ged> GetItemsByModelLibelle(string identifged)
         {
@@ -35,10 +35,10 @@ namespace Store.Data.Repositories
 
     public interface IGedRepository : IRepository<GES_Ged>
     {
-        IEnumerable<GES_Ged> GetAll();
+        //IEnumerable<GES_Ged> GetAll();
          GES_Ged GetById(long id);
         IEnumerable<GES_Ged> GetItemsByModelLibelle(string identifged);
 
 
-    }*/
+    }
 }

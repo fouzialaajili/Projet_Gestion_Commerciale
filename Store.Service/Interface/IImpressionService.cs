@@ -10,9 +10,9 @@ namespace Store.Service.Interface
 {
     interface IImpressionService
     {
-        IEnumerable<GES_Impression> GetALL();
-        GES_Impression GetImpression(long id);
-        IEnumerable<GES_Impression> Impressions(string identifged);
+        IEnumerable<ImpressionPivot> GetALL();
+        ImpressionPivot GetImpression(long id);
+        IEnumerable<ImpressionPivot> Impressions(string identifged);
         void DeleteImpression(ImpressionPivot ged);
         void UpdateImpression(ImpressionPivot ged);
         void CreateImpression(ImpressionPivot ged);

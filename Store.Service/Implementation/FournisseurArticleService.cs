@@ -14,11 +14,10 @@ namespace Store.Service.Implementation
 {
     class FournisseurArticleService : IFournisseurArticleService
     {
-
-        /**    virtual public GEN_Tiers FournisseurArticleFichetier { get; set; }
+        virtual public GEN_Tiers FournisseurArticleFichetier { get; set; }
         virtual public GES_Article FournisseurArticleArticle
         { get; set; }
-    
+
         private readonly IFournisseurArticleRepository fournisseurArticleRepository;
         private readonly IFichetierRepository tiersRepository;
         private readonly IArticleRepository articleRepository;
@@ -33,21 +32,21 @@ namespace Store.Service.Implementation
             this.unitOfWork = unitOfWork;
         }
 
-        public IEnumerable<GES_FournisseurArticle> GetALL()
+        public IEnumerable<FournisseurArticlePivot> GetALL()
         {
             IEnumerable<GES_FournisseurArticle> fournisseurArticles = fournisseurArticleRepository.GetALL().ToList();
             IEnumerable<FournisseurArticlePivot> fournisseurArticlePivots = Mapper.Map<IEnumerable<GES_FournisseurArticle>, IEnumerable<FournisseurArticlePivot>>(fournisseurArticles);
             return fournisseurArticlePivots;
         }
 
-        public GES_FournisseurArticle GetFournisseurArticle(long id)
+        public FournisseurArticlePivot GetFournisseurArticle(long id)
         {
             var item = fournisseurArticleRepository.GetById((int)id);
             FournisseurArticlePivot fournisseurArticlePivot = Mapper.Map<GES_FournisseurArticle, FournisseurArticlePivot>(item);
             return fournisseurArticlePivot;
         }
 
-        public IEnumerable<GES_FournisseurArticle> GetTiersFournisseurArticle(string tiersArticle)
+        public IEnumerable<FournisseurArticlePivot> GetTiersFournisseurArticle(string tiersArticle)
         {
             IEnumerable<GES_FournisseurArticle> fournisseurArticles = fournisseurArticleRepository.GetItemsByModelLibelle(tiersArticle).ToList();
             IEnumerable<FournisseurArticlePivot> fournisseurArticlePivots = Mapper.Map<IEnumerable<GES_FournisseurArticle>, IEnumerable<FournisseurArticlePivot>>(fournisseurArticles);
@@ -73,40 +72,7 @@ namespace Store.Service.Implementation
         {
             fournisseurArticleRepository.Update(Mapper.Map<FournisseurArticlePivot, GES_FournisseurArticle>(fournisseurArticle));
         }
-    **/
-        public void CreateFournisseurArticle(FournisseurArticlePivot fournisseurArticle)
-        {
-            throw new NotImplementedException();
-        }
 
-        public void DeleteFournisseurArticle(FournisseurArticlePivot fournisseurArticle)
-        {
-            throw new NotImplementedException();
-        }
 
-        public IEnumerable<GES_FournisseurArticle> GetALL()
-        {
-            throw new NotImplementedException();
-        }
-
-        public GES_FournisseurArticle GetFournisseurArticle(long id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<GES_FournisseurArticle> GetTiersFournisseurArticle(string tiersArticle)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SaveFournisseurArticle()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateFournisseurArticle(FournisseurArticlePivot fournisseurArticle)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

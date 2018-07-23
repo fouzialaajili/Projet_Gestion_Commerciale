@@ -25,7 +25,7 @@ namespace Store.Data.Repositories
             return objetifs;
         }
 
-       /* public IEnumerable<GES_Objectif> GetItemsByModelLibelle(string identifged)
+    /*  public IEnumerable<GES_Objectif> GetItemsByModelLibelle(string identifged)
         {
 
             var numerotations = this.DbContext.Objectifs.Where(c => c.ObjectifRepresentant == identifged);
@@ -38,7 +38,7 @@ namespace Store.Data.Repositories
     {
         IEnumerable<GES_Objectif> GetALL();
         GES_Objectif GetById(long id);
-     //   IEnumerable<GES_Objectif> GetItemsByModelLibelle(string identifged);
+  //IEnumerable<GES_Objectif> GetItemsByModelLibelle(string identifged);
 
     }
 }

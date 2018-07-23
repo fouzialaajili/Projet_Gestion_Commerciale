@@ -8,6 +8,7 @@ using Store.Service.Pivot;
 using Store.Data.Repositories;
 using Store.Data.Infrastructure;
 using Store.Model;
+using AutoMapper;
 
 namespace Store.Service.Implementation
 {
@@ -49,13 +50,13 @@ namespace Store.Service.Implementation
             return objectifPivot;
         }
 
-        public IEnumerable<ObjectifPivot> Objectifs(string identifged)
+        /*public IEnumerable<ObjectifPivot> Objectifs(string identifged)
         {
             IEnumerable<GES_Objectif> objectif = objectifSRepository.GetItemsByModelLibelle(identifged).ToList();
             IEnumerable<ObjectifPivot> objectifPivots = Mapper.Map<IEnumerable<GES_Objectif>, IEnumerable<ObjectifPivot>>(objectif);
             return objectifPivots;
         }
-
+        */
         public void SaveObjectif()
         {
             unitOfWork.Commit();
